@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx:1.23.1
+    container_name: nginx
+    ports:
+      - '80:80'
+    restart: on-failure
+    volumes:
+      - /home/kube/Learnings/hau/mendez-mr/nginx-conf:/etc/nginx/conf.d:ro
+    depends_on:
+      - node
+
+  node:
+    image: node-app:v1
+    container_name: node-inventory-app
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:10.3.36
+    container_name: db
+    restart: on-failure
+    environment:
+       MYSQL_ROOT_PASSWORD: root
+    ports:
+      - '3306:3306'
+    volumes:
+        - /home/kube/Learnings/mysql:/var/lib/mysql
