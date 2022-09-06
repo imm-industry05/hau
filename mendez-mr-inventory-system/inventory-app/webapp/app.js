@@ -61,7 +61,7 @@ app.get('/', function (req, res) {
   connection.query('SELECT * from products', function (error, results, fields) {
     if (error) throw error;
     res.render('index', {
-      title : "Shop",
+      title : "Tindahan",
       products: results
     })
   });
