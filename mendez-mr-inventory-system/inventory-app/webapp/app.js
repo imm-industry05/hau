@@ -11,7 +11,7 @@ app.use(session({secret: 'ssshhhhh!'}));
 
 app.use(fileUpload());
 
-app.locals.baseUrl = "http://localhost:3000"
+app.locals.baseUrl = "http://127.0.0.1:3000"
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -37,7 +37,7 @@ app.use(express.static('static'))
 
 
 var connection = mysql.createConnection({
-  host     : '10.0.2.4',
+  host     : '172.16.64.208',
   user     : 'root',
   password : 'root',
   database : 'inventorydb'

@@ -1,17 +1,17 @@
 version: '3'
 
 services:
-  # nginx:
-  #   image: nginx:1.23.1
-  #   container_name: nginx
-  #   ports:
-  #     - '80:80'
-  #   restart: on-failure
-  #   volumes:
-  #     - /home/kube/Learnings/hau/mendez-mr/nginx-conf:/etc/nginx/conf.d:ro
-  #   depends_on:
-  #     - node
-
+  nginx:
+    image: nginx:1.23.1
+    container_name: nginx
+    ports:
+      - '80:80'
+    restart: on-failure
+    volumes:
+      - /home/kube/Learnings/hau/mendez-mr-inventory-system/inventory-app/nginx-conf:/etc/nginx/conf.d:ro
+      - /etc/hosts:/etc/hosts:ro
+    depends_on:
+      - node
   node:
     image: node-inventory:v1-patch
     container_name: node-inventory-app
