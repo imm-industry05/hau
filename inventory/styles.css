@@ -1,0 +1,7 @@
+.stock-container {
+    border: 1px solid black;
+    height: 500px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+  }
