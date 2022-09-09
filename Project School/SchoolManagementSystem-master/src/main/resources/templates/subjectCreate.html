@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Subjects</title>
+    <link th:href="@{/login.css}" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
+</head>
+<body>
+<div class="newreg">
+    <h1>New Subjects</h1>
+    <form th:action="@{/subjectCreate}" th:object="${subjectForm}" method="post">
+        <table>
+
+            <tr>
+                <th>subjectname</th>
+
+                <td><input type="text" name="subjectname" th:field="*{subjectname}"><span th:if="${#fields.hasErrors('subjectname')}" th:errors="*{subjectname}"></span></td>
+            </tr>
+            <tr>
+                <th>days</th>
+                <td><input type="text" name="days" th:field="*{days}"><span th:if="${#fields.hasErrors('days')}" th:errors="*{days}"></span></td>
+            </tr>
+            <tr>
+                <th>starttime</th>
+                <td><input type="text" name="starttime" th:field="*{starttime}"><span th:if="${#fields.hasErrors('starttime')}" th:errors="*{starttime}"></span></td>
+            </tr>
+            <tr>
+                <th>endtime</th>
+                <td><input type="text" name="endtime" th:field="*{endtime}"><span th:if="${#fields.hasErrors('endtime')}" th:errors="*{endtime}"></span></td>
+            </tr>
+            <tr>
+                <th>room</th>
+                <td><input type="text" name="room" th:field="*{room}"><span th:if="${#fields.hasErrors('room')}" th:errors="*{room}"></span></td>
+            </tr>
+            <tr>
+                <th>block</th>
+                <td><input type="text" name="block" th:field="*{block}"><span th:if="${#fields.hasErrors('block')}" th:errors="*{block}"></span></td>
+            </tr>
+        </table>
+        <div>
+            <input class="regbtn" type="submit" value="Submit">
+            <input class="backbtn" type="submit" name="back" value="Back">
+        </div>
+    </form>
+</div>
+<h2></h2>
+<h3></h3>
+
+<div class="animation-area">
+    <ul class="box-area">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</body>
+</html>

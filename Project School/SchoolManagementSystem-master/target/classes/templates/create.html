@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>New Registers</title>
+  <link th:href="@{/login.css}" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
+</head>
+<body>
+<div class="newreg">
+  <h1>New Registers</h1>
+  <form th:action="@{/create}" th:object="${studentForm}" method="post">
+    <table>
+      <tr>
+        <th>firstname</th>
+        <!-- ポイント1 -->
+        <td><input type="text" name="firstname" th:field="*{firstname}"><span th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}"></span></td>
+      </tr>
+      <tr>
+        <th>lastname</th>
+        <!-- ポイント1 -->
+        <td><input type="text" name="lastname" th:field="*{lastname}"><span th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}"></span></td>
+      </tr>
+      <tr>
+        <th>email</th>
+        <td><input type="text" name="email" th:field="*{email}"><span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span></td>
+      </tr>
+      <tr>
+        <th>phone number</th>
+        <td><input type="text" name="phone" th:field="*{phone}"><span th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></span></td>
+      </tr>
+      <tr>
+        <th>age</th>
+        <td><input type="text" name="age" th:field="*{age}"><span th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></span></td>
+      </tr>
+    </table>
+    <div>
+      <input class="regbtn" type="submit" value="Submit">
+      <input class="backbtn" type="submit" name="back" value="Back">
+    </div>
+  </form>
+</div>
+<h2></h2>
+<h3></h3>
+
+<div class="animation-area">
+  <ul class="box-area">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+</body>
+</html>

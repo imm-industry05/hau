@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Subject List</title>
+    <link th:href="@{/list.css}" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
+</head>
+<body>
+<div class="container">
+    <div class="my-5">
+        <a class="btn btn-primary" th:href="@{/subjectCreate}">Add Subject</a>
+    </div>
+    <hr>
+    <h1>Subject List</h1>
+    <div>
+        <table class="table">
+            <tr class="labels">
+                <th>classcode</th>
+                <th>subjectname</th>
+                <th>days</th>
+                <th>starttime</th>
+                <th>endtime</th>
+                <th>room</th>
+                <th>block</th>
+                <th colspan="2">action</th>
+            </tr>
+
+            <tr th:each="subject : ${subjects}">
+                <td th:text="${subject.classcode}"></td>
+                <td th:text="${subject.subjectname}"></td>
+                <td th:text="${subject.days}"></td>
+                <td th:text="${subject.starttime}"></td>
+                <td th:text="${subject.endtime}"></td>
+                <td th:text="${subject.room}"></td>
+                <td th:text="${subject.block}"></td>
+
+                <td>
+                    <form th:action="@{/subjectEdit}" method="post">
+                        <input type="submit" class="btn btn-outline-primary" name="edit" value="edit">
+
+                        <input type="hidden" name="classcode" th:value="${subject.classcode}">
+                    </form>
+                </td>
+                <td>
+                    <form th:action="@{/subjectEdit}" method="post">
+                        <input type="submit" class="btn btn-outline-danger" name="delete" value="delete">
+                        <input type="hidden" name="classcode" th:value="${subject.classcode}">
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<h2></h2>
+<h3></h3>
+
+<div class="animation-area">
+    <ul class="box-area">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</body>
+</html>

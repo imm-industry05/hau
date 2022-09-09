@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Registers</title>
+    <link th:href="@{/subjectedit.css}" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
+</head>
+<body>
+<div class="container">
+    <h1 class="my-5">Edit Subject</h1>
+    <form th:action="@{/subjectEdit}" th:object="${subjectForm}" method="post">
+        <table class="table table-bordered table-hover col-6">
+            <tr class="form-group">
+                <th class="align-middle">subjectname</th>
+                <td><input type="text" class="form-control" name="subjectname" th:field="*{subjectname}" th:classappend="${#fields.hasErrors('subjectname')} ? 'is-invalid'"><span class="text-danger" th:if="${#fields.hasErrors('subjectname')}" th:errors="*{subjectname}"></span></td>
+            </tr>
+            <tr class="form-group">
+                <th class="align-middle">days</th>
+                <td><input type="text" class="form-control" name="days" th:field="*{days}" th:classappend="${#fields.hasErrors('days')} ? 'is-invalid'"><span class="text-danger" th:if="${#fields.hasErrors('days')}" th:errors="*{days}"></span></td>
+            </tr>
+            <tr class="form-group">
+                <th>start time</th>
+                <td><input type="text" class="form-control" name="starttime" th:field="*{starttime}" th:classappend="${#fields.hasErrors('starttime')} ? 'is-invalid'"><span class="text-danger" th:if="${#fields.hasErrors('starttime')}" th:errors="*{starttime}"></span></td>
+            </tr>
+            <tr class="form-group">
+                <th>end time</th>
+                <td><input type="text" class="form-control" name="endtime" th:field="*{endtime}" th:classappend="${#fields.hasErrors('endtime')} ? 'is-invalid'"><span class="text-danger" th:if="${#fields.hasErrors('endtime')}" th:errors="*{endtime}"></span></td>
+            </tr>
+            <tr class="form-group">
+                <th>room</th>
+                <td><input type="text" class="form-control" name="room" th:field="*{room}" th:classappend="${#fields.hasErrors('room')} ? 'is-invalid'"><span class="text-danger" th:if="${#fields.hasErrors('room')}" th:errors="*{room}"></span></td>
+            </tr>
+            <tr class="form-group">
+                <th>block</th>
+                <td><input type="text" class="form-control" name="block" th:field="*{block}" th:classappend="${#fields.hasErrors('block')} ? 'is-invalid'"><span class="text-danger" th:if="${#fields.hasErrors('block')}" th:errors="*{block}"></span></td>
+            </tr>
+        </table>
+        <input type="submit" class="backbtn" name="back" value="back">
+        <input type="submit" class="regbtn" name="regist" value="submit">
+
+
+        <input type="hidden" name="classcode" th:value="${param.classcode[0]}">
+    </form>
+</div>
+<script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+<h2></h2>
+<h3></h3>
+
+<div class="animation-area">
+    <ul class="box-area">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</html>

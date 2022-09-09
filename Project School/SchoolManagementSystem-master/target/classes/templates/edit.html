@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Registers</title>
+    <link th:href="@{/login.css}" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
+</head>
+<body>
+<div class="container">
+    <h1 class="my-5">Edit Student</h1>
+    <form th:action="@{/edit}" th:object="${studentForm}" method="post">
+        <table class="table table-bordered table-hover col-6">
+            <tr class="form-group">
+                <th class="align-middle">firstname</th>
+                <td><input type="text" class="form-control" name="firstname" th:field="*{firstname}" th:classappend="${#fields.hasErrors('firstname')} ? 'is-invalid'"><span class="text-danger" th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}"></span></td>
+            </tr>
+            <tr class="form-group">
+                <th class="align-middle">lastname</th>
+                <td><input type="text" class="form-control" name="lastname" th:field="*{lastname}" th:classappend="${#fields.hasErrors('lastname')} ? 'is-invalid'"><span class="text-danger" th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}"></span></td>
+            </tr>
+            <tr class="form-group">
+                <th>email</th>
+                <td><input type="text" class="form-control" name="email" th:field="*{email}" th:classappend="${#fields.hasErrors('email')} ? 'is-invalid'"><span class="text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span></td>
+            </tr>
+            <tr class="form-group">
+                <th>phone number</th>
+                <td><input type="text" class="form-control" name="phone" th:field="*{phone}" th:classappend="${#fields.hasErrors('phone')} ? 'is-invalid'"><span class="text-danger" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></span></td>
+            </tr>
+            <tr class="form-group">
+                <th>age</th>
+                <td><input type="text" class="form-control" name="age" th:field="*{age}" th:classappend="${#fields.hasErrors('age')} ? 'is-invalid'"><span class="text-danger" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></span></td>
+            </tr>
+        </table>
+        <input type="submit" class="backbtn" name="back" value="back">
+        <input type="submit" class="regbtn" name="regist" value="submit">
+
+
+        <!---------- ポイント1 ---------->
+        <input type="hidden" name="id" th:value="${param.id[0]}">
+    </form>
+</div>
+<script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+<h2></h2>
+<h3></h3>
+
+<div class="animation-area">
+    <ul class="box-area">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</html>
