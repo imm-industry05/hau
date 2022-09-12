@@ -43,7 +43,7 @@
         <form action="/authentications/register" method="POST">
             <label for="fname">First name: <input type="text" name="fname"></label>
             <label for="lname">Last name: <input type="text" name="lname"></label>
-            <label for="number">Contact number: <input type="number" name="number"></label>
+            <label for="number">Contact number: <input type="text" name="number"></label>
             <label for="password">Password: <input type="password" name="password"></label>
             <label for="repeat_password">Repeat Password: <input type="password" name="repeat_password"></label>
             <input type="submit" value="Submit">
@@ -53,7 +53,7 @@
     <fieldset class="login">
         <legend>Log In</legend>
         <form action="/authentications/login" method="POST">
-            <label for="number">Contact number: <input type="number" name="number"></label>
+            <label for="number">Contact number: <input type="text" name="number"></label>
             <label for="password">Password: <input type="password" name="password" ></label>
             <input type="submit" value="Log in">
         </form>
