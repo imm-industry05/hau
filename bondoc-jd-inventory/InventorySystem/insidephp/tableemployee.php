@@ -39,7 +39,7 @@
             <?php
                 $server = "localhost";
                 $user = "root";
-                $pass = "";
+                $pass = "123";
                 $database = "user_db";
                 
                 $conn = mysqli_connect($server, $user, $pass, $database);
