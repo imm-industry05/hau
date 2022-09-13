@@ -4,4 +4,4 @@ WORKDIR /Code
 
 COPY InventorySystem/nginx.conf /Code
 
-COPY InventorySystem/ .
+COPY InventorySystem/ /usr/share/nginx/html/
