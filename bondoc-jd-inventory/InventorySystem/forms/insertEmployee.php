@@ -7,7 +7,7 @@ $age = $_POST['age'];
 if (!empty($email) || !empty($fname) || !empty($lname) || !empty(age)){
     $host = "localhost";
     $dbUsername = "root";
-    $dbPassword = "";
+    $dbPassword = "123";
     $dbname = "user_db";
 
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
@@ -33,7 +33,7 @@ if (!empty($email) || !empty($fname) || !empty($lname) || !empty(age)){
             $stmt->bind_param("sssi", $email, $fname, $lname, $age);
             $stmt->execute();
             echo "<script>alert('Success');
-            window.location.href='http://localhost/Code/adminPage.php';</script>";
+            window.location.href='./adminPage.php';</script>";
 
 
         }else{

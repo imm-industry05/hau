@@ -21,7 +21,7 @@ if(isset($_POST['submit'])){
                 $email = "";
                 $_POST['password'] = "";
                 $_POST['cpassword'] = "";
-                header("location: http://localhost/Code/forms/loginForm.php");
+                header("location: ./loginForm.php");
             }else{
                 echo "<script>alert('Woops! something wrong')</script>";
             }  
@@ -42,7 +42,7 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://localhost/Code/css/loginpage2.css">
+    <link rel="stylesheet" href="./loginpage2.css">
     <title>Register-Invntory System</title>
 </head>
 <body>
@@ -95,7 +95,7 @@ if(isset($_POST['submit'])){
 
                     <div class="accexist">
                         <p>
-                        Already have an account? <a href="http://localhost/Code/forms/loginForm.php">Login now</a>
+                        Already have an account? <a href="./loginForm.php">Login now</a>
                         </p>
                     </div>
 

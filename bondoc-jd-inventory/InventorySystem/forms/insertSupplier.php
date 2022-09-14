@@ -6,7 +6,7 @@ $lname = $_POST['phone_number'];
 if (!empty($email) || !empty($fname) || !empty($lname)){
     $host = "localhost";
     $dbUsername = "root";
-    $dbPassword = "";
+    $dbPassword = "123";
     $dbname = "user_db";
 
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
@@ -32,7 +32,7 @@ if (!empty($email) || !empty($fname) || !empty($lname)){
             $stmt->bind_param("ssi", $email, $fname, $lname);
             $stmt->execute();
             echo "<script>alert('Success');
-            window.location.href='http://localhost/Code/adminPage.php';</script>";
+            window.location.href='./adminPage.php';</script>";
 
 
         }else{

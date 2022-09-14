@@ -7,15 +7,15 @@
     <title>Employee table</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="http://localhost/Code/css/tableemployee2.css">
+    <link rel="stylesheet" href="./tableemployee2.css">
 </head>
 <body>
     <div class="topnav">
         <ul>
-            <li><a class="active" href="http://localhost/Code/adminPage.php">Dashboard<i class="fa fa-home"></i></a></li>
+            <li><a class="active" href="./adminPage.php">Dashboard<i class="fa fa-home"></i></a></li>
             <li><a href="#news">input</a></li>
             <li><a href="#contact">input</a></li>
-            <li style="float:right"><a href="http://localhost/Code/forms/loginForm.php">Log out<i class="fa fa-arrow-right"></i></a></li>
+            <li style="float:right"><a href="./loginForm.php">Log out<i class="fa fa-arrow-right"></i></a></li>
         </ul>     
     <br/><br/>
     </div>
@@ -39,7 +39,7 @@
             <?php
                 $server = "localhost";
                 $user = "root";
-                $pass = "";
+                $pass = "123";
                 $database = "user_db";
                 
                 $conn = mysqli_connect($server, $user, $pass, $database);
@@ -73,7 +73,7 @@
     </table>     
     </div>
     <div class="addbtn">
-            <form action="http://localhost/Code/employee.php">
+            <form action="./employee.php">
                 <button class="btn btn-primary btn-lg">Add</button>
             </form>
     </div>
@@ -90,7 +90,7 @@
 <?php
     $server = "localhost";
     $user = "root";
-    $pass = "";
+    $pass = "123";
     $database = "user_db";
     
     $conn = mysqli_connect($server, $user, $pass, $database);
@@ -108,7 +108,7 @@
         $query_run = mysqli_query($conn, $query);
 
         if($query_run){
-            header("location: http://localhost/Code/adminPage.php");
+            header("location: ./adminPage.php");
         }else{
             echo '<script>alert("Not Deleted")</script>';
         }
