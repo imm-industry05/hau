@@ -1,0 +1,183 @@
+@import url ('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+
+}
+body{
+  background: #050e2d;
+} 
+
+/* top bar and hover */
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1b2141;
+  transition: 0.5s;
+  z-index: 1000;
+}
+header .logo{
+  position: relative;
+  color: #ffff;
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: 700;
+}
+header .nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  list-style: none;
+  margin: 10px;
+}
+header ul li a {
+  color: #ffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  list-style-type: none;
+}
+header ul li a:hover{
+  background: #1aeeef;
+  color: #050e2d;
+  box-shadow: 0 0 0 10px #1aeeef;
+}
+
+/* search bar */
+
+header .action .searchBX{
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 5px;
+}
+header .action .searchBX i {
+  font-size: 1.4em;
+  margin: 5px;
+  color: #222;
+}
+header .action .searchBX input{
+  outline: none;
+  border: none;
+  font-size:1em;
+  color: #222;
+}
+
+/* Home Banner */
+.banner{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner .bg{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner .bg .content{
+  width: 50%;
+  height: 100%;
+}
+.banner .bg .content h2 {
+  font-size:  4em;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.banner .bg .content p {
+  font-size:  1em;
+  color: #dbd9d9;
+  letter-spacing: 1px;
+}
+.banner .bg .content a{
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border: 1px solid #1aeeef;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 5px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.banner .bg .content a:hover{
+  background: #1aeeef;
+  border: none;
+  color: #050e2d;
+  box-shadow: 0 0 0 10px #1aeeef;
+}
+.banner .bg img {
+  width: 450px;
+}
+
+/* about us  */
+
+.about{
+  position: relative;
+  width: 100%;
+  min-height: 75vh;
+  padding: 0px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about .contentBx{
+  width: 50%;
+  margin: 20px;
+}
+
+.about .contentBx h2{
+  font-size: 3em;
+  font-weight: 700;
+  color: #fff;
+}
+.about .contentBx p {
+  max-width: 600px;
+  text-align: justify;
+  color: #dbd9d9;
+}
+.about .contentBx a{
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border: 1px solid #1aeeef;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 5px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.about .contentBx a:hover{
+  background: #1aeeef;
+  border: none;
+  color: #050e2d;
+  box-shadow: 0 0 0 10px #1aeeef;
+}
+
+.about img {
+  width: 600px;
+}
