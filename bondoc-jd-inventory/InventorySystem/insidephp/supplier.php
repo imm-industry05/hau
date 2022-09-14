@@ -21,7 +21,7 @@
     </div>
     
 
-    <h1>List Of Employee</h1>
+    <h1>List Of Supplier</h1>
     <br>
     <div class="tableContent">
     <table class="table">
@@ -38,7 +38,7 @@
             <?php
                 $server = "localhost";
                 $user = "root";
-                $pass = "123";
+                $pass = "";
                 $database = "user_db";
                 
                 $conn = mysqli_connect($server, $user, $pass, $database);
@@ -88,7 +88,7 @@
 <?php
     $server = "localhost";
     $user = "root";
-    $pass = "123";
+    $pass = "";
     $database = "user_db";
     
     $conn = mysqli_connect($server, $user, $pass, $database);
@@ -106,7 +106,7 @@
         $query_run = mysqli_query($conn, $query);
 
         if($query_run){
-            header("location: ./adminPage.php");
+            header("./adminPage.php");
         }else{
             echo '<script>alert("Not Deleted")</script>';
         }

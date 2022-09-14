@@ -21,17 +21,16 @@
     </div>
     
 
-    <h1>List Of Employee</h1>
+    <h1>List Of Customer</h1>
     <br>
     <div class="tableContent">
     <table class="table">
         <thead>
             <tr>
-                <th class="content1">ID</th>
-                <th class="content1">Email</th>
+                <th class="content1">Cusotomer ID</th>
                 <th class="content1">Firstname</th>
                 <th class="content1">Lastname</th>
-                <th class="content1">Age</th>
+                <th class="content1">Phone Number</th>
             </tr>
         </thead>
 
@@ -48,7 +47,7 @@
                     die("<script>alert('Connection failed')</script>");
                 }
 
-                $sql = "SELECT * FROM user_employee";
+                $sql = "SELECT * FROM customer";
                 $result = mysqli_query($conn, $sql);
 
                 if(!$result){
@@ -57,11 +56,10 @@
 
                 while($row = $result->fetch_assoc()){
                     echo"<tr>
-                            <td>". $row["id"] . "</td>
-                            <td>". $row["email"] . "</td>
-                            <td>". $row["firstname"] . "</td>
-                            <td>". $row["lastname"] . "</td>
-                            <td>". $row["age"] . "</td>
+                            <td>". $row["customer_id"] . "</td>
+                            <td>". $row["first_name"] . "</td>
+                            <td>". $row["last_name"] . "</td>
+                            <td>". $row["phone_number"] . "</td>
                         </tr>";
                 }
 
@@ -73,13 +71,13 @@
     </table>     
     </div>
     <div class="addbtn">
-            <form action="./employee.php">
+            <form action="./addcustomer.php">
                 <button class="btn btn-primary btn-lg">Add</button>
             </form>
     </div>
     <div class="idnumdelete">
                 <form action="" method="POST">
-                    <input type="text" name="idnum" placeholder="Employee ID"/>
+                    <input type="text" name="idnum" placeholder="Customer ID"/>
                     <a class="deldat" href=""><input type="submit" name="deletenum" value="Delete Data"/></a>
                 </form>
     </div>
@@ -104,11 +102,11 @@
     if(isset($_POST['deletenum'])){
         $id = $_POST['idnum'];
 
-        $query = "DELETE FROM `user_employee` WHERE id='$id' ";
+        $query = "DELETE FROM `customer` WHERE customer_id='$id' ";
         $query_run = mysqli_query($conn, $query);
 
         if($query_run){
-            header("location: ./adminPage.php");
+            header("./adminPage.php");
         }else{
             echo '<script>alert("Not Deleted")</script>';
         }

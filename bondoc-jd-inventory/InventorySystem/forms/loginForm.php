@@ -15,10 +15,10 @@ if(isset($_POST['submit'])){
         
         if($row['user_type'] == 'user'){
             $_SESSION['user_name'] = $row['username'];
-            header("location: http://localhost/Code/userPage.php");
+            header("location: ./userPage.php");
         }elseif($row['user_type'] == 'Admin'){
             $_SESSION['admin_name'] = $row['username'];
-            header("location: http://localhost/Code/adminPage.php");
+            header("location: ./adminPage.php");
         }else{
             echo "<script>alert('Woops! email and password is wrong.')</script>";
         }

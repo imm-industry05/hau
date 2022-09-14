@@ -1,8 +1,8 @@
 <?php
-$email = $_POST['email'];
-$fname = $_POST['fname'];
-$lname = $_POST['lname'];
-$age = $_POST['age'];
+$email = $_POST['customer_id'];
+$fname = $_POST['first_name'];
+$lname = $_POST['last_name'];
+$age = $_POST['phone_number'];
 
 if (!empty($email) || !empty($fname) || !empty($lname) || !empty(age)){
     $host = "localhost";
@@ -15,8 +15,8 @@ if (!empty($email) || !empty($fname) || !empty($lname) || !empty(age)){
     if (mysqli_connect_error()){
         die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
     }else{
-        $SELECT = "SELECT email From user_employee Where email = ? Limit 1";
-        $INSERT = "INSERT Into user_employee (email, firstname, lastname, age) values(?, ?, ?, ?)";
+        $SELECT = "SELECT customer_id From customer Where customer_id = ? Limit 1";
+        $INSERT = "INSERT Into customer (customer_id, first_name, last_name, phone_number) values(?, ?, ?, ?)";
 
 
         $stmt = $conn->prepare($SELECT);
@@ -30,7 +30,7 @@ if (!empty($email) || !empty($fname) || !empty($lname) || !empty(age)){
             $stmt->close();
 
             $stmt = $conn->prepare($INSERT);
-            $stmt->bind_param("sssi", $email, $fname, $lname, $age);
+            $stmt->bind_param("issi", $email, $fname, $lname, $age);
             $stmt->execute();
             echo "<script>alert('Success');
             window.location.href='./adminPage.php';</script>";

@@ -21,17 +21,18 @@
     </div>
     
 
-    <h1>List Of Employee</h1>
+    <h1>List Of Product</h1>
     <br>
     <div class="tableContent">
     <table class="table">
         <thead>
             <tr>
-                <th class="content1">ID</th>
-                <th class="content1">Email</th>
-                <th class="content1">Firstname</th>
-                <th class="content1">Lastname</th>
-                <th class="content1">Age</th>
+                <th class="content1">Product ID</th>
+                <th class="content1">Name</th>
+                <th class="content1">Product Code</th>
+                <th class="content1">Stock</th>
+                <th class="content1">Price</th>
+                <th class="content1">Date Stock In</th>
             </tr>
         </thead>
 
@@ -48,7 +49,7 @@
                     die("<script>alert('Connection failed')</script>");
                 }
 
-                $sql = "SELECT * FROM user_employee";
+                $sql = "SELECT * FROM product";
                 $result = mysqli_query($conn, $sql);
 
                 if(!$result){
@@ -57,11 +58,12 @@
 
                 while($row = $result->fetch_assoc()){
                     echo"<tr>
-                            <td>". $row["id"] . "</td>
-                            <td>". $row["email"] . "</td>
-                            <td>". $row["firstname"] . "</td>
-                            <td>". $row["lastname"] . "</td>
-                            <td>". $row["age"] . "</td>
+                            <td>". $row["product_id"] . "</td>
+                            <td>". $row["name"] . "</td>
+                            <td>". $row["product_code"] . "</td>
+                            <td>". $row["stock"] . "</td>
+                            <td>". $row["price"] . "</td>
+                            <td>". $row["date_stock_in"] . "</td>
                         </tr>";
                 }
 
@@ -73,13 +75,13 @@
     </table>     
     </div>
     <div class="addbtn">
-            <form action="./employee.php">
+            <form action="./addproduct.php">
                 <button class="btn btn-primary btn-lg">Add</button>
             </form>
     </div>
     <div class="idnumdelete">
                 <form action="" method="POST">
-                    <input type="text" name="idnum" placeholder="Employee ID"/>
+                    <input type="text" name="idnum" placeholder="Supplier ID"/>
                     <a class="deldat" href=""><input type="submit" name="deletenum" value="Delete Data"/></a>
                 </form>
     </div>
@@ -104,7 +106,7 @@
     if(isset($_POST['deletenum'])){
         $id = $_POST['idnum'];
 
-        $query = "DELETE FROM `user_employee` WHERE id='$id' ";
+        $query = "DELETE FROM `product` WHERE product_id='$id' ";
         $query_run = mysqli_query($conn, $query);
 
         if($query_run){

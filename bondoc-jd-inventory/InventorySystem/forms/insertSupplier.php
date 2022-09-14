@@ -6,7 +6,7 @@ $lname = $_POST['phone_number'];
 if (!empty($email) || !empty($fname) || !empty($lname)){
     $host = "localhost";
     $dbUsername = "root";
-    $dbPassword = "123";
+    $dbPassword = "";
     $dbname = "user_db";
 
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);

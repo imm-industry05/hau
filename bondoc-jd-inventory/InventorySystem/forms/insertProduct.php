@@ -1,10 +1,12 @@
 <?php
-$email = $_POST['email'];
-$fname = $_POST['fname'];
-$lname = $_POST['lname'];
-$age = $_POST['age'];
+$email = $_POST['product_id'];
+$fname = $_POST['product_code'];
+$lname = $_POST['name'];
+$stock = $_POST['stock'];
+$price = $_POST['price'];
+$date = $_POST['date_stock_in'];
 
-if (!empty($email) || !empty($fname) || !empty($lname) || !empty(age)){
+if (!empty($email) || !empty($fname) || !empty($lname) || !empty($stock) || !empty($price) || !empty($date)){
     $host = "localhost";
     $dbUsername = "root";
     $dbPassword = "";
@@ -15,8 +17,8 @@ if (!empty($email) || !empty($fname) || !empty($lname) || !empty(age)){
     if (mysqli_connect_error()){
         die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
     }else{
-        $SELECT = "SELECT email From user_employee Where email = ? Limit 1";
-        $INSERT = "INSERT Into user_employee (email, firstname, lastname, age) values(?, ?, ?, ?)";
+        $SELECT = "SELECT product_id From product Where product_id = ? Limit 1";
+        $INSERT = "INSERT Into product (product_id, product_code, name, stock, price, date_stock_in) values(?, ?, ?, ?, ?, ?)";
 
 
         $stmt = $conn->prepare($SELECT);
@@ -30,7 +32,7 @@ if (!empty($email) || !empty($fname) || !empty($lname) || !empty(age)){
             $stmt->close();
 
             $stmt = $conn->prepare($INSERT);
-            $stmt->bind_param("sssi", $email, $fname, $lname, $age);
+            $stmt->bind_param("iisiii", $email, $fname, $lname, $stock, $price, $date);
             $stmt->execute();
             echo "<script>alert('Success');
             window.location.href='./adminPage.php';</script>";
