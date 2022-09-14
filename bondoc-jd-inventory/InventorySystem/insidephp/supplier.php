@@ -28,10 +28,9 @@
         <thead>
             <tr>
                 <th class="content1">ID</th>
-                <th class="content1">Email</th>
-                <th class="content1">Firstname</th>
-                <th class="content1">Lastname</th>
-                <th class="content1">Age</th>
+                <th class="content1">Company Name</th>
+                <th class="content1">Address</th>
+                <th class="content1">Phone Number</th>
             </tr>
         </thead>
 
@@ -48,7 +47,7 @@
                     die("<script>alert('Connection failed')</script>");
                 }
 
-                $sql = "SELECT * FROM user_employee";
+                $sql = "SELECT * FROM user_supplier";
                 $result = mysqli_query($conn, $sql);
 
                 if(!$result){
@@ -58,10 +57,9 @@
                 while($row = $result->fetch_assoc()){
                     echo"<tr>
                             <td>". $row["id"] . "</td>
-                            <td>". $row["email"] . "</td>
-                            <td>". $row["firstname"] . "</td>
-                            <td>". $row["lastname"] . "</td>
-                            <td>". $row["age"] . "</td>
+                            <td>". $row["company_name"] . "</td>
+                            <td>". $row["company_address"] . "</td>
+                            <td>". $row["phone_number"] . "</td>
                         </tr>";
                 }
 
@@ -73,13 +71,13 @@
     </table>     
     </div>
     <div class="addbtn">
-            <form action="http://localhost/Code/employee.php">
+            <form action="http://localhost/Code/addsupplier.php">
                 <button class="btn btn-primary btn-lg">Add</button>
             </form>
     </div>
     <div class="idnumdelete">
                 <form action="" method="POST">
-                    <input type="text" name="idnum" placeholder="Employee ID"/>
+                    <input type="text" name="idnum" placeholder="Supplier ID"/>
                     <a class="deldat" href=""><input type="submit" name="deletenum" value="Delete Data"/></a>
                 </form>
     </div>
@@ -104,7 +102,7 @@
     if(isset($_POST['deletenum'])){
         $id = $_POST['idnum'];
 
-        $query = "DELETE FROM `user_employee` WHERE id='$id' ";
+        $query = "DELETE FROM `user_supplier` WHERE id='$id' ";
         $query_run = mysqli_query($conn, $query);
 
         if($query_run){

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="http://localhost/Code/css/employee2.css">
-    <title>Employee</title>
+    <title>Supplier</title>
 </head>
 <body>
 <ul>
@@ -22,19 +22,16 @@
     <div class="empContainer">
         <div class="inputEmployee">
          <div class="emp">
-                <form action="http://localhost/Code/forms/insertEmployee.php" method="POST">
+                <form action="http://localhost/Code/forms/insertSupplier.php" method="POST">
                     <div class="inputEmp">
-                        <input type="email" placeholder="Email" name="email" value="" required>
+                        <input type="text" placeholder="Company name" name="company_name" value="" required>
                     </div>
                     <div class="inputEmp">
-                        <input type="text" placeholder="First name" name="fname" value="" required>
+                        <input type="text" placeholder="Company Address" name="company_address" value="" required>
                  </div>
                     <div class="inputEmp">
-                        <input type="text" placeholder="Last name" name="lname" value="" required>
+                        <input type="text" placeholder="Phone Number" name="phone_number" value="" required>
                  </div>
-                 <div class="inputEmp">
-                     <input type="number" placeholder="Age" name="age" value="" required>
-                    </div>
 
                  <div class="buttonsub">
                  <input type="submit" name="submit" value="Submit" class="form-btn">

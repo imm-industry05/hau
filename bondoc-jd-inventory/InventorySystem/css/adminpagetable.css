@@ -1,3 +1,10 @@
+@font-face{
+    font-family: Rivera;
+    src: url(http://localhost/Code/fonts/Nunito-VariableFont_wght.ttf);
+}
+
+
+
 div.tableContent{
     margin-top: 20px;
     margin-left: 485px;
@@ -5,6 +12,7 @@ div.tableContent{
     border-right: 5px solid rgb(252, 174, 85);
     border-left: 5px solid rgb(252, 174, 85);
     border-radius: 10px;
+    float: left;
    
 }
 
@@ -24,7 +32,4 @@ h1{
 
 }
 
-div.addbtn form{
-    text-align: center;
-    
-}
+

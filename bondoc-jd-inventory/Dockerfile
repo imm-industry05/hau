@@ -1,5 +1,3 @@
-FROM nginx:latest
+FROM httpd:2.4.54
 
-COPY ./nginx.conf /etc/nginx/nginx.conf
-
-COPY . /usr/share/nginx/html/
+COPY ./InventorySystem/ /usr/local/apache2/htdocs/
