@@ -3,7 +3,7 @@
 class Dashboard extends CI_Model
 {
 
-    
+
     function select_all_products()
     {
         return $this->db->query("SELECT * FROM products ORDER BY created_at DESC")->result_array();

@@ -95,7 +95,8 @@ class Welcome extends CI_Controller {
             else 
             {
                 $this->session->set_flashdata('input_errors', $result);
-                redirect("users/signin");
+                redirect("welcome/index");
+                // echo "failed";
             }
         }
     }
