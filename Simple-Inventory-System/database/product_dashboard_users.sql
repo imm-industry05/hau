@@ -31,7 +31,7 @@ CREATE TABLE `users` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Andrei','Valencia','valenciaandreijoshua@gmail.com','072127c5884b4adc374daa91707e5f94','2022-08-08 00:38:46','2022-08-08 00:38:46'),(2,'Lebron','James','lebron@gmail.com','072127c5884b4adc374daa91707e5f94','2022-08-08 00:43:05','2022-08-08 00:43:05');
+INSERT INTO `users` VALUES (6,'Andrei','Valencia','valenciaandreijoshua@gmail.com','072127c5884b4adc374daa91707e5f94','2022-09-14 21:21:53','2022-09-14 21:21:53'),(7,'Lebron','James','lebron@gmail.com','072127c5884b4adc374daa91707e5f94','2022-09-14 21:25:30','2022-09-14 21:25:30');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-08-08  1:19:13
+-- Dump completed on 2022-09-14 22:01:47

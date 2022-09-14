@@ -34,7 +34,7 @@ CREATE TABLE `replies` (
   KEY `fk_replies_users1_idx` (`user_id`),
   CONSTRAINT `fk_replies_reviews1` FOREIGN KEY (`review_id`) REFERENCES `reviews` (`id`),
   CONSTRAINT `fk_replies_users1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `replies` (
 
 LOCK TABLES `replies` WRITE;
 /*!40000 ALTER TABLE `replies` DISABLE KEYS */;
-INSERT INTO `replies` VALUES (2,1,1,'this is a reply','2022-08-08 00:42:40','2022-08-08 00:42:40'),(3,2,1,'Yup i agree','2022-08-08 00:43:27','2022-08-08 00:43:27');
+INSERT INTO `replies` VALUES (1,7,9,'yup','2022-09-14 21:25:41','2022-09-14 21:25:41'),(2,6,13,'definitely for gaming!','2022-09-14 21:54:31','2022-09-14 21:54:31');
 /*!40000 ALTER TABLE `replies` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-08-08  1:19:13
+-- Dump completed on 2022-09-14 22:01:47
