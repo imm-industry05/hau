@@ -1,0 +1,52 @@
+.main-container{
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #ddd;
+}
+
+header{
+    background-color: #338cfb;
+    color: #fff;
+}
+
+header *{
+    display: inline-block;
+    padding: 0 20px;
+}
+.dashboard a{
+    margin: 0 50px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+header a{
+    margin-left: 500px;
+}
+
+
+form *{
+    display: block;
+}
+
+.register-container, .login-container{
+    background-color: #ddd;
+    padding:10px 30px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 400px;
+}
+tr:nth-child(3n){
+    background-color: lightgray;
+}
+
+.info-container{
+    padding: 20px;
+}
+
+.subheader{
+    padding: 20px;
+}
+
