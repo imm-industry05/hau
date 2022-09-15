@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  apache-services:
+    container_name: Inventory-System
+    image: httpd:latest
+    cpus: 1.5
+    mem_limit: 2048m
+    ports:
+      -"8080:80"
+    volumes:
+    - InventorySystem/*:/usr/local/apache2/htdocs/ 

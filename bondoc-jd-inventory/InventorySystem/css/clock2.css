@@ -10,7 +10,7 @@ div.mainClock{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(http://localhost/InventorySystem/images/clock.png);
+    background: url(./clock.png);
     background-size: cover;
     border: 4px solid rgb(252, 174, 85);
     border-radius: 50%;
