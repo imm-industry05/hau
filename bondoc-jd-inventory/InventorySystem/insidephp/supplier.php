@@ -7,7 +7,7 @@
     <title>Employee table</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./tableemployee.css">
+    <link rel="stylesheet" href="./css/tableemployee.css">
 </head>
 <body>
     <div class="topnav">
@@ -15,7 +15,7 @@
             <li><a class="active" href="./adminPage.php">Dashboard<i class="fa fa-home"></i></a></li>
             <li><a href="#news">input</a></li>
             <li><a href="#contact">input</a></li>
-            <li style="float:right"><a href="./loginForm.php">Log out<i class="fa fa-arrow-right"></i></a></li>
+            <li style="float:right"><a href="./forms/loginForm.php">Log out<i class="fa fa-arrow-right"></i></a></li>
         </ul>     
     <br/><br/>
     </div>
