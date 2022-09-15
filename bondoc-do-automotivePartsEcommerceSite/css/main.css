@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Raleway:wght@300;400;500&family=Ubuntu:wght@500&display=swap');
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+ 
+}
+li, a, button {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(56, 56, 56);
+  text-decoration: none;
+  list-style-type: none;
+  
+}
+#companyname{
+  font-family: "Raleway", sans-serif;
+  font-size: large;
+  margin-right: auto;
+  color:  rgb(75, 75, 75);
+}
+header{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 2%;
+  box-shadow: 0px 1px 3px rgba(120, 120, 120, 0.8);
+}
+.navlinks{
+  list-style: none;
+}
+.navlinks li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+.navlinks li a{
+  transition: all 0.3s ease 0s;
+}
+.navlinks li a:hover{
+  color: rgb(50, 146, 235);
+}
+#signup_button{
+    padding: 9px 25px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgba(50, 146, 235,0.6) ;
+    color: rgb(50, 146, 235);
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  
+  #signup_button:hover{
+    padding: 9px 25px;
+    background-color: rgb(50, 146, 235);
+    border-radius: 5px;
+    border-color: rgba(50, 146, 235, 0.8 ) ;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
