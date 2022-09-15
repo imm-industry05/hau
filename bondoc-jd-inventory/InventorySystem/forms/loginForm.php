@@ -15,10 +15,10 @@ if(isset($_POST['submit'])){
         
         if($row['user_type'] == 'user'){
             $_SESSION['user_name'] = $row['username'];
-            header("location: ./userPage.php");
+            header("location: http://localhost/InventorySystem/userStatic.php");
         }elseif($row['user_type'] == 'Admin'){
             $_SESSION['admin_name'] = $row['username'];
-            header("location: ./adminPage.php");
+            header("location: http://localhost/InventorySystem/adminPage.php");
         }else{
             echo "<script>alert('Woops! email and password is wrong.')</script>";
         }
@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/loginpage2.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost/InventorySystem/css/loginpage.css">
     <title>Login-Invntory System</title>
 </head>
 <body>
@@ -64,7 +64,7 @@ if(isset($_POST['submit'])){
 
                     <div class="accexist">
                         <p>
-                        Don't have an account? <a href="forms/registerForm.php">Register now</a>
+                        Don't have an account? <a href="http://localhost/InventorySystem/forms/registerForm.php">Register now</a>
                         </p>
                     </div>
 

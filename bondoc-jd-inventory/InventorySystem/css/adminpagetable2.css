@@ -1,0 +1,48 @@
+@font-face{
+    font-family: Rivera;
+    src: url(/fonts/Nunito-VariableFont_wght.ttf);
+}
+
+
+
+
+
+
+div.tableContent{
+    margin-top: 10px;
+    margin-left: 130px;
+    margin-right: 145px;
+    font-size: 20px;
+    align-self: center;
+   
+}
+
+div.tableContent .table .content1{
+    background-color: #4d322783;
+    color: rgb(252, 174, 85);
+    
+}
+
+h1{
+    font-family: Rivera;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 190px;
+    margin-right: 50px;
+    margin-left: 50px;
+    background-color: rgba(255, 255, 255, 0.644);
+    border-radius: 20px;
+
+    
+}
+.table .content2{
+    background-color: rgba(255, 255, 255, 0.644);
+
+}
+
+.table1{
+    display: flex;
+}
+
+

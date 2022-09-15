@@ -33,7 +33,7 @@ if (!empty($email) || !empty($fname) || !empty($lname) || !empty(age)){
             $stmt->bind_param("sssi", $email, $fname, $lname, $age);
             $stmt->execute();
             echo "<script>alert('Success');
-            window.location.href='./adminPage.php';</script>";
+            window.location.href='http://localhost/InventorySystem/adminPage.php';</script>";
 
 
         }else{

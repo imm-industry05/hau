@@ -1,0 +1,46 @@
+@font-face{
+    font-family: Rivera;
+    src: url(/fonts/Nunito-VariableFont_wght.ttf);
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: url(/images/bg-homepage.png);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Rivera;
+}
+
+
+table, th, td {
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.473);
+    font-size: 50px;
+  }
+
+  div.content{
+    margin: 400px;
+    margin-top: 150px;
+  }
+
+  a{
+    text-decoration: none;
+    font-family: Rivera;
+    font-size: 50px;
+    color: black;
+    border: 2px solid rgb(252, 174, 85);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.473);
+  }
+  
+  a:hover{
+    background-color: rgb(252, 174, 85);
+  }
+
