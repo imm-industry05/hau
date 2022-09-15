@@ -13,6 +13,9 @@
     color: #fff;
     background: #fa5353;
 }
+section{
+    padding: 4rem 0 3rem;
+}
 
 img{
     width: 100%;
@@ -333,4 +336,84 @@ header{
 .btn:hover{
     background: #322f40;
     transition: 0.3s all linear;
+}
+
+/* heading */
+.heading{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin-bottom: 2rem;
+}
+.heading .bx{
+    font-size: 21px;
+    color: #fff;
+    background: #fa5353;
+    padding: 10px;
+    border-radius: 5rem;
+}
+.heading h2{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.box{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    border-radius: 0.5rem;
+}
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+.box .box-text {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    background: hsl(227, 14%, 20%, 0.8);
+    backdrop-filter: blur(4px);
+    border-radius: 0.5rem;
+}
+.box .box-text h2{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.box .box-text h3{
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+}
+.rating-download{
+    display: flex;
+    justify-content: space-between;
+}
+.rating{
+    display: flex;
+    align-items: 4px;
+    background: hsl(0, 0%, 100%, 0.4);
+    padding: 4px 10px;
+    border-radius: 0.5rem;
+}
+.rating .bx{
+    color: #faf102;
+    font-size: 0.9rem;
+}
+.rating span{
+    color: #faf102;
+    font-size: 0.9rem;
+}
+.box-btn .bx{
+    padding: 8px;
+    background: #fff;
+    border-radius: 5rem;
+    color: #eb2222;
+    font-weight: 400;
+    font-size: 20px;
+}
+.box-btn .bx:hover{
+    background: #1b182b;
 }
