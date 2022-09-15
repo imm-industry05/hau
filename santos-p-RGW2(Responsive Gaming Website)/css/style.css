@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+}
+::selection{
+    color: #fff;
+    background: #fa5353;
+}
+
+img{
+    width: 100%;
+}
+body{
+    color: #fff;
+    background: #1b182b;
+}
+.container{
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+
+}
+/* header */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #1b182b;
+    z-index: 100;
+}
+/* nav */
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0;
+}
+
+/* logo */
+.logo{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0 auto 0 0;
+} 
+.logo span{
+    color:#fa5353;
+}
+/* nav icons */
+.nav-icons{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+.nav-icons .bx{
+    font-size: 20px;
+    height: 44px;
+    width: 44px;
+    display: grid;
+    place-items: center;
+    color:#fff;
+    background: #322f40;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#bell-icon{
+    position: relative;
+}
+#bell-icon span{
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #fa5353;
+    position: absolute;
+    top: 10px;
+    right: 14px;
+}
+
+/* menu icon */
+
+.menu-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    background: #322f40;
+    cursor: pointer;
+    z-index:200;
+    transition: 0.3s;
+}
+.menu-icon div{
+    display: block;
+    background: #fff;
+    height: 2px;
+    width: 25px;
+    transition: 0.3s;
+}
+.move .line1{
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+.move .line2{
+    opacity: 0;
+}
+.move .line3{
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+/* Menu */
+.menu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0 ,14, 0.9);
+    z-index: 106;
+    display: flex;
+    align-items: center;
+    justify-content:  space-between;
+    transition: 0.5s;
+    clip-path: circle(0% at 100% 0%);
+}
+.menu{
+    clip-path: circle(144% at 100% 0%);
+}
+.menu .img{
+    width: 700px;
+}
+.navbar{
+    display: grid;
+    row-gap: 1rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+.navbar a{
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 500;
+    transform: 0.2s;
+}
+.navbar a:hover{
+    border-bottom:  4px solid #fa5353;
+    font-size: 1.8rem;
+}
+/* nav icons */
+.nav-icons{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+.nav-icons .bx{
+    font-size: 20px;
+    height: 44px;
+    width: 44px;
+    display: grid;
+    place-items: center;
+    color:#fff;
+    background: #322f40;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#bell-icon{
+    position: relative;
+}
+#bell-icon span{
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #fa5353;
+    position: absolute;
+    top: 10px;
+    right: 14px;
+}
+
+/* menu icon */
+
+.menu-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    background: #322f40;
+    cursor: pointer;
+    z-index:200;
+    transition: 0.3s;
+}
+.menu-icon div{
+    display: block;
+    background: #fff;
+    height: 2px;
+    width: 25px;
+    transition: 0.3s;
+}
+.move .line1{
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+.move .line2{
+    opacity: 0;
+}
+.move .line3{
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+/* Menu */
+.menu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0 ,14, 0.9);
+    z-index: 106;
+    display: flex;
+    align-items: center;
+    justify-content:  space-between;
+    transition: 0.5s;
+    clip-path: circle(0% at 100% 0%);
+}
+.menu.active{
+    clip-path: circle(144% at 100% 0%);
+}
+.menu .img{
+    width: 700px;
+}
+.navbar{
+    display: grid;
+    row-gap: 1rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+.navbar a {
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.2s;
+}
+.navbar a:hover{
+    border-bottom:  4px solid #fa5353; 
+    font-size: 1.8rem;  
+}
