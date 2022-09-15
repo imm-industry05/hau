@@ -7,7 +7,7 @@ $age = $_POST['age'];
 if (!empty($email) || !empty($fname) || !empty($lname) || !empty(age)){
     $host = "localhost";
     $dbUsername = "root";
-    $dbPassword = "";
+    $dbPassword = "123";
     $dbname = "user_db";
 
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);

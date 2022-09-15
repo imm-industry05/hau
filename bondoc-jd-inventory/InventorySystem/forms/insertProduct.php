@@ -9,7 +9,7 @@ $date = $_POST['date_stock_in'];
 if (!empty($email) || !empty($fname) || !empty($lname) || !empty($stock) || !empty($price) || !empty($date)){
     $host = "localhost";
     $dbUsername = "root";
-    $dbPassword = "";
+    $dbPassword = "123";
     $dbname = "user_db";
 
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
