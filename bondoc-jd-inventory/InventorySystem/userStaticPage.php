@@ -77,7 +77,7 @@
     <div class="about">
         <h2>Only at Physical Stores</h2>
         <p class="one">Product stocks may differ in other branches</p>
-        <p class="two"><a href=http://localhost/InventorySystem/Contact.html">Contact Us</a></p>
+        <p class="two"><a href="http://localhost/InventorySystem/Contact.html">Contact Us</a></p>
     </div>
        
 </body>
