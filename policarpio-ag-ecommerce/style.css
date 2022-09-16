@@ -40,7 +40,7 @@ section{
 }
 
 .btn:hover{
-    background:var(--red);
+    background:var(--black);
     color:#fff;
 }
 
@@ -181,7 +181,7 @@ header .icons a:hover{
 .home #prev:hover,
 .home #next:hover{
     color:#fff;
-    background:var(--red);
+    background:var(--black);
 }
 
 .home #prev{
