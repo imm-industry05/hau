@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,15 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="http://localhost/InventorySystem/css/homePage2.css">
-    <link rel="stylesheet" type="text/css" href="http://localhost/InventorySystem/css/clock2.css">
-    <link rel="stylesheet" type="text/css" href="http://localhost/InventorySystem/css/adminpagetable2.css">
+    <link rel="stylesheet" type="text/css" href="/css/clock2.css">
+    <link rel="stylesheet" type="text/css" href="/css/homePage2.css">
+    <link rel="stylesheet" type="text/css" href="/css/adminpagetable2.css">
     <title>Home-Admin</title>
 </head>
 <body> 
     <ul>
-        <li><a class="active" href="http://localhost/InventorySystem/adminPage.php">Dashboard <i class="fa-solid fa-bars"></i></a></li>
-        <li style="float:right"><a href="http://localhost/InventorySystem/forms/loginForm.php">Log out <i class="fa fa-arrow-right"></i></a></li>
+        <li><a class="active" href="/adminPage.php">Dashboard <i class="fa-solid fa-bars"></i></a></li>
+        <li style="float:right"><a href="/forms/loginPage.php">Log out <i class="fa fa-arrow-right"></i></a></li>
     </ul>     
     <br/><br/>
 
@@ -23,22 +24,22 @@
     <div class="cards">
       <div class="card">
         <div class="card-content">
-          <div class="card-name"><a href="http://localhost/InventorySystem/insidephp/customer.php">Customer <i class="fa-solid fa-circle-user"></i></a></div>
+          <div class="card-name"><a href="/insidephp/customer.php">Customer <i class="fa-solid fa-circle-user"></i></a></div>
         </div>
       </div>
       <div class="card">
         <div class="card-content">
-          <div class="card-name"><a href="http://localhost/InventorySystem/insidephp/tableemployee.php">Employee <i class="fa-solid fa-user-tie"></i></a></div>
+          <div class="card-name"><a href="/insidephp/tableemployee.php">Employee <i class="fa-solid fa-user-tie"></i></a></div>
         </div>
       </div>
       <div class="card">
         <div class="card-content">
-          <div class="card-name"><a href="http://localhost/InventorySystem/insidephp/product.php">Products <i class="fa-solid fa-coins"></i></a></div>
+          <div class="card-name"><a href="/insidephp/product.php">Products <i class="fa-solid fa-coins"></i></a></div>
         </div>
       </div>
       <div class="card">
         <div class="card-content">
-          <div class="card-name"><a href="http://localhost/InventorySystem/insidephp/supplier.php">Supplier <i class="fa-solid fa-handshake"></i></a></div>
+          <div class="card-name"><a href="/insidephp/supplier.php">Supplier <i class="fa-solid fa-handshake"></i></a></div>
         </div>
       </div>
     
@@ -115,7 +116,7 @@
 
                         <tbody class="content2">
                             <?php
-                                $server = "localhost";
+                                $server = "db";
                                 $user = "root";
                                 $pass = "123";
                                 $database = "user_db";
@@ -174,7 +175,7 @@
 
                         <tbody class="content2">
                             <?php
-                                $server = "localhost";
+                                $server = "db";
                                 $user = "root";
                                 $pass = "123";
                                 $database = "user_db";
@@ -220,3 +221,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></>
 </body>
 </html>
+

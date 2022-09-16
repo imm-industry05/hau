@@ -5,12 +5,12 @@ div.mainClock{
 
 
 .clock{
+    background: url(/images/clock.png);
     width: 350px;
     height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(http://localhost/InventorySystem/images/clock.png);
     background-color: rgba(255, 255, 255, 0.514);
     background-size: cover;
     border: 4px solid rgb(252, 174, 85);

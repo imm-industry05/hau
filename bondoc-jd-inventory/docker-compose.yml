@@ -1,4 +1,4 @@
-version: '3.9'
+version: '3.8'
 
 services:
   apache-services:
@@ -9,3 +9,13 @@ services:
     volumes:
     - ./InventorySystem:/usr/local/apache2/htdocs/
 
+  db:
+    image: mariadb:10.9.2
+    container_name: db
+    restart: on-failure
+    environment:
+       MYSQL_ROOT_PASSWORD: 123
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./mysql:/var/lib/mysql

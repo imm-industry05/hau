@@ -7,7 +7,7 @@ $price = $_POST['price'];
 $date = $_POST['date_stock_in'];
 
 if (!empty($email) || !empty($fname) || !empty($lname) || !empty($stock) || !empty($price) || !empty($date)){
-    $host = "localhost";
+    $host = "db";
     $dbUsername = "root";
     $dbPassword = "123";
     $dbname = "user_db";
@@ -35,9 +35,7 @@ if (!empty($email) || !empty($fname) || !empty($lname) || !empty($stock) || !emp
             $stmt->bind_param("iisiii", $email, $fname, $lname, $stock, $price, $date);
             $stmt->execute();
             echo "<script>alert('Success');
-            window.location.href='http://localhost/InventorySystem/adminPage.php';</script>";
-
-
+            window.location.href='/adminPage.php';</script>";
         }else{
             echo "Some already have this";
         }
