@@ -15,7 +15,7 @@
         <nav>
           <h1 id="logo">Real Time Product Supply</h1>
           <ul class="nav-links">
-            <li><a href="http://localhost/InventorySystem/Contact.html">Contact</a> </li>
+            <li>Contact</li>
             <li><a href="http://localhost/InventorySystem/forms/loginForm.php">Log out <i class="fa fa-arrow-right"></i></a></li>
           </ul>
         </nav>
