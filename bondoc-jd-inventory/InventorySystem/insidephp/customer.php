@@ -8,17 +8,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/tableemployee2.css">
+    <link rel="stylesheet" href="/InventorySystem/css/tableemployee2.css">
 </head>
 <body>
     <div class="topnav">
         <ul>
-            <li><a href="/adminPage.php">Dashboard <i class="fa-solid fa-bars"></i></a></li>
-            <li><a class="active" href="/insidephp/customer.php">Customer <i class="fa-solid fa-circle-user"></i></a></li>
-            <li><a href="/insidephp/tableemployee.php">Employee <i class="fa-solid fa-user-tie"></i></a></li>
-            <li><a href="/insidephp/product.php">Products <i class="fa-solid fa-coins"></i></a></li>
-            <li><a href="/insidephp/supplier.php">Supplier <i class="fa-solid fa-handshake"></i></a></li>
-            <li style="float:right"><a href="/forms/loginPage.php">Log out <i class="fa fa-arrow-right"></i></a></li>
+            <li><a href="/InventorySystem/adminPage.php">Dashboard <i class="fa-solid fa-bars"></i></a></li>
+            <li><a class="active" href="/InventorySystem/insidephp/customer.php">Customer <i class="fa-solid fa-circle-user"></i></a></li>
+            <li><a href="/InventorySystem/insidephp/tableemployee.php">Employee <i class="fa-solid fa-user-tie"></i></a></li>
+            <li><a href="/InventorySystem/insidephp/product.php">Products <i class="fa-solid fa-coins"></i></a></li>
+            <li><a href="/InventorySystem/insidephp/supplier.php">Supplier <i class="fa-solid fa-handshake"></i></a></li>
+            <li style="float:right"><a href="/InventorySystem/forms/loginPage.php">Log out <i class="fa fa-arrow-right"></i></a></li>
         </ul>     
     <br/><br/>
     </div>
@@ -74,14 +74,14 @@
     </table>     
     </div>
     <div class="addbtn">
-            <form action="/addcustomer.php">
+            <form action="/InventorySystem/addcustomer.php">
                 <button class="btn btn-primary btn-lg">Add</button>
             </form>
     </div>
     <div class="idnumdelete">
                 <form action="" method="POST">
                     <input type="text" name="idnum" placeholder="Customer ID"/>
-                    <a class="deldat" href="/adminPage.php"><input type="submit" name="deletenum" value="Delete Data"/></a>
+                    <a class="deldat" href="/InventorySystem/adminPage.php"><input type="submit" name="deletenum" value="Delete Data"/></a>
                 </form>
     </div>
             
@@ -109,7 +109,7 @@
         $query_run = mysqli_query($conn, $query);
 
         if($query_run){
-            header("location: /adminPage.php");
+            header("location: /InventorySystem/adminPage.php");
         }else{
             echo '<script>alert("Not Deleted")</script>';
         }

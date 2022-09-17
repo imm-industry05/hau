@@ -1,21 +1,27 @@
 version: '3.8'
 
 services:
-  apache-services:
-    container_name: Inventory-System
-    image: httpd:latest
-    ports:
-      - '80:80'
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sandboxapp
+    container_name: app
+    restart: unless-stopped
     volumes:
-    - ./InventorySystem:/usr/local/apache2/htdocs/
-
-  db:
-    image: mariadb:10.9.2
-    container_name: db
-    restart: on-failure
-    environment:
-       MYSQL_ROOT_PASSWORD: 123
+      - ./:/var/www
+  
+  webserver:
+    build:
+      context: .
+      dockerfile: Dockerfile_Nginx
+    image: nginx
+    container_name: webserver
+    restart: unless-stopped
     ports:
-      - '3306:3306'
+      - "8080:80"
     volumes:
-      - ./mysql:/var/lib/mysql
+      - ./:/var/www
+      - ./config/nginx/:/etc/nginx/conf.d/
+    depends_on:
+      - app
