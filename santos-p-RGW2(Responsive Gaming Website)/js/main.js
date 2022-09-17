@@ -43,3 +43,8 @@ var swiper = new Swiper(".trending-content", {
       },
     },
   });
+
+
+  // custom scroll bar
+
+  
