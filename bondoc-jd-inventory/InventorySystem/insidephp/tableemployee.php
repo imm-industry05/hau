@@ -91,9 +91,9 @@
 </html>
 
 <?php
-    $server = "mysqldb";
+    $server = "db";
     $user = "root";
-    $pass = "root";
+    $pass = "123";
     $database = "user_db";
     
     $conn = mysqli_connect($server, $user, $pass, $database);

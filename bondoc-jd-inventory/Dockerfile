@@ -6,7 +6,7 @@ RUN apk update && apk add \
     build-base \
     vim
 
-
+RUN docker-php-ext-install mysqli
 RUN docker-php-ext-install pdo_mysql
 
 RUN addgroup -g 1000 -S www && \

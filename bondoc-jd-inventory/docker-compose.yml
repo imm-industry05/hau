@@ -25,3 +25,14 @@ services:
       - ./config/nginx/:/etc/nginx/conf.d/
     depends_on:
       - app
+
+  db:
+    image: mariadb:10.9.2
+    container_name: db
+    restart: unless-stopped
+    environment:
+       MYSQL_ROOT_PASSWORD: 123
+    ports:
+      - "3306:3306"
+    volumes: 
+      - ./mydatabase:/var/lib/mysql

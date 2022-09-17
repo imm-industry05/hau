@@ -54,7 +54,7 @@ if(isset($_POST['submit'])){
 
                     <div class="accexist">
                         <p>
-                        Don't have an account? <a href="/forms/registerForm.php">Register now</a>
+                        Don't have an account? <a href="/InventorySystem/forms/registerForm.php">Register now</a>
                         </p>
                     </div>
                 </form>
