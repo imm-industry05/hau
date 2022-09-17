@@ -1,6 +1,6 @@
 import React from 'react';
 import BannerImage from './components/BannerImage';
-import PhotoEntry from './components/PhotoEntry';
+import MemeAlbum from './components/MemeAlbum';
 import './App.css';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
           <h1>Welcome to Mymes</h1>
           <h3>by Angel Gregory Lansangan</h3>
         </div>
-        <PhotoEntry src="horse.jpg" location="Location" caption="Caption"/>
+        <MemeAlbum/>
       </header>
     </div>
   );
