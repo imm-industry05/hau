@@ -1,0 +1,66 @@
+body{
+    background: url('C:/Users/steph/Desktop/git/HAU/hau/canlas-ms-inventorymanagementsystem/images/login-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial';
+}
+
+div.loginHeader h1{
+    font-size: 40px;
+    -webkit-text-fill-color: #eeeeee;
+    -webkit-text-stroke: 0.15px;
+    color: white;
+    position: relative;
+    top: 635px;
+    left: 15px;
+    margin: 10px;
+}
+
+div.loginHeader h2{
+    color: #eeeeee;
+    font-size: 40px;
+    margin-top: 75px;
+    margin-left: 69%;
+    text-transform: uppercase;
+}
+
+div.loginBody form{
+    margin-left: 55%;
+    width: 450px;
+    background: rgba(0,0,0,0.5);
+    padding: 50px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+div.loginInputContainer{
+    margin-top: 20px;
+}
+
+div.loginInputContainer label{
+    display: block;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+div.loginInputContainer input{
+    height: 30px;
+    width: 100%;
+    border-color: rgba(0,0,0,0.5);
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    font-style: italic;
+}
+
+div.loginButtonContainer{
+    margin-top: 40px;
+    text-align: center;
+}
+
+div.loginButtonContainer button{
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+}
