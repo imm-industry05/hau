@@ -52,8 +52,8 @@ div.mainClock{
     height: 230px;
 }
 .hr, .mn, .sc{
-     display: flex;
-     justify-content: center;
+    display: flex;
+    justify-content: center;
     position: absolute;
     border-radius: 50%;
 }

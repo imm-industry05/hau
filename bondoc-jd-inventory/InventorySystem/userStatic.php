@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="/InventorySystem/css/userStatic.css" />
+    <link rel="stylesheet" href="/InventorySystem/css/copyright.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap" rel="stylesheet"/>
-    <title>Slide Animation</title>
+    <title>Welcome</title>
   </head>
   <body>
     <main>
@@ -15,12 +16,15 @@
         <nav>
           <h1 id="logo">Real Time Product Supply</h1>
           <ul class="nav-links">
-            <li>Contact</li>
+            <li><a href="/InventorySystem/Contact.html">Contact</a></li>
             <li><a href="/InventorySystem/forms/loginPage.php">Log out <i class="fa fa-arrow-right"></i></a></li>
           </ul>
         </nav>
         <p class="big-text2"><a href="">Our Product Supply</a></p>
-        <p class="big-text3"><a href="/InventorySystem/userStaticPage.php">Here <i class="fa-solid fa-forward"></i></a></p>
+        <p class="big-text3"><a href="/InventorySystem/userStaticPage.php">Here <i class="fa-solid fa-forward"></i></a></p> 
+        <div class="footer">
+          <p class="credits">Copyright 2022 by Jan Deniel Bondoc</p>
+        </div>
       </section>
     </main>
     <div class="intro">
@@ -37,7 +41,7 @@
       </div>
     </div>
     <div class="slider"></div>
-
+    
 
 
 
