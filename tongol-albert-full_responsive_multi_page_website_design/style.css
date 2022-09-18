@@ -375,14 +375,19 @@
 .about-us{
     width: 80%;
     margin: auto;
-    padding-top: 50px;   
+    text-align: center;
+    padding-top: 100px; 
 }
 .about-col{
     flex-basis: 48%;
+    border-radius: 10px;
+    text-align: justify;
 }
 .about-col img{
     float: left;
     width: 50%;
+    height: 50%;
+    border-radius: 20px;
 }
 .about-col h1{
     padding-top: 0;
@@ -390,7 +395,8 @@
     margin-bottom: 20px;
 }
 .about-col p{
-    padding: 0 25px;
+    margin-top: 10px;
+    margin-bottom: 15px;
     text-align: justify;
 }
 .red-btn{
@@ -400,3 +406,4 @@
 .red-btn:hover{
     color: #c52015;
 }
+/*-------------news-content---------------*/
