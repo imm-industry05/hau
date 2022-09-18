@@ -342,7 +342,7 @@
     padding: 30px 0;
 }
 .footer h4{
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     margin-top: 20px;
     font-weight: 600;
 }
@@ -354,5 +354,49 @@
 
 }
 .fa-heart-o{
+    color: #c52015;
+}
+
+/*-----------about us---------------*/
+
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(30, 4, 14, 0.7),rgba(30,4,14,0.7)), url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    margin-top: 120px;
+
+}
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;   
+}
+.about-col{
+    flex-basis: 48%;
+}
+.about-col img{
+    float: left;
+    width: 50%;
+}
+.about-col h1{
+    padding-top: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.about-col p{
+    padding: 0 25px;
+    text-align: justify;
+}
+.red-btn{
+    background: transparent;
+    color: #c52015;
+}
+.red-btn:hover{
     color: #c52015;
 }
