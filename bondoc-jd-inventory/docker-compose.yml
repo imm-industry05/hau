@@ -5,7 +5,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: sandboxapp
     container_name: app
     restart: unless-stopped
     volumes:
