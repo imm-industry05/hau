@@ -407,3 +407,24 @@
     color: #c52015;
 }
 /*-------------news-content---------------*/
+
+.news-content{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+}
+.news-left{
+    flex-basis: 65%;
+}
+.news-left img{
+    width: 100%;
+}
+.news-left h2{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.news-left p{
+    text-align: justify;
+    padding-top: 0%;
+}
