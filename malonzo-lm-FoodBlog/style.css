@@ -43,14 +43,14 @@ header{
     color: #fff;
     font-size: 2rem;
     display: block;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
     font-family: var(--Playfair);
     letter-spacing: 1px;
 }
 .navbar-nav{
     padding: 0.8rem 0 0.2rem 0;
-    text-align: center;
+    text-align: right;
 }
 .navbar-nav a{
     text-transform: uppercase;
@@ -93,32 +93,122 @@ header{
     color: rgb(208, 203, 203);
     word-spacing: 2px;
 }
-.banner form{
-    background: rgb(208, 203, 203);
-    border-radius: 2rem;
-    padding: 0.6rem 1rem;
-    display: flex;
-    justify-content: space-between;
+.food-content{
+    margin: 2rem 0;
 }
-.search-input{
+.food-img{
+    position: relative;
+    cursor: pointer;
+    margin: 1.5rem 0;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 35%;
+}
+.food-img span{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: var(--exDark);
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 0.3rem 0.6rem;
+}
+.food-img img{
+    transition:  all 0.5s ease;
+}
+.food-item:hover img{
+    transform: scale(1.2);
+}
+.food-img span:first-of-type{
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 10px;
+    background: var(--exDark);
+    color: #fff;
+    padding: 0.25rem 1rem;
+}
+.food-img span:last-of-type{
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.food-text{
+    margin: 2.2rem 0;
+    padding: 0 1rem;
+}
+.food-text span{
+    font-weight: 300;
+    display: block;
+    padding-bottom: 0.5rem;
+}
+.food-text h2{
+    font-family: var(--Playfair);
+    padding: 1rem 0;
+    font-size: 1.65rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background: rgba(142, 131, 131, 0.874);
+}
+.food-text p{
+    font-weight: 300;
+    font-size: 1.1rem;
+    opacity: 1;
+    padding-bottom: 1.2rem;
+    color: rgb(255, 255, 255);
+    background: rgba(142, 131, 131, 0.874);
+}
+.food-text a{
     font-family: var(--Roboto);
     font-size: 1.1rem;
-    background: rgb(208, 203, 203);
-    width: 100%;
-    outline: 0;
-    padding: 0.6rem 0;
-    border: none;
-}
-.search-input::placeholder{
-    text-transform: none;
-}
-.search-btn{
-    width: 40px;
-    font-size: 1.1rem;
+    text-decoration: none;
     color: var(--dark);
-    border: none;
-    background: transparent;
-    outline: 0;
-    cursor: pointer;
+    display: inline-block;
+    background: var(--dark);
+    color: #fff;
+    padding: 0.55rem 1.2rem;
+    transition: all 0.5s ease;
 }
-
+.food-text a:hover{
+    background: var(--exDark);
+}
+footer{
+    background: var(--exDark);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+}
+.social-links a{
+    border: 2px solid #fff;
+    color: #fff;
+    display: block;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 0 0.3rem;
+    transition: all 0.5s ease;
+}
+.social-links a:hover{
+    background: #fff;
+    color: var(--exDark);
+}
+.footer span{
+    margin-top: 1rem;
+    display: block;
+    font-family: var(--Playfair);
+    letter-spacing: 2px;
+}
