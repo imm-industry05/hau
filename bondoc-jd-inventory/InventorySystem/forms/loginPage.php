@@ -2,13 +2,17 @@
 include 'config.php';
 error_reporting(0);
 session_start();
+
 if(isset($_POST['submit'])){
     $email = $_POST['email'];
     $password = md5($_POST['password']);
+
     $sql = "SELECT * FROM user_form WHERE email='$email' AND password='$password'";
     $result = mysqli_query($conn, $sql);
+
     if($result -> num_rows > 0){
-        $row = mysqli_fetch_assoc($result);     
+        $row = mysqli_fetch_assoc($result);
+        
         if($row['user_type'] == 'user'){
             $_SESSION['user_name'] = $row['username'];
             header("location: /InventorySystem/userStatic.php");
@@ -17,7 +21,8 @@ if(isset($_POST['submit'])){
             header("location: /InventorySystem/adminPage.php");
         }else{
             echo "<script>alert('Woops! email and password is wrong.')</script>";
-        }        
+        }
+        
     }
 }
 ?>

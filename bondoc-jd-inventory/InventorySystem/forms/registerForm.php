@@ -1,6 +1,7 @@
 <?php
 include 'config.php';
 error_reporting(0);
+
 if(isset($_POST['submit'])){
     $username = $_POST['name'];
     $email = $_POST['email'];
@@ -16,12 +17,11 @@ if(isset($_POST['submit'])){
             $sql = "INSERT INTO user_form(name, email, password, user_type) VALUES('$username', '$email', '$password', '$user_type')";
             $result = mysqli_query($conn, $sql);
             if($result){
-                echo "<script>alert('wow! user registered')</script>";
                 $username = "";
                 $email = "";
                 $_POST['password'] = "";
                 $_POST['cpassword'] = "";
-                header("location: /InventorySystem/forms/loginPage.php");
+                header("location: /InventorySystem/alertPage/registerAlert.html");
             }else{
                 echo "<script>alert('Woops! something wrong')</script>";
             }  
