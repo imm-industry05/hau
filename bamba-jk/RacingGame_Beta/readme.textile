@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 h1. Krazy Kart
+=======
+h1. Krazy Kart
+>>>>>>> e33c5b45fde077e3d0eb4b2de979b51e0fc5a478
