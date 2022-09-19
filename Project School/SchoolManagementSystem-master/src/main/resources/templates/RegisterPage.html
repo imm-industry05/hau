@@ -26,7 +26,7 @@
             </div>
         </div>
         <div>
-            <h1>Login</h1>
+            <h1>Register</h1>
             <form name='f' th:action="@{/j_spring_security_check}" method='POST'>
                 <table>
                     <hr>
@@ -34,8 +34,9 @@
                     <input type='text' name='username' value=''>
                     <h4 for="psw"><b>Password</b></h4>
                     <input type='password' name='password' />
-                    <button onclick="" type="submit" class="loginbtn" th:href="@{/login}">Submit</button>
-                    <button onclick="" type="register" class="registerbtn" th:href="@{/register}">Register</a>
+                    <td>Remember Me?</td>
+                    <td><input type="checkbox" name="remember-me" /></td>
+                    <button onclick="myFunction()" type="submit" class="loginbtn">Submit</button>
                     </hr>
                 </table>
             </form>

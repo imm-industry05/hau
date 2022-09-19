@@ -43,6 +43,12 @@ public class MainController {
         return "loginPage";
     }
 
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
+    public String registerPage(Model model) {
+
+        return "registerPage";
+    }
+
     @RequestMapping(value = "/userInfo", method = RequestMethod.GET)
     public String userInfo(Model model, Principal principal) {
 
