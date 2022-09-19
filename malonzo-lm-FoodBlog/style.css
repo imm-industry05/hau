@@ -60,7 +60,7 @@ header{
     color: #fff;
     text-decoration: none;
     display: inline-block;
-    padding: 0.4rem 0.1rem;
+    padding: 0.4rem 1.5rem;
     letter-spacing: 3px;
     transition: opacity 0.5s ease;
 }
@@ -76,13 +76,13 @@ header{
     color: #fff;
 }
 .banner-title{
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: var(--Playfair);
     line-height: 1.2;
 }
 .banner-title span{
     font-family: var(--Playfair);
-    color: rgb(208, 203, 203);
+    color: #fff;
 }
 .banner p{
     padding: 1rem 0 2rem 0;
@@ -90,7 +90,7 @@ header{
     text-transform: none;
     font-family: var(--Roboto);
     font-weight: 300;
-    color: rgb(208, 203, 203);
+    color: #fff;
     word-spacing: 2px;
 }
 .food-content{
