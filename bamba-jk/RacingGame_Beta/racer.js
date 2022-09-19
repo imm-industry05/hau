@@ -126,7 +126,7 @@ var game = (function(){
         context.drawImage(spritesheet,  357, 9, 115, 20, 100, 20, 115, 40);
         
         drawString("How To Play:",{x: 100, y: 90});
-        drawString("Space to start, up/down for throttle/brake, left/right to steer",{x: 30, y: 100});
+        drawString("Space to start, arrow keys to drive",{x: 30, y: 100});
         drawString("Credits:",{x: 120, y: 120});
         drawString("code: Jan Karto Bamba",{x: 55, y: 130});
         drawString("font: spicypixel.net",{x: 70, y: 140});
@@ -209,9 +209,9 @@ var game = (function(){
         
         if(absoluteIndex >= roadParam.length-render.depthOfField-1){
             clearInterval(gameInterval);
-            drawString("You did it!", {x: 100, y: 20});
+            drawString("Finished!", {x: 100, y: 20});
             drawString("Press t to tweet your time.", {x: 30, y: 30});
-            $(window).keydown(function(e){ if(e.keyCode == 84) {location.href="http://twitter.com/home?status="+escape("I've just raced through #racer10k in "+currentTimeString+"!")}});
+            $(window).keydown(function(e){ if(e.keyCode == 84) {location.href="http://twitter.com/home?status="+escape("I've just raced through #krazykart in "+currentTimeString+"!")}});
         }
         
         var currentSegmentIndex    = (absoluteIndex - 2) % road.length;
