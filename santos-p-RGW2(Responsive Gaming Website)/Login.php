@@ -31,6 +31,7 @@
     
     </header>
     <section>
+        <!-- login bg -->
         <div class="imgBx">
             <img src="./images/loginbg.jpg">
         </div>
