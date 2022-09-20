@@ -8,8 +8,16 @@
 }
 body{
   background: #2a2a2a;
-  
-  /* Navbar */
+  justify-content: center;
+  align-items: center;    
+}
+
+/* Navbar */
+header {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  z-index: 12;
 }
 nav{
   margin: 0%;
@@ -27,6 +35,9 @@ nav .logo a{
   font-size: 25px;
   font-weight: 600;
   letter-spacing: -1px;
+}
+nav .logo a:hover{
+  color: #fff;
 }
 nav .nav-items{
   display: flex;
@@ -66,7 +77,7 @@ nav form .search-data{
   background: none;
 }
 nav form button{
-  padding: 0 15px;
+  padding: 0px 15px;
   color: #fff;
   font-size: 17px;
   background: black;
@@ -193,14 +204,7 @@ nav .search-icon{
   text-align: center;
   transform: translate(-50%, -50%);
 }
-.content header{
-  font-size: 30px;
-  font-weight: 700;
-}
-.content .text{
-  font-size: 30px;
-  font-weight: 700;
-}
+
 .space{
   margin: 10px 0;
 }
@@ -243,16 +247,44 @@ nav .login button:hover{
 /* Navbar ends here*/
 
 /* Slide section Start here */
-body .slider{
-  max-width: 90%;
-  margin: auto;
-}
-body .slider .anime-features{
-  background-color: #fff;
-}
-body .slider .anime-features .anime-fade{
-  margin-top: 30px;
-  border-color:chartreuse ;
-}
 
+.slideshow{
+  background-color: #2a2a2a;
+}
+.carousel-item img{
+  -webkit-backdrop-size:cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: auto;
+  height: 100vh;
+  filter: brightness(40%);
+}
 /* Slide section ends here */
+
+#recently-added{
+  position: absolute;
+  background-color: #2a2a2a;
+  color: white;
+  display: grid;
+  position: relative;
+}
+#recently-added .header-recently{
+  background-color: #000000;
+  padding: 25px 20px;
+  border: 12px;
+}
+#recently-added .anime-card{
+  padding: 10px 20px;
+  justify-content: center;
+}
+#recently-added .anime-card img{
+ margin: 10px; 
+ height: 400px;
+ width: 300px;
+ border-radius: 20px;
+ object-fit: cover;
+}
+.anime-card-info h5{
+  font-weight: 300;
+  text-decoration: none;
+}
