@@ -1,4 +1,19 @@
 <?php
+$server = "db";
+$user = "root";
+$pass = "123";
+$database = "user_db";
+
+$conn = mysqli_connect($server, $user, $pass, $database);
+
+session_start();
+
+if(!isset($_SESSION['admin_name'])){
+  header('location:/InventorySystem/forms/loginPage.php');
+}
+
+
+
 $email = $_POST['product_id'];
 $fname = $_POST['product_code'];
 $lname = $_POST['name'];
@@ -37,7 +52,7 @@ if (!empty($email) || !empty($fname) || !empty($lname) || !empty($stock) || !emp
             echo "<script>alert('Success');
             window.location.href='/InventorySystem/adminPage.php';</script>";
         }else{
-            echo "Some already have this";
+            echo '<script>alert("Some Information Already Exist..")</script>';
         }
         $stmt->close();
         $conn->close();

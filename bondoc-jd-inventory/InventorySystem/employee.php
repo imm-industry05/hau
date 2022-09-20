@@ -1,3 +1,20 @@
+<?php
+
+$server = "db";
+$user = "root";
+$pass = "123";
+$database = "user_db";
+
+$conn = mysqli_connect($server, $user, $pass, $database);
+
+session_start();
+
+if(!isset($_SESSION['admin_name'])){
+  header('location:/InventorySystem/forms/loginPage.php');
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

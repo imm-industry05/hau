@@ -1,3 +1,19 @@
+<?php
+
+$server = "db";
+$user = "root";
+$pass = "123";
+$database = "user_db";
+
+$conn = mysqli_connect($server, $user, $pass, $database);
+
+session_start();
+
+if(!isset($_SESSION['user_name'])){
+  header('location:/InventorySystem/forms/loginPage.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +30,7 @@
     <div class="topnav">
         <ul>
             <li><a class="active" href="/InventorySystem/userStatic.php">Real Time Product Supply <i class="fa-solid fa-check"></i></a></li>
-            <li style="float:right"><a href="/InventorySystem/forms/loginPage.php">Log out <i class="fa fa-arrow-right"></i></a></li>
+            <li style="float:right"><a href="/InventorySystem/forms/logout.php">Log out <i class="fa fa-arrow-right"></i></a></li>
         </ul>     
     <br/><br/>
     </div>

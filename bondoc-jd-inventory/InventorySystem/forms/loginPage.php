@@ -6,25 +6,34 @@ session_start();
 if(isset($_POST['submit'])){
     $email = $_POST['email'];
     $password = md5($_POST['password']);
+    $user_type = $_POST['user_type'];
 
     $sql = "SELECT * FROM user_form WHERE email='$email' AND password='$password'";
     $result = mysqli_query($conn, $sql);
 
-    if($result -> num_rows > 0){
-        $row = mysqli_fetch_assoc($result);
-        
-        if($row['user_type'] == 'user'){
-            $_SESSION['user_name'] = $row['username'];
-            header("location: /InventorySystem/userStatic.php");
-        }elseif($row['user_type'] == 'Admin'){
-            $_SESSION['admin_name'] = $row['username'];
-            header("location: /InventorySystem/adminPage.php");
-        }else{
-            echo "<script>alert('Woops! email and password is wrong.')</script>";
+
+
+
+    if(mysqli_num_rows($result) > 0){
+
+        $row = mysqli_fetch_array($result);
+  
+        if($row['user_type'] == 'Admin'){
+  
+           $_SESSION['admin_name'] = $row['name'];
+           header('location:/InventorySystem/adminPage.php');
+  
+        }elseif($row['user_type'] == 'user'){
+  
+           $_SESSION['user_name'] = $row['name'];
+           header('location:/InventorySystem/userStatic.php');
+  
         }
-        
-    }
-}
+       
+     }else{
+        echo "<script>alert('Password or Email not matched.')</script>";
+     }
+};
 ?>
 <!DOCTYPE html>
 <html lang="en">

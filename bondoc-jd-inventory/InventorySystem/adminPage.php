@@ -1,3 +1,19 @@
+<?php
+
+$server = "db";
+$user = "root";
+$pass = "123";
+$database = "user_db";
+
+$conn = mysqli_connect($server, $user, $pass, $database);
+
+session_start();
+
+if(!isset($_SESSION['admin_name'])){
+  header('location:/InventorySystem/forms/loginPage.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +31,7 @@
 <body> 
     <ul>
         <li><a class="active" href="/InventorySystem/adminPage.php">Dashboard <i class="fa-solid fa-bars"></i></a></li>
-        <li style="float:right"><a href="/InventorySystem/forms/loginPage.php">Log out <i class="fa fa-arrow-right"></i></a></li>
+        <li style="float:right"><a href="/InventorySystem/forms/logout.php">Log out <i class="fa fa-arrow-right"></i></a></li>
     </ul>     
     <br/><br/>
 

@@ -1,3 +1,19 @@
+<?php
+
+$server = "db";
+$user = "root";
+$pass = "123";
+$database = "user_db";
+
+$conn = mysqli_connect($server, $user, $pass, $database);
+
+session_start();
+
+if(!isset($_SESSION['admin_name'])){
+  header('location:/InventorySystem/forms/loginPage.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,6 +107,8 @@
 </html>
 
 <?php
+
+    error_reporting(0);
     $server = "db";
     $user = "root";
     $pass = "123";
@@ -111,9 +129,11 @@
         $query_run = mysqli_query($conn, $query);
 
         if($query_run){
-            header("location: /InventorySystem/adminPage.php");
+            echo "<script>alert('Deleted..');
+            window.location.href='/InventorySystem/adminPage.php';</script>";
         }else{
-            echo '<script>alert("Not Deleted")</script>';
+            echo "<script>alert('Not Deleted..');
+            window.location.href='/InventorySystem/adminPage.php';</script>";
         }
     }
 
