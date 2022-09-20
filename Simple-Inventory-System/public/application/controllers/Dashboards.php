@@ -17,7 +17,7 @@ class Dashboards extends CI_Controller
     public function logoff()
     {
         $this->session->sess_destroy();
-        redirect("/welcome/index");
+        redirect(base_url()."welcome/index");
     }
 
     // this function displays the add product html page
@@ -39,7 +39,7 @@ class Dashboards extends CI_Controller
         else
         {
             $add_product = $this->Dashboard->add_product($this->input->post(NULL,TRUE));
-            redirect('/dashboards/index');
+            redirect(base_url().'dashboards/index');
         }
     }
 
@@ -47,7 +47,7 @@ class Dashboards extends CI_Controller
     public function remove_product($id)
     {
         $this->Dashboard->delete_product_by_id($id);
-        redirect('/dashboards/index');
+        redirect(base_url().'dashboards/index');
     }
 
     // this function display the edit html page
@@ -72,7 +72,7 @@ class Dashboards extends CI_Controller
         else
         {
             $edit_product = $this->Dashboard->edit_product($this->input->post(NULL,TRUE));
-            redirect('/dashboards/index');
+            redirect(base_url().'dashboards/index');
         }
     }
 
@@ -95,7 +95,7 @@ class Dashboards extends CI_Controller
         if($result !=null && $get_old_password != $password)
         {
             $this->session->set_flashdata('input_errors', $result);
-			redirect("/dashboards/profile");
+			redirect(base_url()."dashboards/profile");
         }
         else
         {
@@ -123,7 +123,7 @@ class Dashboards extends CI_Controller
     {
         $content = $this->input->post(['review']);
         $this->Dashboard->postReview($this->session->userdata('user_id'), $this->session->userdata('product_id'),$content);
-        redirect("/dashboards/show/{$this->session->userdata('product_id')}");
+        redirect(base_url()."dashboards/show/{$this->session->userdata('product_id')}");
     }
 
     //this function does the process when posting REPLIES
@@ -131,7 +131,7 @@ class Dashboards extends CI_Controller
     {
         $content = $this->input->post(NULL,TRUE);
         $this->Dashboard->postReply($this->session->userdata('user_id'),$content['review_id'],$content);
-        redirect("/dashboards/show/{$this->session->userdata('product_id')}");
+        redirect(base_url()."dashboards/show/{$this->session->userdata('product_id')}");
     }
 
     public function user()
@@ -140,7 +140,7 @@ class Dashboards extends CI_Controller
         $view_array = [
             'products' => $all_products
         ];
-        $this->load->view("user/dashboard",$view_array);
+        $this->load->view(base_url()."user/dashboard",$view_array);
     }
 }
 

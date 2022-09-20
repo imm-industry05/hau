@@ -52,7 +52,7 @@ class Welcome extends CI_Controller {
 			// if($count['count'] == 1)
 			// {
 			// 	$this->User->isAdmin();
-                redirect("/dashboards/index");
+                redirect(base_url()."dashboards/index");
 			// }else{
 			// 	redirect("/dashboards/user");
 			// }
@@ -65,7 +65,7 @@ class Welcome extends CI_Controller {
         $result = $this->User->validate_signin();
         if($result != 'success') {
             $this->session->set_flashdata('input_errors', $result);
-            redirect("/users/signin");
+            redirect(base_url()."welcome/index");
         } 
         else 
         {
@@ -89,13 +89,13 @@ class Welcome extends CI_Controller {
 				// 	redirect("/dashboards/user");
 				// }else
 				// {
-                    redirect("/dashboards/index");
+                    redirect(base_url().'dashboards/index');
 				// }
             }
             else 
             {
                 $this->session->set_flashdata('input_errors', $result);
-                redirect("welcome/index");
+                redirect(base_url()."welcome/index");
                 // echo "failed";
             }
         }

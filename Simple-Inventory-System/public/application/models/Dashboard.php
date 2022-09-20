@@ -12,7 +12,6 @@ class Dashboard extends CI_Model
     function select_products_by_id($product_id)
     {
         return $this->db->query("SELECT * FROM products WHERE id = ?", $product_id)->row_array();
-
     }
 
     function add_product($product)

@@ -4,12 +4,12 @@ class User extends CI_Model
 {
     function get_user_by_id($id)
     {
-        return $this->db->query("SELECT * FROM Users WHERE id= ?" , $this->security->xss_clean($id))->row_array();
+        return $this->db->query("SELECT * FROM users WHERE id= ?" , $this->security->xss_clean($id))->row_array();
     }
 
     function get_user_by_email($email)
     { 
-        return $this->db->query("SELECT * FROM Users WHERE email= ?" , $this->security->xss_clean($email))->row_array();
+        return $this->db->query("SELECT * FROM users WHERE email= ?" , $this->security->xss_clean($email))->row_array();
     }
 
     function register($user)
