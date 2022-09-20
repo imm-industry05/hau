@@ -13,3 +13,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#theme:checked~ .App{
+  filter: invert(1)
+  
+}
+.App{
+  max-width: 100%;
+  min-height: 100vh;
+  background:white;
+}
+.main{
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+}
