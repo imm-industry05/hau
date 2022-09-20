@@ -73,13 +73,13 @@
             </div>
         </div>
         <div class="contact-col">
-            <form action="">
-                <input type="text" placeholder="Firstname" required>
-                <input type="text" placeholder="Lastname" required>
-                <input type="number" placeholder="Contact Number" required>
-                <input type="email" placeholder="Email Address" required>
-                <textarea rows="8" placeholder="Message" required></textarea>
-                <button type="submit" class="hero-btn red-btn">Send Form</button>
+            <form action="form-handler.php" method="post">
+                <input type="text" name="firstname" placeholder="Firstname" required>
+                <input type="text" name="lastname" placeholder="Lastname" required>
+                <input type="number" name="number" placeholder="Contact Number" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <textarea rows="8" name="message" placeholder="Message" required></textarea>
+                <button type="submit" class="hero-btn red-btn">Send Form</button>  
             </form>
         </div>
     </div>
