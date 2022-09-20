@@ -9,7 +9,7 @@ services:
     networks: 
       codeigniter_net:
     ports:
-      - "8181:90"
+      - "80:90"
     restart: always
 
   php:
