@@ -5,13 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fluffy Clicker</title>
+    <link rel = "stylesheet" href="styles.css">
 </head>
 
 <body>
-    <p id="goldMined">0 Gold Mined</p>
-    <button onclick="mineGold()">Mine Gold</button>
-    <button onclick="buyGoldPerClick()" id="perClickUpgrade">Upgrade Pickaxe (Currently Level 1) Cost: 10 Gold</button>
-
+    <p id = "goldMined" class="gold-mined">0 Gold Mined</p>
+    <div id="navigateButtons">
+        <button onclick="tab('mineGoldMenu')">Go to Mine Gold</button>
+        <button onclick="tab('shopMenu')">Go to Shop</button>
+    </div>
+    <div id="mineGoldMenu">
+        <button onclick="mineGold()">Mine Gold</button>
+    </div>
+    <div id="shopMenu">
+        <button onclick="buyGoldPerClick()" id="perClickUpgrade">Upgrade Pickaxe (Currently Level 1) Cost: 10 Gold</button>
+    </div>
     <script src="main.js" charset="utf-8" type="text/javascript"></script>
 </body>
 </html>
