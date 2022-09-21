@@ -13,7 +13,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+#theme{
+  display: none;
+  
+}
 #theme:checked~ .App{
   filter: invert(1)
   
