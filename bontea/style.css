@@ -1,0 +1,27 @@
+body{
+    background: #fbe0d9;
+
+}
+/* title image */
+.title{ 
+    background-image: url(img/title.png);
+    background-size: contain;
+    background-position: center;
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    bottom: 400px;
+    left: 455px;
+}
+
+.logo{
+    background-image: url(img/logo.png);
+    background-size: contain;
+    background-position: center;   
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 550px;
+    left: 1150px;
+    
+}
