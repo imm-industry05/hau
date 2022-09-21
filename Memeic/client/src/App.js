@@ -11,7 +11,10 @@ function App() {
         <div className="App">
           <div className="main">
             <Routes>
-              <Route path="/:page" element={<PageRender/>} />
+              <Route exact path="/:page" element={<PageRender/>} />
+            </Routes>
+            <Routes>
+              <Route exact path="/:page/:id" element={<PageRender/>} />
             </Routes>
           </div>
         </div>
