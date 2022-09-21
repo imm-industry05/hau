@@ -33,7 +33,7 @@ const authCtrl = {
                 path: '/api/refresh_token',
                 maxAge: 30*24*60*60*1000
             })
-
+            await newUser.save()
             res.json({msg: 'Register Success',
                 access_token,
                 user:{
