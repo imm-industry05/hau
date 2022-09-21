@@ -1,173 +1,133 @@
 <!DOCTYPE html>
-<html lang ="en">
+<html lang="en">
     <head>
-        <meta charset = "UTF-8">
-        <meta name ="viewport" content="width=device-width", initial-scale="1.0">
-        <title> All Products - Red Store </title>
-        <link rel = "stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cart</title>
+        <link rel="stylesheet" href="style1.css">
+        <script src="https://kit.fontawesome.com/1431de1d77.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        
-        <div class ="container">
-        <div class ="navbar">
-            <div class="logo">
-                <img src="images/logo.png" width="125px">
-            </div>
-            <nav>
-                <ul id="MenuItems">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="product-details.html">Product-Details</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Account</a></li> 
-                </ul>
-            </nav>
-            <img src="images/cart.png" width="30px" height="30px">
-            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
-        </div>
-    </div>
-
-<!------Cart Items Details------>
-<div class="small-container cart-page">
-    <table>
-        <tr>
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Subtotal</th>
-        </tr>
-        <tr>
-            <td>
-                <div class="cart-info">
-                    <img src="Images/buy-1.jpg">
-                    <div>
-                        <p>Red Printed T-shirt</p>
-                        <small>Price: $20.00</small>
-                        <br>
-                        <a href="">Remove</a>
+        <!---Header--->
+        <header>
+            <!---Nav--->
+            <div class="nav container">
+                <a href="#" class="logo">Red Store</a>
+            <!---Cart Icon--->
+                <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+            <!----Cart--->
+                <div class ="cart">
+                    <h2 class="cart-title">Your Cart</h2>
+                    <!---Content--->
+                    <div class="cart-content">
+          
                     </div>
-                </div>
-            </td>
-            <td><input type ="number" value="1"></td>
-            <td>$20.00</td>
-        </tr>
-        <tr>
-            <td>
-                <div class="cart-info">
-                    <img src="Images/buy-2.jpg">
-                    <div>
-                        <p>Black PUMA Shoes</p>
-                        <small>Price: $50.00</small>
-                        <br>
-                        <a href="">Remove</a>
+                    <!---Total--->
+                    <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">$0.00</div>
                     </div>
-                </div>
-            </td>
-            <td><input type ="number" value="1"></td>
-            <td>$20.00</td>
-        </tr>
-        <tr>
-            <td>
-                <div class="cart-info">
-                    <img src="Images/buy-3.jpg">
-                    <div>
-                        <p>PUMA Jogger</p>
-                        <small>Price: $30.00</small>
-                        <br>
-                        <a href="">Remove</a>
-                    </div>
-                </div>
-            </td>
-            <td><input type ="number" value="1"></td>
-            <td>$20.00</td>
-        </tr>
-    </table>
-
-<div class="total-price">
-    
-    <table>
-        <tr>
-            <td>Subtotal</td>
-            <td>$100.00</td>
-        </tr>
-        <tr>
-            <td>Tax</td>
-            <td>$10.00</td>
-        </tr>
-        <tr>
-            <td>Total</td>
-            <td>$110.00</td>
-        </tr>
-    </table>
-</div>
-
-
-</div>
-
-
-<!----Footer----->
-
-    <div class ="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col-1">
-                    <h3>Download Our App</h3>
-                    <p>Download App for Android and ios mobile phone.</p>
-                    <div class="app-logo">
-                        <img src="Images/play-store.png">
-                        <img src="Images/app-store.png">
-                    </div>
-                </div>
-                <div class="footer-col-2">
-                    <img src="Images/logo-white.png">
-                    <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
-                </div>
-                <div class="footer-col-3">
-                    <h3>Useful Links</h3>
-                    <ul>
-                        <li>Coupons</li>
-                        <li>Blog Post</li>
-                        <li>Return Policy</li>
-                        <li>Join Affiliate</li>
-                    </ul>
-                </div>
-                <div class="footer-col-4">
-                    <h3>Follow us</h3>
-                    <ul>
-                        <li>Facebook</li>
-                        <li>Twitter</li>
-                        <li>Instagram</li>
-                        <li>Youtube</li>
-                    </ul>
+                    <!---Buy Button--->
+                    <button type="button" class="btn-buy">Buy Now</button>
+                    <!---Cart Close--->
+                    <i class="fa-solid fa-xmark" id="close-cart"></i>
+                    <button></button>
                 </div>
             </div>
-            
-            <hr>
-            <p class ="copyright">Copyright 2022 - Pasco Ian Jordan B.</p>
-        </div>
+            </header>
+            <!---Shop--->
+                <section class="shop container">
+                    <h2 class ="cart-title">Your Cart</h2>
+            <!---Content--->
+                    <div class="shop-content">
+            <!---Box 1--->
+                        <div class="product-box">
+                           <img src="Images/product-1.jpg" alt="" class="product-img">
+                           <h2 class="product-title">Red Puma T-shirt</h2>
+                           <span class="price">$20.00</span>
+                           <i class="fa-solid fa-cart-plus add-cart"></i>
+                        </div>
+            <!---Box 2--->
+                        <div class="product-box">
+                           <img src="Images/product-2.jpg" alt="" class="product-img">
+                           <h2 class="product-title">Red Puma T-shirt</h2>
+                           <span class="price">$20.00</span>
+                           <i class="fa-solid fa-cart-plus add-cart"></i>
+                        </div>
+            <!---Box 3--->
+                        <div class="product-box">
+                            <img src="Images/product-3.jpg" alt="" class="product-img">
+                            <h2 class="product-title">Red Puma T-shirt</h2>
+                            <span class="price">$20.00</span>
+                            <i class="fa-solid fa-cart-plus add-cart"></i>
+                         </div>
+            <!---Box 4--->
+                         <div class="product-box">
+                            <img src="Images/product-4.jpg" alt="" class="product-img">
+                            <h2 class="product-title">Red Puma T-shirt</h2>
+                            <span class="price">$20.00</span>
+                            <i class="fa-solid fa-cart-plus add-cart"></i>
+                         </div>
+            <!---Box 5--->
+                         <div class="product-box">
+                            <img src="Images/product-5.jpg" alt="" class="product-img">
+                            <h2 class="product-title">Red Puma T-shirt</h2>
+                            <span class="price">$20.00</span>
+                            <i class="fa-solid fa-cart-plus add-cart"></i>
+                         </div>
+            <!---Box 6--->
+                         <div class="product-box">
+                            <img src="Images/product-6.jpg" alt="" class="product-img">
+                            <h2 class="product-title">Red Puma T-shirt</h2>
+                            <span class="price">$20.00</span>
+                            <i class="fa-solid fa-cart-plus add-cart"></i>
+                         </div>
+            <!---Box 7--->            
+                         <div class="product-box">
+                            <img src="Images/product-7.jpg" alt="" class="product-img">
+                            <h2 class="product-title">Red Puma T-shirt</h2>
+                            <span class="price">$20.00</span>
+                            <i class="fa-solid fa-cart-plus add-cart"></i>
+                         </div>
+            <!---Box 8---> 
+                         <div class="product-box">
+                            <img src="Images/product-8.jpg" alt="" class="product-img">
+                            <h2 class="product-title">Red Puma T-shirt</h2>
+                            <span class="price">$20.00</span>
+                            <i class="fa-solid fa-cart-plus add-cart"></i>
+                         </div>
+            <!---Box 9---> 
+                         <div class="product-box">
+                            <img src="Images/product-9.jpg" alt="" class="product-img">
+                            <h2 class="product-title">Red Puma T-shirt</h2>
+                            <span class="price">$20.00</span>
+                            <i class="fa-solid fa-cart-plus add-cart"></i>
+                         </div>
+            <!---Box 10---> 
+                         <div class="product-box">
+                            <img src="Images/product-10.jpg" alt="" class="product-img">
+                            <h2 class="product-title">Red Puma T-shirt</h2>
+                            <span class="price">$20.00</span>
+                            <i class="fa-solid fa-cart-plus add-cart"></i>
+                         </div>
+            <!---Box 11---> 
+                         <div class="product-box">
+                            <img src="Images/product-11.jpg" alt="" class="product-img">
+                            <h2 class="product-title">Red Puma T-shirt</h2>
+                            <span class="price">$20.00</span>
+                            <i class="fa-solid fa-cart-plus add-cart"></i>
+                         </div>
+            <!---Box 12---> 
+                         <div class="product-box">
+                            <img src="Images/product-12.jpg" alt="" class="product-img">
+                            <h2 class="product-title">Red Puma T-shirt</h2>
+                            <span class="price">$20.00</span>
+                            <i class="fa-solid fa-cart-plus add-cart"></i>
     </div>
-
-    <!------js for toggle menu------->
-    <script>
-        var MenuItems = document.getElementById("MenuItems");
-
-        MenuItems.style.maxHeight = "0px";
-
-        function menutoggle(){
-            if(MenuItems.style.maxHeight == "0px")
-            {
-                MenuItems.style.maxHeight = "200px"
-            }
-            else
-            {
-                MenuItems.style.maxHeight = "0px";
-            }
-        }
-    
-    </script>
-
+</div>
+     </section>
+     <!---Link to JS--->
+     <script src="main.js"></script>
 </body>
-</html>
+</html> 
