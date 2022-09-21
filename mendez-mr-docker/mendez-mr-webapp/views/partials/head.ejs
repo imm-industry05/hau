@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><%=title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="<%=baseUrl %>/css/bulma.min.css" />
+    <link rel="stylesheet" href="<%=baseUrl %>/css/animate.css" />
+    <link rel="stylesheet" href="<%=baseUrl %>/css/style.css" />
+    <style>
+        .mycontainer {
+            margin-top: 50px;
+        }
+        body,html {
+          background: #F2F6FA;
+          min-height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="container">
+                <div class="navbar-brand">
+                  <a class="navbar-item" href="<%=baseUrl %>">
+                    <img src="<%-baseUrl %>/imgs/images.png">
+                  </a>
+              
+                  <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                  </a>
+                </div>
+              
+                  
+              
+                  <div class="navbar-end">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <% if(locals.user){ %>
+                          <a class="navbar-link">
+                              <%= user.username %>
+                            </a>
+                    
+                            <div class="navbar-dropdown">
+                              <a href="<%=baseUrl %>/orders" class="navbar-item">
+                                Orders
+                              </a>
+                              <hr class="navbar-divider">
+                              <a href="<%=baseUrl %>/logout" class="navbar-item">
+                                Sign out
+                              </a>
+                        <% }else { %>
+                          <a class="navbar-link">
+                              Login / Register
+                            </a>
+                    
+                            <div class="navbar-dropdown">
+                              <a class="navbar-item" href="<%=baseUrl %>/login">
+                                Login
+                              </a>
+                              <hr class="navbar-divider">
+                              <a class="navbar-item" href="<%=baseUrl %>/register">
+                                Register
+                              </a>
+                        <% } %>
+                        
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+              </nav>
+
+<div class="container mycontainer">

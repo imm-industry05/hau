@@ -1,0 +1,79 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx:1.23.1
+    container_name: nginx
+    ports:
+      - '80:80'
+    restart: on-failure
+    volumes:
+      - /home/kube/Learnings/hau/mendez-mr-nginx-conf:/etc/nginx/conf.d:ro
+      - /home/kube/Learnings/hau/mendez-mr-infra/hosts:/etc/hosts:ro
+      # - /home/kube/Learnings/hau/mendez-mr-nginx-conf/cert/jenkins.locl.com/tindahan.locl.com.crt:/etc/nginx/conf.d/cert/tindahan.locl.com.crt
+      # - /home/kube/Learnings/hau/mendez-mr-nginx-conf/cert/jenkins.locl.com/tindahan.locl.com.key:/etc/nginx/conf.d/cert/tindahan.locl.com.key
+    networks:
+      infraNework:
+        ipv4_address: 10.10.0.2
+    depends_on:
+      - node
+
+  jenkins:
+    image: jenkins/jenkins:lts-jdk11
+    container_name: jenkins-1
+    ports:
+      - '8180:8080'
+      - '51000:50000'
+    volumes:
+      - /home/kube/Learnings/jenkins:/var/jenkins_home
+      - /home/kube/Learnings/hau/mendez-mr-infra/hosts:/etc/hosts:ro
+    networks:
+      infraNework:
+        ipv4_address: 10.10.0.3
+
+  node:
+    image: node-inventory:v1-patch
+    container_name: node-inventory-app
+    ports:
+      - '3001:3000'
+    volumes:
+      - /home/kube/Learnings/hau/mendez-mr-infra/hosts:/etc/hosts:ro
+    networks:
+      infraNework:
+        ipv4_address: 10.10.0.4
+    depends_on:
+      - db
+
+  node2:
+    image: node-inventory:v1-patch
+    container_name: node-inventory-app-2
+    ports:
+      - '3000:3000'
+    volumes:
+      - /home/kube/Learnings/hau/mendez-mr-infra/hosts:/etc/hosts:ro
+    networks:
+      infraNework:
+        ipv4_address: 10.10.0.5
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:10.3.36
+    container_name: db-1
+    restart: on-failure
+    environment:
+       MYSQL_ROOT_PASSWORD: root
+    ports:
+      - '3306:3306'
+    volumes:
+        - /home/kube/Learnings/mysql:/var/lib/mysql
+    networks:
+      infraNework:
+        ipv4_address: 10.10.0.50
+
+
+networks:
+  infraNework:
+    ipam:
+      config:
+        - subnet: 10.10.0.0/16

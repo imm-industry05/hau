@@ -1,0 +1,12 @@
+pipeline {
+    agent {}
+    stages {
+        stage("Clone") {
+            steps {
+                script {
+                    sh 'echo hello'
+                }
+            }
+        }
+    }
+}
