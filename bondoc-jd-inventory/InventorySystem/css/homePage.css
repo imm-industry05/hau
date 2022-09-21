@@ -1,6 +1,6 @@
 @font-face{
     font-family: Rivera;
-    src: url(/InventorySystem/fonts/Nunito-VariableFont_wght.ttf);
+    src: url(/fonts/Nunito-VariableFont_wght.ttf);
 }
 
 
@@ -12,7 +12,7 @@ html, body{
 }
 
 body{
-    background-image: url(/InventorySystem/images/bg-homepage.png);
+    background-image: url(/images/bg-homepage.png);
     background-attachment: fixed;
     background-size: cover;
 }

@@ -9,7 +9,7 @@ $conn = mysqli_connect($server, $user, $pass, $database);
 session_start();
 
 if(!isset($_SESSION['admin_name'])){
-  header('location:/InventorySystem/forms/loginPage.php');
+  header('location:/forms/loginPage.php');
 }
 
 
@@ -48,7 +48,7 @@ if (!empty($email) || !empty($fname) || !empty($lname) || !empty(age)){
             $stmt->bind_param("issi", $email, $fname, $lname, $age);
             $stmt->execute();
             echo "<script>alert('Success');
-            window.location.href='/InventorySystem/adminPage.php';</script>";
+            window.location.href='/index.php';</script>";
         }else{
             echo '<script>alert("Some Information Already Exist..")</script>';
         }

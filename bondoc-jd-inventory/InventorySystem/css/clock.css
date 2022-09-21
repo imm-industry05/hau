@@ -5,7 +5,7 @@ div.mainClock{
 
 
 .clock{
-    background: url(/InventorySystem/images/clock.png);
+    background: url(/images/clock.png);
     width: 350px;
     height: 350px;
     display: flex;

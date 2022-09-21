@@ -1,30 +1,34 @@
 version: '3.8'
 
 services:
-  app:
+  php:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: app
-    restart: unless-stopped
-    volumes:
-      - ./:/var/www
-  
-  webserver:
-    build:
-      context: .
-      dockerfile: Dockerfile_Nginx
-    image: nginx
-    container_name: webserver
-    restart: unless-stopped
     ports:
-      - "8080:80"
+      - 8080:80
     volumes:
-      - ./:/var/www
-      - ./config/nginx/:/etc/nginx/conf.d/
+      - ./InventorySystem:/var/www/html/
+    networks:
+      myProxy:
+        ipv4_address: 172.25.0.100
     depends_on:
-      - app
+      - db
 
+  nginx:
+    image: nginx:1.23.1
+    container_name: nginx
+    ports:
+      - 80:80
+    restart: on-failure
+    volumes:
+      - ./config/nginx:/etc/nginx/conf.d
+    networks:
+      myProxy:
+        ipv4_address: 172.25.0.200
+
+
+  
   db:
     image: mariadb:10.9.2
     container_name: db
@@ -35,3 +39,68 @@ services:
       - "3306:3306"
     volumes: 
       - ./mydatabase:/var/lib/mysql
+    networks:
+      myProxy:
+        ipv4_address: 172.25.0.201
+
+networks:
+  myProxy:
+    ipam:
+      config:
+        - subnet: 172.25.0.0/16
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#  apache-service:
+#    build: 
+#      context: .
+#      dockerfile: Dockerfile
+#    container_name: app
+#    ports:
+#      - '8080:80'
+#    volumes:
+#      - ./InventorySystem:/usr/local/apache2/htdocs
+#  
+#  webserver:
+#    image: nginx:1.23.1
+#    container_name: webserver
+#    restart: unless-stopped
+#    ports:
+#      - "80:80"
+#    volumes:
+#      - ./config/nginx/:/etc/nginx/conf.d:ro
+#

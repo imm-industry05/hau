@@ -11,5 +11,5 @@ session_start();
 session_unset();
 session_destroy();
 
-header('location:/InventorySystem/forms/loginPage.php');
+header('location:/forms/loginPage.php');
 ?>

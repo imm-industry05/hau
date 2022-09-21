@@ -10,7 +10,7 @@ $conn = mysqli_connect($server, $user, $pass, $database);
 session_start();
 
 if(!isset($_SESSION['admin_name'])){
-  header('location:/InventorySystem/forms/loginPage.php');
+  header('location:/forms/loginPage.php');
 }
 ?>
 
@@ -24,17 +24,17 @@ if(!isset($_SESSION['admin_name'])){
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/InventorySystem/css/tableemployee2.css">
+    <link rel="stylesheet" href="/css/tableemployee2.css">
 </head>
 <body>
     <div class="topnav">
         <ul>
-            <li><a href="/InventorySystem/adminPage.php">Dashboard <i class="fa-solid fa-bars"></i></a></li>
-            <li><a class="active" href="/InventorySystem/insidephp/customer.php">Customer <i class="fa-solid fa-circle-user"></i></a></li>
-            <li><a href="/InventorySystem/insidephp/tableemployee.php">Employee <i class="fa-solid fa-user-tie"></i></a></li>
-            <li><a href="/InventorySystem/insidephp/product.php">Products <i class="fa-solid fa-coins"></i></a></li>
-            <li><a href="/InventorySystem/insidephp/supplier.php">Supplier <i class="fa-solid fa-handshake"></i></a></li>
-            <li style="float:right"><a href="/InventorySystem/forms/loginPage.php">Log out <i class="fa fa-arrow-right"></i></a></li>
+            <li><a href="/index.php">Dashboard <i class="fa-solid fa-bars"></i></a></li>
+            <li><a class="active" href="/insidephp/customer.php">Customer <i class="fa-solid fa-circle-user"></i></a></li>
+            <li><a href="/insidephp/tableemployee.php">Employee <i class="fa-solid fa-user-tie"></i></a></li>
+            <li><a href="/insidephp/product.php">Products <i class="fa-solid fa-coins"></i></a></li>
+            <li><a href="/insidephp/supplier.php">Supplier <i class="fa-solid fa-handshake"></i></a></li>
+            <li style="float:right"><a href="/forms/logout.php">Log out <i class="fa fa-arrow-right"></i></a></li>
         </ul>     
     <br/><br/>
     </div>
@@ -90,14 +90,14 @@ if(!isset($_SESSION['admin_name'])){
     </table>     
     </div>
     <div class="addbtn">
-            <form action="/InventorySystem/addcustomer.php">
+            <form action="/addcustomer.php">
                 <button class="btn btn-primary btn-lg">Add</button>
             </form>
     </div>
     <div class="idnumdelete">
                 <form action="" method="POST">
                     <input type="text" name="idnum" placeholder="Customer ID"/>
-                    <a class="deldat" href="/InventorySystem/adminPage.php"><input type="submit" name="deletenum" value="Delete Data"/></a>
+                    <a class="deldat" href="/index.php"><input type="submit" name="deletenum" value="Delete Data"/></a>
                 </form>
     </div>
             
@@ -127,10 +127,10 @@ if(!isset($_SESSION['admin_name'])){
 
         if($query_run){
             echo "<script>alert('Deleted..');
-            window.location.href='/InventorySystem/adminPage.php';</script>";
+            window.location.href='/index.php';</script>";
         }else{
             echo "<script>alert('Not Deleted..');
-            window.location.href='/InventorySystem/adminPage.php';</script>";
+            window.location.href='/index.php';</script>";
         }
     }
 
