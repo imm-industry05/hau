@@ -18,3 +18,15 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.auth_page form .pass {
+    position: relative;
+}
+.auth_page form .pass small {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0.5;
+}
