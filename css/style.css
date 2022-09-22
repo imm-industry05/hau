@@ -261,30 +261,87 @@ nav .login button:hover{
 }
 /* Slide section ends here */
 
-#recently-added{
-  position: absolute;
-  background-color: #2a2a2a;
-  color: white;
-  display: grid;
-  position: relative;
-}
-#recently-added .header-recently{
+.breaker {
   background-color: #000000;
-  padding: 25px 20px;
-  border: 12px;
+  color: antiquewhite;
+  padding: 20px 40px 20px 40px;
 }
-#recently-added .anime-card{
-  padding: 10px 20px;
+/* Recently section start here */
+#recently{
+  background-color: #2a2a2a;
+}
+#recently .container{
+  padding: 10px 10px 10px 10px;
+}
+#recently .container .row{
+  width: 100%;
+  display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
-#recently-added .anime-card img{
- margin: 10px; 
- height: 400px;
- width: 300px;
- border-radius: 20px;
- object-fit: cover;
+#recently .container .row .image{
+ position: relative;
+ flex: 1;
+ max-width: 1000px;
 }
-.anime-card-info h5{
-  font-weight: 300;
+#recently .container .row .image img{
+  border-radius: 20px;
+  padding: 10px 10px 10px 10px;
+  height: 450px;
+  width: 320px;
+}
+#recently .container .row .image .details{
+  padding: 4px 100px 20px 20px;
+  display: center;
+}
+#recently .container .row .image .details a{
+  justify-content: center;
+  color: #fff;
   text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
 }
+#recently .container .row .image .details a:hover{
+  color: chartreuse;
+}
+/* Recently section ends here */
+
+/* Trending section start here */
+#trending{
+  background-color: #2a2a2a;
+}
+#trending .t-container{
+  padding: 10px 10px 10px 10px;
+}
+#trending .t-container .t-row{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#trending .t-container .t-row .t-image{
+ position: relative;
+ flex: 1;
+ max-width: 1000px;
+}
+#trending .t-container .t-row .t-image img{
+  border-radius: 20px;
+  padding: 10px 10px 10px 10px;
+  height: 450px;
+  width: 320px;
+}
+#trending .t-container .t-row .t-image .t-details{
+  padding: 4px 100px 20px 20px;
+  display: center;
+}
+#trending .t-container .t-row .t-image .t-details a{
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+}
+#trending .t-container .t-row .t-image .t-details a:hover{
+  color: chartreuse;
+}
+/* Recently section ends here */
