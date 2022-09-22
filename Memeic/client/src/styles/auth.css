@@ -1,0 +1,20 @@
+.auth_page{
+    width: 100%;
+    min-height: 100vh;
+    background: #fdfdfd;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    position:relative
+}
+.auth_page form{
+    background:#fff;
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 50px 25px;
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
