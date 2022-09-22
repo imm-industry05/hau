@@ -46,7 +46,7 @@ if(!isset($_SESSION['admin_name'])){
     <table class="table">
         <thead>
             <tr>
-                <th class="content1">Product ID</th>
+                <th class="content1">ID</th>
                 <th class="content1">Name</th>
                 <th class="content1">Product Code</th>
                 <th class="content1">Stock</th>
@@ -100,7 +100,7 @@ if(!isset($_SESSION['admin_name'])){
     </div>
     <div class="idnumdelete">
                 <form action="" method="POST">
-                    <input type="text" name="idnum" placeholder="Supplier ID"/>
+                    <input type="text" name="idnum" placeholder="Product ID"/>
                     <a class="deldat" href=""><input type="submit" name="deletenum" value="Delete Data"/></a>
                 </form>
     </div>

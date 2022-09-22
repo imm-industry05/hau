@@ -46,7 +46,7 @@ if(!isset($_SESSION['admin_name'])){
     <table class="table">
         <thead>
             <tr>
-                <th class="content1">Cusotomer ID</th>
+                <th class="content1">ID</th>
                 <th class="content1">Firstname</th>
                 <th class="content1">Lastname</th>
                 <th class="content1">Phone Number</th>
