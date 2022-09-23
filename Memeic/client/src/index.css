@@ -34,3 +34,7 @@ code {
 
 /**AUTH**/
 @import url("./styles/auth.css");
+
+
+/**Loading**/
+@import url("./styles/loading.css");

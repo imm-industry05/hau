@@ -5,9 +5,13 @@ import Home from './pages/home';
 // import Register from './pages/register';
 import Login from './pages/login';
 
+import Notify from './components/notify/Notify';
+
 function App() {
   return (
     <BrowserRouter>
+      <Notify />
+
         <input type="checkbox" id="theme"/>
         <div className="App">
           <div className="main">
