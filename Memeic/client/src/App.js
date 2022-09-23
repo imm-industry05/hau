@@ -6,8 +6,10 @@ import Home from './pages/home';
 import Login from './pages/login';
 
 import Notify from './components/notify/Notify';
+import {useSelector, useDispatch} from 'react-redux'
 
 function App() {
+  const { auth } = useSelector(state => state)
   return (
     <BrowserRouter>
       <Notify />
@@ -16,7 +18,7 @@ function App() {
         <div className="App">
           <div className="main">
             <Routes>
-              <Route exact path="/" element={<Login/>} />
+              <Route path="/" element={auth.token ? Home : Login} />
             </Routes>
             <Routes>
               <Route exact path="/:page/:id" element={<PageRender/>} />
