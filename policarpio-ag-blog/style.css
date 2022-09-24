@@ -27,6 +27,19 @@ section{
     padding:2rem 9%;
 }
 
+.heading{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4rem;
+    color:var(--black);
+    padding:1rem;
+}
+
+.heading span{
+    text-transform: uppercase;
+    color:var(--black);
+}
+
 .btn{
     display: inline-block;
     margin-top: 1rem;
@@ -72,21 +85,11 @@ header .navbar a:hover{
     color:var(--red);
 }
 
-header .icons a{
-    font-size: 2.5rem;
-    color:var(--white);
-    margin-left:1.5rem;
-}
-
-header .icons a:hover{
-    color:var(--red);
-}
-
 #menu-bar{
     font-size: 2.5rem;
     padding: .5rem 1.5rem;
-    border:.1rem solid var(--black);
-    color:var(--black);
+    border:.1rem solid var(--white);
+    color:var(--white);
     border-radius: .3rem;
     cursor: pointer;
     display: none;
@@ -226,6 +229,53 @@ header .icons a:hover{
     padding:1rem 0;
 }
 
+.bestsellers .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.bestsellers .box-container .box{
+    border:.1rem solid rgba(0,0,0,.1);
+    border-radius: .5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background:#fff;
+    flex:1 1 30rem;
+}
+
+.bestsellers .box-container .box .content{
+    padding:1.5rem;
+}
+
+.bestsellers .box-container .box img{
+    height:15rem;
+    filter:drop-shadow(0 .5rem 1rem rgba(0,0,0, .1));
+    margin:6rem 2rem;
+}
+
+.bestsellers .box-container .box:hover img{
+    transform: rotate(-1deg) scale(1.2);
+}
+
+.bestsellers .box-container .box .content h3{
+    color:var(--black);
+    font-size: 1.5rem;
+}
+
+.bestsellers .box-container .box .content .price{
+    color:var(--black);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding:1rem 0;
+}
+
+.bestsellers .box-container .box .content .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
 
 
 
@@ -275,7 +325,7 @@ header .icons a:hover{
 
     header .navbar a{
         font-size: 2rem;
-        background:#fff;
+        background:#000000;
         border:.1rem solid var(--black);
         border-radius: .5rem;
         padding:1.5rem;
@@ -299,6 +349,10 @@ header .icons a:hover{
 
     .home .slide-container .slide .images{
         padding-bottom: 6rem;
+    }
+
+    .heading{
+        font-size: 3rem;
     }
 
 }
