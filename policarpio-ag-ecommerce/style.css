@@ -3,6 +3,7 @@
 :root{
     --black:#000000;
     --red:#ff0000;
+    --white:#fff;
 }
 
 *{
@@ -48,7 +49,7 @@ header{
     position: fixed;
     top:0; left:0; right:0;
     z-index: 1000;
-    background:#fff;
+    background:#000000;
     padding:2rem 9%;
     display: flex;
     align-items: center;
@@ -58,12 +59,12 @@ header{
 
 header .logo{
     font-size: 2.5rem;
-    color:var(--black);
+    color:var(--white);
 }
 
 header .navbar a{
     font-size: 1.7rem;
-    color:var(--black);
+    color:var(--white);
     margin:0 1rem;
 }
 
@@ -73,7 +74,7 @@ header .navbar a:hover{
 
 header .icons a{
     font-size: 2.5rem;
-    color:var(--red);
+    color:var(--white);
     margin-left:1.5rem;
 }
 
@@ -127,7 +128,6 @@ header .icons a:hover{
 
 .home .slide-container .slide .images .shoe{
     width:100%;
-    transform: rotate(-35deg);
     animation:shoe .3s linear;
 }
 
@@ -149,7 +149,7 @@ header .icons a:hover{
 
 .home .slide-container .slide .content p{
     font-size: 1.7rem;
-    color:#666;
+    color:#000000;
     padding:.5rem 0;
 }
 
@@ -194,6 +194,37 @@ header .icons a:hover{
     
 }
 
+.service .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    background:#000000;
+    border:.1rem solid rgba(0,0,0,.1);
+    border-radius: .5rem;
+    padding:2rem;
+}
+
+.service .box-container .box{
+    text-align: center;
+    flex:1 1 30rem;
+}
+
+.service .box-container .box i{
+    font-size: 4rem;
+    color:var(--white);
+}
+
+.service .box-container .box h3{
+    font-size: 2rem;
+    color:var(--white);
+    padding-top: 1rem;
+}
+
+.service .box-container .box p{
+    font-size: 1.5rem;
+    color:#fff;
+    padding:1rem 0;
+}
 
 
 
