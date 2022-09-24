@@ -95,12 +95,12 @@ header .navbar a:hover{
     display: none;
 }
 
-.home{
+.featured{
     padding:0;
     position:relative;
 }
 
-.home .slide-container .slide{
+.featured .slide-container .slide{
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -110,7 +110,7 @@ header .navbar a:hover{
     padding-top: 9rem;
 }
 
-.home .slide-container .slide .content{
+.featured .slide-container .slide .content{
     flex:1 1 40rem;
     animation: slideContent .5s linear 1s backwards;
 }
@@ -122,14 +122,14 @@ header .navbar a:hover{
     }
 }
 
-.home .slide-container .slide .images{
+.featured .slide-container .slide .images{
     flex:1 1 50rem;
     padding-bottom: 15rem;
     position: relative;
     z-index: 0;
 }
 
-.home .slide-container .slide .images .shoe{
+.featured .slide-container .slide .images .shoe{
     width:100%;
     animation:shoe .3s linear;
 }
@@ -140,32 +140,32 @@ header .navbar a:hover{
     }
 }
 
-.home .slide-container .slide .content span{
+.featured .slide-container .slide .content span{
     font-size: 2rem;
     color:var(--red);
 }
 
-.home .slide-container .slide .content h3{
+.featured .slide-container .slide .content h3{
     font-size: 5rem;
     color:var(--black);
 }
 
-.home .slide-container .slide .content p{
+.featured .slide-container .slide .content p{
     font-size: 1.7rem;
     color:#000000;
     padding:.5rem 0;
 }
 
-.home .slide-container{
+.featured .slide-container{
     display: none;
 }
 
-.home .slide-container.active{
+.featured .slide-container.active{
     display: block;
 }
 
-.home #prev,
-.home #next{
+.featured #prev,
+.featured #next{
     position: absolute;
     top:50%;
     transform:translateY(-50%);
@@ -181,18 +181,18 @@ header .navbar a:hover{
     text-align: center;
 }
 
-.home #prev:hover,
-.home #next:hover{
+.featured #prev:hover,
+.featured #next:hover{
     color:#fff;
     background:var(--black);
 }
 
-.home #prev{
+.featured #prev{
     left:3rem;
 
 }
 
-.home #next{
+.featured #next{
     right:3rem;
     
 }
@@ -229,13 +229,13 @@ header .navbar a:hover{
     padding:1rem 0;
 }
 
-.bestsellers .box-container{
+.popular .box-container{
     display: flex;
     flex-wrap: wrap;
     gap:1.5rem;
 }
 
-.bestsellers .box-container .box{
+.popular .box-container .box{
     border:.1rem solid rgba(0,0,0,.1);
     border-radius: .5rem;
     text-align: center;
@@ -245,33 +245,33 @@ header .navbar a:hover{
     flex:1 1 30rem;
 }
 
-.bestsellers .box-container .box .content{
+.popular .box-container .box .content{
     padding:1.5rem;
 }
 
-.bestsellers .box-container .box img{
+.popular .box-container .box img{
     height:15rem;
     filter:drop-shadow(0 .5rem 1rem rgba(0,0,0, .1));
     margin:6rem 2rem;
 }
 
-.bestsellers .box-container .box:hover img{
-    transform: rotate(-1deg) scale(1.2);
+.popular .box-container .box:hover img{
+    transform: rotate(0deg) scale(1.2);
 }
 
-.bestsellers .box-container .box .content h3{
+.popular .box-container .box .content h3{
     color:var(--black);
-    font-size: 1.5rem;
-}
-
-.bestsellers .box-container .box .content .price{
-    color:var(--black);
-    font-size: 1.5rem;
     font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.popular .box-container .box .content .detail{
+    color:var(--black);
+    font-size: 1.5rem;
     padding:1rem 0;
 }
 
-.bestsellers .box-container .box .content .price span{
+.popular .box-container .box .content .detail span{
     font-size: 1.5rem;
     text-decoration: line-through;
 }
