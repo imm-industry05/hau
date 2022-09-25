@@ -26,7 +26,7 @@
         <!-- LOGO -->
         <div class="nav container">
             
-            <a href="index.html" class="logo">Game<span>Store</span></a>
+            <a href="index.php" class="logo">Game<span>Store</span></a>
         </div>
     
     </header>

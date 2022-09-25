@@ -25,7 +25,7 @@
         <!-- nav -->
         <div class="nav container">
             <!-- logo -->
-            <a href="index.html" class="logo">Game<span>Store</span></a>
+            <a href="index.php" class="logo">Game<span>Store</span></a>
             <!-- Nav Icons-->
             <div class="nav-icons">
                 <i class='bx bx-bell bx-tada' id="bell-icon"><span></span></i>
@@ -46,7 +46,7 @@
             <div class="menu">
                 <img src="images/menu.png" alt="">
                  <div class="navbar">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="#trending">Trending</a></li>
                     <li><a href="#new">New Games</a></li>
                     <li><a href="#action">Action Games</a></li>
@@ -131,7 +131,7 @@
                                     <i class='bx bxs-star'></i>
                                     <span>4.7</span>
                                 </div>
-                                <a href="download1.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                                <a href="download1.php" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
                             </div>
                         </div>
                     </div>
@@ -247,7 +247,7 @@
                             <i class='bx bxs-star'></i>
                             <span>4.7</span>
                         </div>
-                        <a href="download2.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        <a href="download2.php" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
                     </div>
                 </div>
             </div>
