@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:80
+    volumes:
+      - ./University:/var/www/html/
+    networks:
+      myProxy:
+        ipv4_address: 15.15.0.10
+    depends_on:
+      - db
+
+  nginx:
+    image: nginx:1.23.1
+    container_name: nginx
+    ports:
+      - 80:80
+    restart: on-failure
+    volumes:
+      - ./config/nginx:/etc/nginx/conf.d
+    networks:
+      myProxy:
+        ipv4_address: 15.15.0.11
+
+
+  
+  db:
+    image: mariadb:10.9.2
+    container_name: db
+    restart: unless-stopped
+    environment:
+       MYSQL_ROOT_PASSWORD: 123
+    ports:
+      - "3306:3306"
+    volumes: 
+      - ./mydatabase:/var/lib/mysql
+    networks:
+      myProxy:
+        ipv4_address: 15.15.0.12
+
+networks:
+  myProxy:
+    ipam:
+      config:
+        - subnet: 15.15.0.0/16
