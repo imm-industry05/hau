@@ -8,7 +8,7 @@ services:
     ports:
       - 8080:80
     volumes:
-      - ./University:/var/www/html/
+      - ./university:/var/www/html/
     networks:
       myProxy:
         ipv4_address: 15.15.0.10

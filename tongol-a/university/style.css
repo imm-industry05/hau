@@ -87,10 +87,8 @@
         .text-box h1{
             font-size: 30px;
         }
-        .text-box p{
-            margin: 10px 0 40px;
-            font-size: 12px;
-            color: #fff;
+        .text-box a{
+            text-align: left;
         }
         .nav-links ul li{
             display: block;
@@ -152,6 +150,7 @@
         padding: 20px 12px;
         box-sizing: border-box;
         transition: 0.5s;
+        text-align: justify;
     }
     h3{
         text-align: center;
