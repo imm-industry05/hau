@@ -30,8 +30,6 @@ services:
       codeigniter_net:
     ports:
       - 3307:3306
-    env_file:
-      - .env
     restart: always
   
 
