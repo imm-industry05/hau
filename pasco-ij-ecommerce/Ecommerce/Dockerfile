@@ -1,3 +1,3 @@
-FROM php:fpm
+FROM httpd:latest
 
-RUN docker-php-ext-install mysqli pdo pdo_mysql && docker-php-ext-enable pdo_mysql
+COPY . /usr/local/apache2/htdocs
