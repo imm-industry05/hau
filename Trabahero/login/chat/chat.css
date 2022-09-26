@@ -1,0 +1,2358 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 15px;
+
+  background-color:#FEC56D;
+}
+
+.messaging {
+  width: 455px;
+  width: 90%;
+  margin: 100px auto;
+  border: 1px solid #D0D3D6;
+  /* margin-right: 10%; */
+  background-color: #fff;
+  
+}
+
+.messages {
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.messages li {
+  display: inline-block;
+  max-width: 75%;
+  margin: 0 8px 8px 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: #0073B1;
+  color: #fff;
+}
+
+.messages.move li {
+  animation: slideUp 0.167s cubic-bezier(.4,0,.2,1);
+}
+
+.messages.move li:last-child {
+  animation: slideUpAndRight 0.167s cubic-bezier(.4,0,.2,1);
+}
+
+.compose {
+  border-top: 2px solid #0091CA;
+  overflow: hidden;
+}
+
+.compose textarea {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 16px;
+  resize: none;
+  outline: none;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(44px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes slideUpAndRight {
+  from {
+    transform: translateX(-100px) translateY(44px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+
+
+img{
+	border: 0;
+}
+
+
+
+#header h1, #pixels{
+	color: #48941A;
+}
+
+.float-left{
+	float: left;	
+	margin: 0 0 0 20px;
+}
+
+.float-right{
+	float: right;
+	margin: 0 20px 0 0;
+}
+
+.center{
+	font-size: 2.5em;
+	padding: 80px 0 0 0;
+	text-align: center;
+}
+
+#loader {
+	position:absolute;
+	width:100%;
+	height:2000%;
+	z-index:100;
+	background-color:#e2e0e0;
+}
+#loader .gif {
+	max-width: 100%;
+}
+
+#load {
+	position:fixed;
+	width:206px;
+	left:50%;
+	margin-left:-103px;
+	top:50%;
+	margin-top:-103px;
+}
+
+#load img {
+	position:absolute;
+}
+
+#load #cl  { 
+	left:50%; 
+	margin-left:-20px; 
+	top:50%;
+	margin-top:63px; 
+	opacity:0.8; 
+	position:absolute;  
+	width: 100%;
+	}
+	
+
+
+#share {
+	float:left;
+	position:fixed;
+	z-index:50;
+	left:40px;
+	bottom:40px;
+}
+
+#share a {
+	opacity:0.4;
+		-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+
+#share a:hover {
+	opacity:1;
+}
+	
+#content {
+	width:210px;
+	float:left;
+	position:absolute;
+	bottom: 4px;
+	left: 39px;
+	height:41px;
+	z-index:50;
+	display:none;
+	list-style: none;
+	border-radius:0 3px 3px 0;
+	background-color: rgba(255,255,255,0.4);
+}
+
+
+#content li {
+	margin-top:10px;
+	margin-left:10px;
+	display:inline;
+	float:left;
+	width:95px;
+	
+}
+
+#content li a{
+	width:88px;
+}
+
+#nom{
+	list-style: none;
+	position: fixed;
+	right: 44px;
+	z-index:50;
+	height:280px;
+	margin-top:40px;
+}
+
+
+#menu {
+	float:left;
+	position:fixed;
+	top:40px;
+	left:40px;
+	z-index:50;
+	
+}
+#know {
+	opacity:0.5;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+
+#know:hover {
+	opacity:1;
+}
+#exp {
+	opacity:0.5;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+
+#exp:hover {
+	opacity:1;
+}
+
+
+#s-in {
+	opacity:0.5;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+
+#s-in:hover {
+	opacity:1;
+}
+#s-up {
+	opacity:0.5;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+
+#s-up:hover {
+	opacity:1;
+}
+
+#menu img {
+	margin-right:30px;
+}
+#nom li{
+	margin: 0 0 10px;
+	height:10px;	
+}
+#nom li a{
+	opacity:0.4;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+	
+}
+#nom li a:hover{
+	opacity:1;
+	
+}
+nav {
+		opacity:1;
+	right:20px;
+	position:absolute;
+}
+nav li a{
+	opacity:1;
+	display:none;
+	float:right;
+}
+
+
+#intro{
+	background:url(images/trabahero-BG.png) 0 no-repeat;
+	background-color:#fec56d;
+	background-position:center;
+	background-size:auto;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	color: white;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#intro a {
+	border:none;
+	background-color:transparent;
+	opacity:0.6;
+	bottom:15px;
+	position:fixed;
+	left:50%;
+	width:30px;
+	margin-left:-15px;
+	z-index:20;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+
+#intro a:hover {
+	opacity:1;
+}
+
+@-moz-document url-prefix()
+{
+    #content {
+        bottom:6px;
+	}
+}
+
+@-moz-document url-prefix()
+{
+    #intro a {
+        bottom:0px;
+	
+}
+	
+	
+}
+
+
+
+
+#arki{
+	background: url(images/arki-bg-2.png) 50% no-repeat fixed;
+	background-color:#B9E3D6;
+	background-size:1071px;
+	color: white;
+	height: 120%;
+	width:100%;
+	margin: 0 auto;
+	padding-top:0;
+	overflow: hidden;
+	position:relative;
+}
+
+#arki .bg{
+	background: url(images/arki.png) 50% 84.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+
+
+#ce{
+	background: url(images/civil-bg-2.png) 50% no-repeat fixed;
+	background-color:#F4D0AD;
+	background-size:1071px;
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#ce .bg{
+	background: url(images/civil.png) 50% 78.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+
+#writer{
+	background: url(images/writer-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#7979B7;
+	background-size:1071px;
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#writer .bg{
+	background: url(images/writer.png) 50% 83% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+
+#doctor{
+	background: url(images/doctor-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#5FAFA7;
+	background-size:1071px;
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#doctor .bg{
+	background: url(images/doctor.png) 50% 85% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+
+#barber{
+	background: url(images/barber-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#F4D0AB;
+	background-size:1071px;
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#barber .bg{
+	background: url(images/barber.png) 50% 85% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fashion{
+	background: url(images/fashion-bg-2.png) 50% 82% no-repeat fixed;
+	background-color:#B6EEFF;
+	background-size:1071px;
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fashion .bg{
+	background: url(images/fashion.png) 50% 82% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#marketing{
+	background: url(images/marketing-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#F7CA7D;
+	background-size:1071px;
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#marketing .bg{
+	background: url(images/marketing.png) 50% 84% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#photography{
+	background: url(images/photography-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#FFDB80;
+	background-size:1071px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#photography .bg{
+	background: url(images/photography.png) 50% 86% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#teacher{
+	background: url(images/teacher-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#FBDFF8;
+	background-size:1071px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#teacher .bg{
+	background: url(images/teacher.png) 50% 82% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#videography{
+	background: url(images/videography-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#EAB9B5;
+	background-size:1071px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#videography .bg{
+	background: url(images/videography.png) 50% 83% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+/* #fond11{
+	background: url(images/fond11.png) 50% 0 no-repeat fixed;
+	background-color:#f8c075;
+	background-size:1071px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond11 .bg{
+	background: url(images/velo11.png) 50% 80% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond12{
+	background: url(images/fond122.jpg) 50% 0 no-repeat fixed;
+	background-color:#ffd4ab;
+	background-size:1071px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond12 .bg{
+	background: url(images/velo12.png) 50% 80.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond13{
+	background: url(images/fond13.jpg) 50% 0 no-repeat fixed;
+	background-color:#b2fad7;
+	background-size:1071px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond13 .bg{
+	background: url(images/velo13.png) 50% 82% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond14{
+	background: url(images/fond14.jpg) 50% 0 no-repeat fixed;
+	background-color:#dbdbdb;
+	background-size:1071px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond14 .bg{
+	background: url(images/velo14.png) 50% 83.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond15{
+	background: url(images/fond15.jpg) 50% 0 no-repeat fixed;
+	background-color:#fddcae;
+	background-size:1071px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond15 .bg{
+	background: url(images/velo15.png) 50% 83% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond16{
+	background: url(images/fond16.jpg) 50% 0 no-repeat fixed;
+	background-color:#fb9d79;
+	background-size:1071px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond16 .bg{
+	background: url(images/velo16.png) 50% 82.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond17{
+	background: url(images/fond17.jpg) 50% 0 no-repeat fixed;
+	background-color:#f6978f;
+	background-size:1071px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond17 .bg{
+	background: url(images/velo17.png) 50% 79.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+} */
+
+#fond19{
+	background: url(images/fond18.jpg) 50% no-repeat fixed;
+	background-color:#000;
+	background-size:1071px;
+	color: white;
+	height: 120%;
+	width:100%;
+	margin: 0 auto;
+	padding-top:0;
+	overflow: hidden;
+	position:relative;
+	z-index:2;
+}
+
+#fond19 .bg{
+	background: url(images/velo18.png) 50% 113% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+	top:0px;
+}
+
+#fond19 img {
+	position:fixed;
+	bottom:44px;
+	right:40px;
+	display:none;
+}
+
+#fond19 p {
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:11px;	
+	color:#fff;
+	position:fixed;
+	bottom:96px;
+	right:32px;
+	text-align:center;
+	display:none;
+}
+
+#fond19 hr {
+	color:#fff;
+	position:fixed;
+	bottom:86px;
+	right:39px;
+	width:40px;
+	display:none;	
+}
+
+
+
+.story{
+	margin: 0 auto;
+	min-width: 980px;
+	overflow: auto;
+	width: 980px;
+}
+
+.story .float-left, .story .float-right{
+	padding: 100px 0 0 0;
+	position: relative;
+	width: 350px;	
+}
+
+footer {
+	position:relative;
+	z-index:-10;
+	margin:0;
+	padding:0;
+	height:100%;
+	background-color:#f68076;	
+	text-align:center;
+}
+
+#fond18 {
+	text-align:center;
+	position:fixed;
+	top:50%;
+	margin-top:-180px;
+	margin-left:-300px;
+	width:600px;
+	left:50%;
+}
+
+#fond18 hr {
+	border:none;
+	width:280px;
+	color:#ffffff;
+	height:5px;
+	background-color:#FFF;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+
+#fond18 a {
+	opacity:1;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+
+#fond18 a:hover {
+	opacity:0.6;
+}
+
+footer p {
+	left:40px;
+	z-index:0;
+	position:fixed;
+	float:left;
+	bottom:6px;
+	font-family:"Lucida Grande", sans-serif;
+	font-size:9.5px;
+	color:#ffffff;
+	font-weight:100;
+}
+
+@media (min-height:649px) {
+	
+	#fond19{
+	background: url(images/fond18.jpg) 50% no-repeat fixed;
+background-color:#000;
+	background-size:1071px;
+	color: white;
+	height: 120%;
+	width:100%;
+	margin: 0 auto;
+	padding-top:0;
+	overflow: hidden;
+	z-index:2;
+}
+
+#fond19 .bg{
+	background: url(images/velo18.png) 50% 105% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+	top:0px;
+}
+}
+
+@media (min-height:679px) {
+	
+	#fond19{
+	background: url(images/fond18.jpg) 50% no-repeat fixed;
+background-color:#000;
+	background-size:1071px;
+	color: white;
+	height: 120%;
+	width:100%;
+	margin: 0 auto;
+	padding-top:0;
+	overflow: hidden;
+	z-index:2;
+}
+
+#fond19 .bg{
+	background: url(images/velo18.png) 50% 97% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+	top:0px;
+}
+	
+	
+	#arki{	
+	background: url(images/arki-bg-2.png) 50% no-repeat fixed;
+	background-color:#B9E3D6;;
+	background-size:1200px;
+
+	color: white;
+	height: 120%;
+	width:100%;
+	margin: 0 auto;
+	padding-top:0;
+	overflow: hidden;
+	}
+
+#arki .bg{
+	background: url(images/arki.png) 50% 84.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+
+#ce{
+	background: url(images/civil-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#F4D0AD;
+	background-size:1200px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#ce .bg{
+	background: url(images/civil.png) 50% 78.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+
+#writer{
+	background: url(images/writer-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#7979B7;
+	background-size:1200px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#writer .bg{
+	background: url(images/writer.png) 50% 83% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+
+#doctor{
+	background: url(images/doctor-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#5FAFA7;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#doctor .bg{
+	background: url(images/doctor.png) 50% 85% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+
+#barber{
+	background: url(images/barber-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#F4D0AB;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#barber .bg{
+	background: url(images/barber.png) 50% 85% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fashion{
+	background: url(images/fashion-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#B6EEFF;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fashion .bg{
+	background: url(images/fashion.png) 50% 82% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#marketing{
+	background: url(images/marketing-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#F7CA7D;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#marketing .bg{
+	background: url(images/marketing.png) 50% 84% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#photography{
+	background: url(images/photography-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#FFDB80;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#photography .bg{
+	background: url(images/photography.png) 50% 86% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#teacher{
+	background: url(images/teacher-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#FBDFF8;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#teacher .bg{
+	background: url(images/teacher.png) 50% 82% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#videography{
+	background: url(images/videography-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#EAB9B5;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#videography .bg{
+	background: url(images/videography.png) 50% 83% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+/* #fond11{
+	background: url(images/fond11.jpg) 50% 0 no-repeat fixed;
+	background-color:#f8c075;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond11 .bg{
+	background: url(images/velo11.png) 50% 80% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond12{
+	background: url(images/fond122.jpg) 50% 0 no-repeat fixed;
+	background-color:#ffd4ab;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond12 .bg{
+	background: url(images/velo12.png) 50% 80.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond13{
+	background: url(images/fond13.jpg) 50% 0 no-repeat fixed;
+	background-color:#b2fad7;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond13 .bg{
+	background: url(images/velo13.png) 50% 82% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond14{
+	background: url(images/fond14.jpg) 50% 0 no-repeat fixed;
+	background-color:#dbdbdb;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond14 .bg{
+	background: url(images/velo14.png) 50% 83.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond15{
+	background: url(images/fond15.jpg) 50% 0 no-repeat fixed;
+	background-color:#fddcae;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond15 .bg{
+	background: url(images/velo15.png) 50% 83% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond16{
+	background: url(images/fond16.jpg) 50% 0 no-repeat fixed;
+	background-color:#fb9d79;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond16 .bg{
+	background: url(images/velo16.png) 50% 82.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond17{
+	background: url(images/fond17.jpg) 50% 0 no-repeat fixed;
+	background-color:#f6978f;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond17 .bg{
+	background: url(images/velo17.png) 50% 79.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+}
+
+@media (min-height:720px) {
+	
+	#fond19{
+	background: url(images/fond18.jpg) 50% no-repeat fixed;
+background-color:#000;
+	background-size:1071px;
+	z-index:2;
+	color: white;
+	height: 120%;
+	width:100%;
+	margin: 0 auto;
+	padding-top:0;
+	overflow: hidden;
+}
+
+#fond19 .bg{
+	background: url(images/velo18.png) 50% 85% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+	top:0px;
+}
+}
+
+@media (min-height:750px) {
+	
+	#fond19{
+	background: url(images/fond18.jpg) 50% no-repeat fixed;
+background-color:#000;
+	background-size:1071px;
+	z-index:2;
+	color: white;
+	height: 120%;
+	width:100%;
+	margin: 0 auto;
+	padding-top:0;
+	overflow: hidden;
+}
+
+#fond19 .bg{
+	background: url(images/velo18.png) 50% 79% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+	top:0px;
+}
+}
+
+@media (min-height:780px) {
+	
+	#fond19{
+	background: url(images/fond18.jpg) 50% no-repeat fixed;
+background-color:#000;
+	background-size:1071px;
+	z-index:2;
+	color: white;
+	height: 120%;
+	width:100%;
+	margin: 0 auto;
+	padding-top:0;
+	overflow: hidden;
+}
+
+#fond19 .bg{
+	background: url(images/velo18.png) 50% 75% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+	top:0px;
+}
+}
+
+
+@media (min-height:800px) {
+	
+	#fond19{
+	background: url(images/fond18.jpg) 50% no-repeat fixed;
+background-color:#000;
+	background-size:1200px;
+	z-index:2;
+	color: white;
+	height: 120%;
+	width:100%;
+	margin: 0 auto;
+	padding-top:0;
+	overflow: hidden;
+}
+
+#fond19 .bg{
+	background: url(images/velo18.png) 50% 90% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+	top:0px;
+}
+	
+	
+	#traveler{
+	background: url(images/fond1.jpg) 50% no-repeat fixed;
+	background-color:#f4d0ad;
+	background-size:1200px;
+
+	color: white;
+	height: 120%;
+	width:100%;
+	margin: 0 auto;
+	padding-top:0;
+	overflow: hidden;
+}
+
+#traveler .bg{
+	background: url(images/traveler.png) 50% 84.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+
+#third{
+	background: url(images/fond2.jpg) 50% 0 no-repeat fixed;
+	background-color:#b1deed;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#third .bg{
+	background: url(images/weirdo.png) 50% 78.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+
+#hipster{
+	background: url(images/fond3.jpg) 50% 0 no-repeat fixed;
+	background-color:#f79cc1;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#hipster .bg{
+	background: url(images/velo3.png) 50% 83% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+
+#fond4{
+	background: url(images/fond4.jpg) 50% 0 no-repeat fixed;
+	background-color:#abe7f4;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond4 .bg{
+	background: url(images/velo4.png) 50% 85% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+
+#fond5{
+	background: url(images/fond5.jpg) 50% 0 no-repeat fixed;
+	background-color:#f8d5b8;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond5 .bg{
+	background: url(images/velo5.png) 50% 85% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond6{
+	background: url(images/fond6.jpg) 50% 0 no-repeat fixed;
+	background-color:#a0e3ff;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond6 .bg{
+	background: url(images/velo6.png) 50% 82% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond7{
+	background: url(images/fond7.jpg) 50% 0 no-repeat fixed;
+	background-color:#f7ca7d;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond7 .bg{
+	background: url(images/velo7.png) 50% 84% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond8{
+	background: url(images/fond8.jpg) 50% 0 no-repeat fixed;
+	background-color:#fbdff8;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond8 .bg{
+	background: url(images/velo8.png) 50% 86% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond9{
+	background: url(images/fond9.jpg) 50% 0 no-repeat fixed;
+	background-color:#c6deff;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond9 .bg{
+	background: url(images/velo9.png) 50% 82% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond10{
+	background: url(images/fond10.jpg) 50% 0 no-repeat fixed;
+	background-color:#91f9d3;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond10 .bg{
+	background: url(images/velo10.png) 50% 83% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond11{
+	background: url(images/fond11.jpg) 50% 0 no-repeat fixed;
+	background-color:#f8c075;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond11 .bg{
+	background: url(images/velo11.png) 50% 80% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond12{
+	background: url(images/fond122.jpg) 50% 0 no-repeat fixed;
+	background-color:#ffd4ab;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond12 .bg{
+	background: url(images/velo12.png) 50% 80.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond13{
+	background: url(images/fond13.jpg) 50% 0 no-repeat fixed;
+	background-color:#b2fad7;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond13 .bg{
+	background: url(images/velo13.png) 50% 82% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond14{
+	background: url(images/fond14.jpg) 50% 0 no-repeat fixed;
+	background-color:#dbdbdb;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond14 .bg{
+	background: url(images/velo14.png) 50% 83.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond15{
+	background: url(images/fond15.jpg) 50% 0 no-repeat fixed;
+	background-color:#fddcae;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond15 .bg{
+	background: url(images/velo15.png) 50% 83% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond16{
+	background: url(images/fond16.jpg) 50% 0 no-repeat fixed;
+	background-color:#fb9d79;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond16 .bg{
+	background: url(images/velo16.png) 50% 82.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond17{
+	background: url(images/fond17.jpg) 50% 0 no-repeat fixed;
+	background-color:#f6978f;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond17 .bg{
+	background: url(images/velo17.png) 50% 79.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+} */
+}
+
+@media (min-height:840px) {
+	
+	#fond19{
+	background: url(images/fond18.jpg) 50% no-repeat fixed;
+background-color:#000;
+	background-size:1200px;
+	z-index:2;
+	color: white;
+	height: 120%;
+	width:100%;
+	margin: 0 auto;
+	padding-top:0;
+	overflow: hidden;
+}
+
+#fond19 .bg{
+	background: url(images/velo18.png) 50% 84% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+	top:0px;
+}
+}
+
+@media (min-height:860px) {
+	
+	#fond19{
+	background: url(images/fond18.jpg) 50% no-repeat fixed;
+background-color:#000;
+	background-size:1200px;
+	z-index:2;
+	color: white;
+	height: 120%;
+	width:100%;
+	margin: 0 auto;
+	padding-top:0;
+	overflow: hidden;
+}
+
+#fond19 .bg{
+	background: url(images/velo18.png) 50% 82% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+	top:0px;
+}
+}
+
+@media (min-height:900px) {
+	
+	#fond19{
+	background: url(images/fond18.jpg) 50% no-repeat fixed;
+	background-color:#000;
+	background-size:1200px;
+	color: white;
+	height: 120%;
+	width:100%;
+	margin: 0 auto;
+	padding-top:0;
+	overflow: hidden;
+	z-index:2;
+}
+
+#fond19 .bg{
+	background: url(images/velo18.png) 50% 92% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+	top:0px;
+}
+	
+	#arki{
+	background: url(images/arki-bg-2.png) 50% no-repeat fixed;
+	background-color:#B9E3D6;
+	background-size:1200px;
+	color: white;
+	height: 120%;
+	width:100%;
+	margin: 0 auto;
+	padding-top:0;
+	overflow: hidden;
+}
+
+#arki .bg{
+	background: url(images/arki.png) 50% 84.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+
+#ce{
+	background: url(images/civil-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#F4D0AD;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#ce .bg{
+	background: url(images/civil.png) 50% 78.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+
+#writer{
+	background: url(images/writer-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#7979B7;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#writer .bg{
+	background: url(images/writer.png) 50% 83% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+
+#doctor{
+	background: url(images/doctor-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#5FAFA7;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#doctor .bg{
+	background: url(images/doctor.png) 50% 85% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+
+#barber{
+	background: url(images/barber-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#F4D0AB;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#barber .bg{
+	background: url(images/barber.png) 50% 85% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fashion{
+	background: url(images/fashion-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#B6EEFF;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fashion .bg{
+	background: url(images/fashion.png) 50% 82% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#marketing{
+	background: url(images/marketing-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#F7CA7D;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#marketing .bg{
+	background: url(images/marketing.png) 50% 84% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#photography{
+	background: url(images/photography-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#FFDB80;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#photography .bg{
+	background: url(images/photography.png) 50% 86% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#teacher{
+	background: url(images/teacher-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#FBDFF8;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#teacher .bg{
+	background: url(images/teacher.png) 50% 82% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#videography{
+	background: url(images/videography-bg-2.png) 50% 0 no-repeat fixed;
+	background-color:#EAB9B5;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#videography .bg{
+	background: url(images/videography.png) 50% 83% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+/* #fond11{
+	background: url(images/fond11.jpg) 50% 0 no-repeat fixed;
+	background-color:#f8c075;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond11 .bg{
+	background: url(images/velo11.png) 50% 80% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond12{
+	background: url(images/fond122.jpg) 50% 0 no-repeat fixed;
+	background-color:#ffd4ab;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond12 .bg{
+	background: url(images/velo12.png) 50% 80.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond13{
+	background: url(images/fond13.jpg) 50% 0 no-repeat fixed;
+	background-color:#b2fad7;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond13 .bg{
+	background: url(images/velo13.png) 50% 82% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond14{
+	background: url(images/fond14.jpg) 50% 0 no-repeat fixed;
+	background-color:#dbdbdb;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond14 .bg{
+	background: url(images/velo14.png) 50% 83.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond15{
+	background: url(images/fond15.jpg) 50% 0 no-repeat fixed;
+	background-color:#fddcae;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond15 .bg{
+	background: url(images/velo15.png) 50% 83% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond16{
+	background: url(images/fond16.jpg) 50% 0 no-repeat fixed;
+	background-color:#fb9d79;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond16 .bg{
+	background: url(images/velo16.png) 50% 82.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond17{
+	background: url(images/fond17.jpg) 50% 0 no-repeat fixed;
+	background-color:#f6978f;
+	background-size:1200px;
+
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond17 .bg{
+	background: url(images/velo17.png) 50% 79.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+} */
+}
+
+@media (min-height:940px) {
+	
+	#fond19{
+	background: url(images/fond18.jpg) 50% no-repeat fixed;
+background-color:#000;
+	background-size:1200px;
+	z-index:2;
+	color: white;
+	height: 120%;
+	width:100%;
+	margin: 0 auto;
+	padding-top:0;
+	overflow: hidden;
+}
+
+#fond19 .bg{
+	background: url(images/velo18.png) 50% 77% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+	top:0px;
+}
+}
+
+@media (min-height:980px) {
+	
+	#fond19{
+	background: url(images/fond18.jpg) 50% no-repeat fixed;
+background-color:#000;
+	background-size:1200px;
+	z-index:2;
+	color: white;
+	height: 120%;
+	width:100%;
+	margin: 0 auto;
+	padding-top:0;
+	overflow: hidden;
+}
+
+#fond19 .bg{
+	background: url(images/velo18.png) 50% 83% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+	top:0px;
+}
+}
+
+@media (min-height:1020px) {
+	
+	#fond19{
+	background: url(images/fond18.jpg) 50% no-repeat fixed;
+background-color:#000;
+	background-size:1200px;
+	z-index:2;
+	color: white;
+	height: 120%;
+	width:100%;
+	margin: 0 auto;
+	padding-top:0;
+	overflow: hidden;
+}
+
+#fond19 .bg{
+	background: url(images/velo18.png) 50% 81% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+	top:0px;
+}
+}
+
+@media (min-height:1070px) {
+	
+	#fond19{
+	background: url(images/fond18.jpg) 50% no-repeat fixed;
+	background-color:#000;
+	background-size:1300px;
+	color: white;
+	height: 120%;
+	width:100%;
+	margin: 0 auto;
+	padding-top:0;
+	overflow: hidden;
+	z-index:1;
+}
+
+#fond19 .bg{
+	background: url(images/velo18.png) 50% 98% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+	top:0px;
+}
+	
+	#arki{
+	background: url(images/arki-bg.png) 50% no-repeat fixed;
+	background-color:#B9E3D6;
+	background-size:1300px;
+	color: white;
+	height: 120%;
+	width:100%;
+	margin: 0 auto;
+	padding-top:0;
+	overflow: hidden;
+}
+
+#arki .bg{
+	background: url(images/arki.png) 50% 84.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+
+#ce{
+	background: url(images/ce-bg.png) 50% 0 no-repeat fixed;
+	background-color:#F4D0AD;	background-size:1300px;
+color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#ce .bg{
+	background: url(images/ce.png) 50% 78.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+
+#writer{
+	background: url(images/writer-bg.png) 50% 0 no-repeat fixed;
+	background-color:#7979B7;
+	background-size:1300px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#writer .bg{
+	background: url(images/writer.png) 50% 83% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+
+#doctor{
+	background: url(images/doctor-bg.png) 50% 0 no-repeat fixed;
+	background-color:#5FAFA7;
+	background-size:1300px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#doctor .bg{
+	background: url(images/doctor.png) 50% 85% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+
+#barber{
+	background: url(images/barber-bg.png) 50% 0 no-repeat fixed;
+	background-color:#F4D0AB;
+	background-size:1300px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#barber .bg{
+	background: url(images/barber.png) 50% 85% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fashion{
+	background: url(images/fashion-bg.png) 50% 0 no-repeat fixed;
+	background-color:#B6EEFF;
+	background-size:1300px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fashion .bg{
+	background: url(images/fashion.png) 50% 82% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#marketing{
+	background: url(images/marketing-bg.png) 50% 0 no-repeat fixed;
+	background-color:#F7CA7D;
+	background-size:1300px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#marketing .bg{
+	background: url(images/marketing.png) 50% 84% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#photography{
+	background: url(images/photography-bg.png) 50% 0 no-repeat fixed;
+	background-color:#FFDB80;
+	background-size:1300px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#photography .bg{
+	background: url(images/photography.png) 50% 86% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#teacher{
+	background: url(images/teacher-bg.png) 50% 0 no-repeat fixed;
+	background-color:#FBDFF8;
+	background-size:1300px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#teacher .bg{
+	background: url(images/teacher.png) 50% 82% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#videography{
+	background: url(images/videography-bg.png) 50% 0 no-repeat fixed;
+	background-color:#EAB9B5;
+	background-size:1300px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#videography .bg{
+	background: url(images/videography.png) 50% 83% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+/* #fond11{
+	background: url(images/fond11.jpg) 50% 0 no-repeat fixed;
+	background-color:#f8c075;
+	background-size:1300px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond11 .bg{
+	background: url(images/velo11.png) 50% 80% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond12{
+	background: url(images/fond122.jpg) 50% 0 no-repeat fixed;
+	background-color:#ffd4ab;
+	background-size:1300px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond12 .bg{
+	background: url(images/velo12.png) 50% 80.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond13{
+	background: url(images/fond13.jpg) 50% 0 no-repeat fixed;
+	background-color:#b2fad7;
+	background-size:1300px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond13 .bg{
+	background: url(images/velo13.png) 50% 82% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond14{
+	background: url(images/fond14.jpg) 50% 0 no-repeat fixed;
+	background-color:#dbdbdb;
+	background-size:1300px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond14 .bg{
+	background: url(images/velo14.png) 50% 83.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond15{
+	background: url(images/fond15.jpg) 50% 0 no-repeat fixed;
+	background-color:#fddcae;
+	background-size:1300px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond15 .bg{
+	background: url(images/velo15.png) 50% 83% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond16{
+	background: url(images/fond16.jpg) 50% 0 no-repeat fixed;
+	background-color:#fb9d79;
+	background-size:1300px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond16 .bg{
+	background: url(images/velo16.png) 50% 82.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+}
+#fond17{
+	background: url(images/fond17.jpg) 50% 0 no-repeat fixed;
+	background-color:#f6978f;
+	background-size:1300px;
+
+	color: white;
+	height: 120%;
+	padding:0;	
+}
+
+#fond17 .bg{
+	background: url(images/velo17.png) 50% 79.5% no-repeat fixed;
+	height: 120%;
+	padding: 0;
+	position: absolute;
+	width:inherit;
+	z-index: 10;
+} */
+
+
+
+}
+

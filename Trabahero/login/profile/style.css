@@ -1,0 +1,287 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, html{
+	margin: 0;
+	padding: 0;
+	height:100%;
+	background-size:50%;
+	
+}
+
+body {
+	display:block;
+}
+
+img{
+	border: 0;
+}
+
+
+
+#header h1, #pixels{
+	color: #48941A;
+}
+
+.float-left{
+	float: left;	
+	margin: 0 0 0 20px;
+}
+
+.float-right{
+	float: right;
+	margin: 0 20px 0 0;
+}
+
+.center{
+	font-size: 2.5em;
+	padding: 80px 0 0 0;
+	text-align: center;
+}
+
+#loader {
+	position:absolute;
+	width:100%;
+	height:2000%;
+	z-index:100;
+	background-color:#e2e0e0;
+}
+#loader .gif {
+	max-width: 100%;
+}
+
+#load {
+	position:fixed;
+	width:206px;
+	left:50%;
+	margin-left:-103px;
+	top:50%;
+	margin-top:-103px;
+}
+
+#load img {
+	position:absolute;
+}
+
+#load #cl  { 
+	left:50%; 
+	margin-left:-20px; 
+	top:50%;
+	margin-top:63px; 
+	opacity:0.8; 
+	position:absolute;  
+	width: 100%;
+	}
+	
+
+
+#share {
+	float:left;
+	position:fixed;
+	z-index:50;
+	left:40px;
+	bottom:40px;
+}
+
+#share a {
+	opacity:0.4;
+		-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+
+#share a:hover {
+	opacity:1;
+}
+	
+#content {
+	width:210px;
+	float:left;
+	position:absolute;
+	bottom: 4px;
+	left: 39px;
+	height:41px;
+	z-index:50;
+	display:none;
+	list-style: none;
+	border-radius:0 3px 3px 0;
+	background-color: rgba(255,255,255,0.4);
+}
+
+
+#content li {
+	margin-top:10px;
+	margin-left:10px;
+	display:inline;
+	float:left;
+	width:95px;
+	
+}
+
+#content li a{
+	width:88px;
+}
+
+#nom{
+	list-style: none;
+	position: fixed;
+	right: 44px;
+	z-index:50;
+	height:280px;
+	margin-top:40px;
+}
+
+
+#menu {
+	float:left;
+	position:fixed;
+	top:40px;
+	left:40px;
+	z-index:50;
+	
+}
+#know {
+	opacity:0.5;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+
+#know:hover {
+	opacity:1;
+}
+#know {
+	opacity:0.5;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+
+#know:hover {
+	opacity:1;
+}
+
+#menu img {
+	margin-right:30px;
+}
+#nom li{
+	margin: 0 0 10px;
+	height:10px;	
+}
+#nom li a{
+	opacity:0.4;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+	
+}
+#nom li a:hover{
+	opacity:1;
+	
+}
+nav {
+		opacity:1;
+	right:20px;
+	position:absolute;
+}
+nav li a{
+	opacity:1;
+	display:none;
+	float:right;
+}
+
+
+#intro{
+	background:url(images/trabahero-BG.png) 0 no-repeat;
+	background-color:#fec56d;
+	background-position:center;
+	background-size:auto;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	color: white;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#intro a {
+	border:none;
+	background-color:transparent;
+	opacity:0.6;
+	bottom:15px;
+	position:fixed;
+	left:50%;
+	width:30px;
+	margin-left:-15px;
+	z-index:20;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+
+#intro a:hover {
+	opacity:1;
+}
+
+@-moz-document url-prefix()
+{
+    #content {
+        bottom:6px;
+	}
+}
+
+@-moz-document url-prefix()
+{
+    #intro a {
+        bottom:0px;
+	
+}
+	
+	
+}
+#know {
+	opacity:0.5;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+
+#know:hover {
+	opacity:1;
+}
+#exp {
+	opacity:0.5;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+
+#exp:hover {
+	opacity:1;
+}
+#s-out {
+	opacity:0.5;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+
+#s-out:hover {
+	opacity:1;
+}
+
+#hero {
+	opacity:0.5;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+
+#hero:hover {
+	opacity:1;
+}
+
+
+
+
+

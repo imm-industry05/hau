@@ -1,0 +1,298 @@
+@charset "UTF-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family-Lato:wght@100;300;400;700;900&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+img {
+	border:0;
+}
+
+#menu {
+	float:left;
+	position:fixed;
+	top:40px;
+	left:40px;
+	z-index:50;
+	
+}
+
+#menu img {
+	margin-right:30px;
+}
+
+#exp {
+	opacity:0.5;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+
+#exp:hover {
+	opacity:1;
+}
+
+#shop {
+	opacity:0.5;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+
+#shop:hover {
+	opacity:1;
+}
+#hero {
+	opacity:0.5;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+
+#hero:hover {
+	opacity:1;
+}
+#nav{
+	list-style: none;
+	position: fixed;
+	right: 44px;
+	z-index:50;
+	height:280px;
+	margin-top:40px;
+}
+
+#nav li{
+	margin: 0 0 10px;
+	height:10px;	
+}
+
+#nav li a{
+	opacity:0.2;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+	
+}
+
+#nav li a:hover{
+	opacity:1;
+	
+}
+
+#nom {
+		opacity:1;
+	right:20px;
+	position:absolute;
+}
+#nom li a{
+	opacity:1;
+	display:none;
+	float:right;
+	padding-top:4px;
+}
+
+#content {
+	width:210px;
+	float:left;
+	position:absolute;
+	bottom: 0;
+	left: 39px;
+	height:41px;
+	z-index:50;
+	display:none;
+	list-style: none;
+	border-radius:0 3px 3px 0;
+	background-color: rgba(255,255,255,0.4);
+}
+
+#content li {
+	margin-top:10px;
+	margin-left:10px;
+	display:inline;
+	float:left;
+	width:95px;
+	
+}
+
+#content li a{
+	width:88px;
+}
+
+
+/* parties */
+
+#part1 {
+	background-color:rgb(255, 210, 161);
+	position: relative;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	/* margin-top: -10; */
+	}
+	
+#part1 iframe {
+	background-color:#003;
+	width:650px;
+	height:366px;
+	position:relative;
+	top:50%;
+	margin-top: -150px;
+	left:50%;
+	margin-left: -325px;
+	box-shadow: 0 0 5px #333333;
+}
+
+#part1 img {
+	position: absolute;
+	width:216px;
+	left:50%;
+	margin-left:-108px;
+	top: 140px;	
+}
+#teaser img{
+	top:100vh;
+}
+	
+#part2 {
+	background-color:rgb(189, 248, 239);
+	position: relative;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	}
+	
+
+.container {
+	margin-left:30px;
+	width:580px;
+	height:422px;
+}
+
+#part3 {
+	background-color:#a3efc9;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	padding: 150px;
+	
+	}
+
+#part3 #titre {
+	position:absolute;
+	width:216px;
+	left:50%;
+	margin-left:-108px;
+	margin-top: 13px;	
+}
+
+#about {
+	position:absolute;
+	top:50%;
+	margin-top:-170px;
+	left:50%;
+	margin-left:-279px;
+	
+}
+
+#copyr {
+	left:40px;
+	z-index:0;
+	position:fixed;
+	float:left;
+	bottom:6px;
+	font-family:"Lucida Grande", sans-serif;
+	font-size:9.5px;
+	color:#ffffff;
+	font-weight:100;
+}
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
+
+.team-section{
+    width: 100%;
+}
+.team-section .container{
+    width:80%;
+    margin:auto;
+}
+.team-section .container .row{
+    width:60%;
+    margin:auto;   
+}
+.team-section .container .row .title{
+    text-align: center;
+}
+.team-section .container .row .title p{
+    font-size: 16px;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin-top: auto;
+    color: #a3efc9;
+}
+.team-section .container .team-card{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin-top: 150px;
+}
+.team-section .container .team-card .card{
+    width: 100%;
+    background-color: #F7CA7D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    cursor: pointer;
+}
+.team-section .container .team-card .card:hover{
+    background-color: #65f0aa;
+    transition: 0.3s ;
+}
+.team-section .container .team-card .card .image-section img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 6px solid #F4D0AD;
+}
+.team-section .container .team-card .card .content{
+    width: 100%;
+    text-align: center;
+}
+.team-section .container .team-card .card .content h3{
+    font-size: 27px;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin-top: 10px;
+    letter-spacing: 1.5px;
+    color: #3c301d;
+}
+.team-section .container .team-card .card .content h4{
+    font-size: 17px;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin-top: 7px;
+    letter-spacing: 1.5px;
+    color: #6e6e6e;
+}
+.team-section .container .team-card .card .content p{
+    font-size: 15px;
+    margin-top: 16px 0px;
+    line-height: 1.5;
+    color: #6c6c6c;
+}
+@media screen and (max-width: 900px){
+    .team-section .container .team-card{  
+        grid-template-columns: repeat(2, 1fr);
+    }  
+}
+@media screen and (max-width: 768px){
+    .team-section .container .team-card{  
+        grid-template-columns:1fr;
+    }
+
+}

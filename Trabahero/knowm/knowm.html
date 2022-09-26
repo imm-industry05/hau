@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Know More</title>
+    <link rel="icon" type="image/png" href="../images/fav.png" />
+    <link href="knowm-style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" href="../images/logo.png" />
+    <script type="text/javascript" src="../scripts/jquery.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.localscroll-1.2.7-min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.scrollTo-1.4.2-min.js"></script>
+    <script src="../scripts/jquery.slides.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $('#know,#nav li a,#exp').click(function(){
+                        var el = $(this).attr('href');
+                        var elWrapped = $(el);
+                        scrollToDiv(elWrapped,40);
+                        return false;
+                    });
+        
+                    function scrollToDiv(element,navheight){
+                        var offset = element.offset();
+                        var offsetTop = offset.top;
+                        var totalScroll = offsetTop - $("header").outerHeight() + "px";
+        
+                        $('body,html').animate({scrollTop: totalScroll}, 700);
+        
+                    }
+                    $("#n1").css({opacity:'1'}, 1);
+                    
+                    $("#n1").hover(function(){
+                       $("#b1").fadeToggle(0.5);
+              });
+                      $("#n2").hover(function(){
+                       $("#b2").fadeToggle(0.5);
+              });
+                    $("#n3").hover(function(){
+                       $("#b3").fadeToggle(0.5);
+              });
+                      $("#gauche #bout").mouseover(function(){
+                       $("#gauche #bout").animate({opacity:'0.8'}, 'fast');
+              });
+                      $("#gauche #bout").mouseleave(function(){
+                       $("#gauche #bout").animate({opacity:'1'}, 'fast');
+              });
+        });
+        </script>
+</head>
+
+<body>
+
+    <div id="menu">
+        <a id="exp" href="../index.html"><img alt="experiment" src="../images/experiment_1.png" /></a>
+		<a id="know" href="knowm/knowm.html"><img alt="know more" src="../images/know-w.png" /></a>
+		<a id="exp" href="../heroes/heroes.html"><img alt="shop section" src="../images/heroes-w.png" /></a>
+		<a id="exp" href="../login/login.html"><img alt="sign-up section" src="../images/s-in-w.png" /></a>
+
+    </div>
+
+    <ul id="nav">
+        <div id="nom">
+            <li><a id="b1" href="#part1" title="Next Section"><img src="src/title1.png" alt="Link" /></a></li>
+            <li><a id="b3" href="#part3" title="Next Section"><img src="src/title3.png" alt="Link" /></a></li>
+        </div>
+        <li><a id="n1" href="#part1" title="Next Section"><img src="src/button2.png" alt="Link" /></a></li>
+        <li><a id="n3" href="#part3" title="Next Section"><img src="src/button.png" alt="Link" /></a></li>
+    </ul>
+
+
+    <div id="part1">
+        <img id="teaser" alt="TrabaHero Teaser" src="src/teaser.png" />
+        <iframe width="660" height="415" src="https://www.youtube.com/embed/YnNM72cP94M" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+
+
+    <div id="part3">
+        <img id="titre" alt="About the Developers" src="src/Developers.png" />
+        <div class="team-section">
+            <div class="container">
+                <div class="row">
+                    <div class="title">
+                        <p>" " "</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="card">
+                        <div class="image-section">
+                            <img src="src/us1.jpg">
+                        </div>
+                        <div class="content">
+                            <h3>Gregory</h3>
+                            <h4>Web Developer</h4>
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua."</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image-section">
+                            <img src="src/us2.jpg">
+                        </div>
+                        <div class="content">
+                            <h3>Lyka</h3>
+                            <h4>Web Developer</h4>
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua."</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image-section">
+                            <img src="src/us3.jpg">
+                        </div>
+                        <div class="content">
+                            <h3>Haidy</h3>
+                            <h4>Web Developer</h4>
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua."</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="copyr">
+            <p>© MATENAKAN 2022 — All rights reserved</p>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
