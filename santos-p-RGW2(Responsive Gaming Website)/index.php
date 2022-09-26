@@ -1,3 +1,17 @@
+<?php
+
+include 'config.php';
+session_start();
+
+if(!isset($_SESSION['log_in'])){
+    header("location: http://localhost/hau/HAU/santos-p-RGW2(Responsive%20Gaming%20Website)/Login.php");
+}
+
+
+?>
+
+
+
 <!DOCTYPEhtml>
 <html lang ="en">
 <head>
@@ -50,7 +64,7 @@
                     <li><a href="#trending">Trending</a></li>
                     <li><a href="#new">New Games</a></li>
                     <li><a href="#action">Action Games</a></li>
-                    <li><a href="#About Us">About Us</a></li>
+                    <li><a href="http://localhost/hau/HAU/santos-p-RGW2(Responsive%20Gaming%20Website)/Logout.php">Log out</a></li>
             </div>
         </div>
         <div class="notification">

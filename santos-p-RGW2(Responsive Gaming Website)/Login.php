@@ -1,3 +1,38 @@
+<?php
+include 'config.php';
+error_reporting(0);
+session_start();
+
+if (isset($_POST['login'])){
+
+    $username1 = $_POST['username'];
+    $password1 = md5($_POST['password']);
+     
+    $sql = "SELECT * FROM signup_php WHERE username = '$username1' AND password = '$password1'";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) > 0){
+
+        $row = mysqli_fetch_array($result);
+
+        if ($row['username'] == "$username1"){
+            $_SESSION['log_in'] = $row['username'];
+            header("location: http://localhost/hau/HAU/santos-p-RGW2(Responsive%20Gaming%20Website)/");
+        }
+    }
+
+
+
+
+}
+
+
+
+
+?>
+
+
+
 <!DOCTYPEhtml>
 <html lang ="en">
 <head>
@@ -38,20 +73,20 @@
         <div class="contentBx">
             <div class="formBx">
                 <h2>Login</h2>
-                <form>
+                <form action="" method="POST" >
                     <div class="inputBx">
                         <span>Username</span>
-                        <input type="text" name="">
+                        <input type="text" name="username">
                     </div>
                     <div class="inputBx">
                         <span>password</span>
-                        <input type="password" name="">
+                        <input type="password" name="password">
                     </div>
                     <div class="remember">
                         <label><input type="checkbox" name="">Remember me</label>
                     </div>
                     <div class="inputBx">
-                        <input type="submit" value="Sign in" name="">
+                        <input type="submit" value="Sign in" name="login">
                     </div>
                     <div class="inputBx">
                         <p>Don't have an account? <a href="./SignUp.php">Sign Up Here</a></p>

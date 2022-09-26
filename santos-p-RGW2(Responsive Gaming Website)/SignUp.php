@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
                 $email1 = "";
                 $_POST['password'] = "";
                 $_POST['cpassword'] = "";
-                header("location: /index.php");
+                header("location: http://localhost/hau/HAU/santos-p-RGW2(Responsive%20Gaming%20Website)/");
             } else {
                 echo"<script>alert('Try again')</script>";
             }
