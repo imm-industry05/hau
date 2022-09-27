@@ -130,7 +130,7 @@ var game = (function(){
         drawString("Project of:",{x: 120, y: 120});
         drawString("Name: Jan Karlo Bamba",{x: 55, y: 130});
         drawString("Section: CpE - 401",{x: 70, y: 140});
-        drawString("Special Thank to: You",{x: 85, y: 150});
+        drawString("Special Thanks to: You",{x: 85, y: 150});
         if(keys[32]){
             clearInterval(splashInterval);
             gameInterval = setInterval(renderGameFrame, 30);
