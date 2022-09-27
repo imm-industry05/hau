@@ -133,17 +133,17 @@
     p{
         color: #777;
         font-size: 16px;
-        font-weight: 300;
+        font-weight: 700;
         line-height: 22px;
         padding: 10px;
         padding-bottom: 5px;
     }
     .course p{
         color: #777;
-        font-size: 16px;
-        font-weight: 300;
+        font-size: 12px;
+        font-weight: 1000;
         line-height: 22px;
-        padding: 10px;
+        padding: 5px;
         text-align: justify;
     }
     .course .index p{
