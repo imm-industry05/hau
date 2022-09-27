@@ -1,5 +1,11 @@
 <?php
-include 'config.php';
+$server = "database";
+$user = "root";
+$pass = "123";
+$database = "inventory_db";
+
+$conn = mysqli_connect($server, $user, $pass, $database);
+
 error_reporting(0);
 session_start();
 
@@ -17,7 +23,7 @@ if (isset($_POST['login'])){
 
         if ($row['username'] == "$username1"){
             $_SESSION['log_in'] = $row['username'];
-            header("location: http://localhost/hau/HAU/santos-p-RGW2(Responsive%20Gaming%20Website)/");
+            header("location: /index.php");
         }
     }
 

@@ -1,7 +1,13 @@
 <?php
 
-include 'config.php'; 
-error_reporting(0);
+
+$server = "database";
+$user = "root";
+$pass = "123";
+$database = "inventory_db";
+
+$conn = mysqli_connect($server, $user, $pass, $database);
+
 
 if (isset($_POST['submit'])) {
 
@@ -17,12 +23,14 @@ if (isset($_POST['submit'])) {
         if(!$result -> num_rows > 0) {
             $sql = "INSERT INTO signup_php(username, email, password) VALUES('$username1', '$email1', '$password1')";
             $result = mysqli_query($conn, $sql);
+
+            
             if($result){
                 $username1 = "";
                 $email1 = "";
                 $_POST['password'] = "";
                 $_POST['cpassword'] = "";
-                header("location: http://localhost/hau/HAU/santos-p-RGW2(Responsive%20Gaming%20Website)/");
+                header("location: /Login.php");
             } else {
                 echo"<script>alert('Try again')</script>";
             }
@@ -105,7 +113,7 @@ if (isset($_POST['submit'])) {
         </form>
         <hr>
         <div class="already">
-            Already have an account? <a href="./Login.php">Sign In</a>
+            Already have an account? <a href="/Login.php">Sign In</a>
         </div>
 
         

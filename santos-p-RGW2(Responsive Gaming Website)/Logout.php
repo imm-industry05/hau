@@ -1,13 +1,18 @@
 <?php
 
-include 'config.php';
+$server = "database";
+$user = "root";
+$pass = "123";
+$database = "inventory_db";
+
+$conn = mysqli_connect($server, $user, $pass, $database);
 
 
 session_start();
 session_unset();
 session_destroy();
 
-header("location: http://localhost/hau/HAU/santos-p-RGW2(Responsive%20Gaming%20Website)/Login.php");
+header("location: /Login.php");
 
 
 

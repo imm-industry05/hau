@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+  apache:
+    image: php:7.4-apache
+    command: docker-php-ext-install mysqli
+    ports:
+      - 6969:80
+    volumes:
+      - ./santos-p-RGW2(Responsive Gaming Website):/var/www/html/
+    networks:
+      pat_network:
+        ipv4_address: 16.16.0.10
+    depends_on:
+      - database
+  
+  database:
+    image: mariadb:10.9.3
+    container_name: mydatabase
+    restart: unless-stopped 
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+    ports:
+      - 3306:3306
+    volumes:
+      - ./rgwdb:/var/lib/mysql
+    networks:
+      pat_network:
+        ipv4_address: 16.16.0.20  
+
+  server:
+    image: nginx:latest
+    container_name: webserver
+    restart: unless-stopped
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/config:/etc/nginx/conf.d
+    networks:
+      pat_network:
+        ipv4_address: 16.16.0.30
+
+
+networks:
+  pat_network:
+    ipam:
+      config:
+        - subnet: 16.16.0.0/16
+        
