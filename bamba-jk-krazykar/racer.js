@@ -127,10 +127,10 @@ var game = (function(){
         
         drawString("How To Play:",{x: 100, y: 90});
         drawString("Space to start, arrow keys to drive",{x: 30, y: 100});
-        drawString("Credits:",{x: 120, y: 120});
-        drawString("code: Jan Karlo Bamba",{x: 55, y: 130});
-        drawString("section: CpE - 401",{x: 70, y: 140});
-        drawString("playtesters: almond",{x: 85, y: 150});
+        drawString("Project of:",{x: 120, y: 120});
+        drawString("Name: Jan Karlo Bamba",{x: 55, y: 130});
+        drawString("Section: CpE - 401",{x: 70, y: 140});
+        drawString("Special Thank to: You",{x: 85, y: 150});
         if(keys[32]){
             clearInterval(splashInterval);
             gameInterval = setInterval(renderGameFrame, 30);
