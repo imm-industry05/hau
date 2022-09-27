@@ -36,12 +36,12 @@ var game = (function(){
     var player = {
         position: 10,
         speed: 0,
-        acceleration: 0.05,
+        acceleration: 0.07,
         deceleration: 0.3,
         breaking: 0.6,
-        turning: 5.0,
+        turning: 5.5,
         posx: 0,
-        maxSpeed: 15
+        maxSpeed: 16
     };
     
     var splashInterval;
@@ -123,13 +123,13 @@ var game = (function(){
         context.fillStyle = "rgb(0,0,0)";
         context.fillRect(0, 0, render.width, render.height);
         
-        context.drawImage(spritesheet,  357, 9, 115, 20, 100, 20, 115, 40);
+        context.drawImage(spritesheet,  357, 9, 115, 33, 100, 33, 115, 40);
         
         drawString("How To Play:",{x: 100, y: 90});
         drawString("Space to start, arrow keys to drive",{x: 30, y: 100});
         drawString("Credits:",{x: 120, y: 120});
-        drawString("code: Jan Karto Bamba",{x: 55, y: 130});
-        drawString("font: spicypixel.net",{x: 70, y: 140});
+        drawString("code: Jan Karlo Bamba",{x: 55, y: 130});
+        drawString("section: CpE - 401",{x: 70, y: 140});
         drawString("playtesters: almond",{x: 85, y: 150});
         if(keys[32]){
             clearInterval(splashInterval);
