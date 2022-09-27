@@ -1,0 +1,8 @@
+Krazy Kar
+
+1. Inspired from the the popular 1990's game outrun. Made with love using java script to have a more dynamic interaction with the user.
+2. Race against the time with randomly generated road to have a different experience every play. 
+3. Use your keyboard's arrow keys to control the car. Up/Down is the acceleration and brake and the Left/Right is to steer the car.
+4. Feedbacks are welcome to fine tune the control of the car and add more interesting stuff in the future.
+5. Can be played with a low resolution mode and also available in HD!
+6. My time is 31.051 seconds :) Try and beat it and share your results!
