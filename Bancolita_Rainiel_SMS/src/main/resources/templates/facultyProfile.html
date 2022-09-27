@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Faculty Profile</title>
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css" type="text/css" media="all" th:href="@{/css/styles.css}">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+
+<div class="wrapper">
+
+    <div class="header">
+        <div class="header-menu">
+            <div class="title">Faculty Dashboard</div>
+            <ul>
+                <li><a href="http://localhost:8080/faculty/profile/" class="menu-btn"><i class='bx bx-user' ></i></a><li>
+                <li sec:authorize="isAuthenticated()"><a th:href="@{/faculty/logout}"><i class='bx bx-log-out'></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-menu">
+            <div class="profile">
+                <i class='bx bx-user-circle user' ></i>
+            </div>
+            <li>
+                <a href="http://localhost:8080/faculty/" class="menu-btn">
+                    <i class='bx bx-home'></i><span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:8080/faculty/profile/" class="menu-btn">
+                    <i class='bx bx-user' ></i></i><span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:8080/faculty/records/" class="menu-btn">
+                    <i class='bx bx-book-content' ></i><span>Records</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:8080/faculty/schedule/" class="menu-btn">
+                    <i class='bx bx-buildings' ></i><span>Schedule</span>
+                </a>
+            </li>
+
+        </div>
+    </div>
+
+<br>
+<br>
+<br>
+<br>
+<div class = "container">
+    <div class = "row">
+        <div class = "col-md-6 col-md-offset-3" >
+
+            <h1> My Profile</h1>
+            <div>
+                <div>
+                    <h5 style="font-weight:bold;">Full Name: </h5>
+                    <p th:text="${facultyProfile.firstName}+' '+${facultyProfile.middleName}+' '+${facultyProfile.lastName}"></p>
+                </div>
+                <div>
+                    <h5 style="font-weight:bold;">Department: </h5>
+                    <p th:text="${facultyProfile.department.departmentName}"></p>
+                </div>
+                <div>
+                    <h5 style="font-weight:bold;">Address: </h5>
+                    <p th:text="${facultyProfile.address}"></p>
+                </div>
+                <div>
+                    <h5 style="font-weight:bold;">Birth date: </h5>
+                    <p th:text="${facultyProfile.birthDate}"></p>
+                </div>
+                <div>
+                    <h5 style="font-weight:bold;">Contact Number: </h5>
+                    <p th:text="${facultyProfile.contactNumber}"></p>
+                </div>
+                <div>
+                    <h5 style="font-weight:bold;">Email: </h5>
+                    <p th:text="${facultyProfile.email}"></p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

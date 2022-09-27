@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>Grades</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css" type="text/css" media="all" th:href="@{/css/styles.css}">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+
+<div class="wrapper">
+
+    <div class="header">
+        <div class="header-menu">
+            <div class="title">Student Dashboard</div>
+            <ul>
+                <li><a href="http://localhost:8080/student/profile/" class="menu-btn"><i class='bx bx-user' ></i></a><li>
+                <li sec:authorize="isAuthenticated()"><a th:href="@{/student/logout}"><i class='bx bx-log-out'></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-menu">
+            <div class="profile">
+                <i class='bx bx-user-circle user' ></i>
+            </div>
+            <li>
+                <a href="http://localhost:8080/student/" class="menu-btn">
+                    <i class='bx bx-home'></i><span>Home</span>
+                </a>
+            </li>
+            <li>
+                <<a href="http://localhost:8080/student/profile/" class="menu-btn">
+                <i class='bx bx-user' ></i></i><span>Profile</span>
+            </a>
+            </li>
+            <li>
+                <a href="http://localhost:8080/student/enrollment/" class="menu-btn">
+                    <i class='bx bx-map-alt' ></i><span>Enrollment</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:8080/student/schedule/" class="menu-btn">
+                    <i class='bx bx-detail'></i><span>Schedule</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:8080/student/grades/" class="menu-btn">
+                    <i class='bx bxs-graduation' ></i><span>Grades</span>
+                </a>
+            </li>
+
+        </div>
+    </div>
+    <br>
+    <br>
+  <section class="home-section">
+      <div class="home-content">
+          <h1>Grades</h1>
+          <div class="admin-dashboard-wrapper">
+              <div class="function-wrapper mt-5" >
+                  <div class="col col-sm-12" th:each="subject:${subjects}" >
+                      <a th:href="@{'/student/grades/'+${subject.subjCode}}" class="dashboard-main-btn"><button class="funcButton" th:text="${subject.subjCode} + ' '+${subject.subjTitle}"></button></a>
+                  </div>
+              </div>
+
+
+
+              <div class="table-responsive mt-3" th:if="${student!=null}">
+                  <table class="table table-striped table-hover" >
+
+                      <tr  style="text-align:center;" th:if="${not #lists.isEmpty(prelimActivities)} or ${not #lists.isEmpty(midtermActivities)} or ${not #lists.isEmpty(finalActivities)} "  >
+                          <th scope="col"  rowspan="1" ></th>
+                          <th scope="col" rowspan="1" th:if="${not #lists.isEmpty(prelimActivities)}" th:colspan="${#lists.size(prelimActivities)}"  th:text="${prelimActivities[0].period}"></th>
+                          <th scope="col" rowspan="1" th:if="${not #lists.isEmpty(midtermActivities)}" th:colspan="${#lists.size(midtermActivities)}"  th:text="${midtermActivities[0].period}"></th>
+                          <th scope="col" rowspan="1" th:if="${not #lists.isEmpty(finalActivities)}" th:colspan="${#lists.size(finalActivities)}"  th:text="${finalActivities[0].period}"></th>
+                          <th scope="col" rowspan="1"></th>
+                          <th scope="col" rowspan="1"></th>
+                      </tr>
+                      <tr style="text-align:center;">
+                          <th scope="col" rowspan="1">Name</th>
+                          <th scope="col" rowspan="1"  th:if="${not #lists.isEmpty(prelimActivities)}" th:text="${activity.activityName}"  th:each="activity:${prelimActivities}"></th>
+                          <th scope="col" rowspan="1"  th:if="${not #lists.isEmpty(midtermActivities)}" th:text="${activity.activityName}"  th:each="activity:${midtermActivities}"></th>
+                          <th scope="col" rowspan="1"  th:if="${not #lists.isEmpty(finalActivities)}" th:text="${activity.activityName}"  th:each="activity:${finalActivities}"></th>
+                          <th scope="col" rowspan="1">Grade</th>
+                          <th scope="col" rowspan="1">Equivalent</th>
+                      </tr>
+                      <tr style="text-align:center">
+                          <td th:text="${student.firstName}+' '+${student.middleName}+' '+${student.lastName}"></td>
+                          <td th:text="${activity.score}+'/'+${activity.totalItems}" th:if="${student.studentId}==${activity.student.studentId}"  th:each="activity:${prelimActivities}"></td>
+                          <td th:text="${activity.score}+'/'+${activity.totalItems}" th:if="${student.studentId}==${activity.student.studentId}"  th:each="activity:${midtermActivities}"></td>
+                          <td th:text="${activity.score}+'/'+${activity.totalItems}" th:if="${student.studentId}==${activity.student.studentId}"  th:each="activity:${finalActivities}"></td>
+                          <td th:text="${grade}" th:if="${grade}!=null and ${grade}!='0.0'"></td>
+                          <td th:text="${equivalent}" th:if="${grade}!=null and ${grade}!='0.0'"></td>
+                          <td  th:unless="${grade}!=null and ${grade}!='0.0'">Not yet available.</td>
+                          <td  th:unless="${grade}!=null and ${grade}!='0.0'">Not yet available.</td>
+                      </tr>
+
+
+
+                  </table>
+              </div>
+          </div>
+      </div>
+  </section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+</body>
+</html>
