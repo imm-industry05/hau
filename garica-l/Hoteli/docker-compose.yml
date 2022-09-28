@@ -17,8 +17,15 @@ services:
         container_name: mysql-db
         ports:
             - "3307:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD:
+            MYSQL_DATABASE: hoteli
+            MYSQL_USER: root
+            MYSQL_PASSWORD: 
         env_file:
             - ./db.env
+        volumes:
+            - ./db:/docker-entrypoint-initdb.d
         networks:
             - app-network
 
@@ -36,7 +43,7 @@ services:
     
     myphpadmin:
         image: phpmyadmin/phpmyadmin
-        container_name: php-app
+        container_name: php-admin
         restart: always
         env_file:
             - ./phpmyadmin.env
