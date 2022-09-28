@@ -102,8 +102,8 @@ header{
     margin: 1.5rem 0;
     top: 0;
     left: 0;
-    width: 35%;
-    height: 35%;
+    width: 20%;
+    height: 20%;
 }
 .food-img span{
     position: absolute;
@@ -112,13 +112,14 @@ header{
     background: var(--exDark);
     color: #fff;
     font-size: 1.4rem;
-    padding: 0.3rem 0.6rem;
+    padding: 0rem 30rem;
 }
 .food-img img{
     transition:  all 0.5s ease;
+    padding: 0rem 30rem;
 }
 .food-item:hover img{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .food-img span:first-of-type{
     position: absolute;
@@ -127,7 +128,7 @@ header{
     left: 10px;
     background: var(--exDark);
     color: #fff;
-    padding: 0.25rem 1rem;
+    padding: 0.9rem 1rem;
 }
 .food-img span:last-of-type{
     position: absolute;
