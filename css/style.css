@@ -7,9 +7,19 @@
   font-family: 'Montserrat', sans-serif;
 }
 body{
+  overflow-y:auto ;
   background: #2a2a2a;
   justify-content: center;
   align-items: center;    
+}
+body::-webkit-scrollbar{
+  width: .9rem;
+  border-radius: .4rem;
+  background-color: #fff;
+}
+body::-webkit-scrollbar-thumb{
+  border-radius: .4rem;
+  background-color: chartreuse;
 }
 
 /* Navbar */
@@ -88,6 +98,7 @@ nav form button{
 nav form button:hover{
   background: chartreuse;
 }
+
 nav .menu-icon,
 nav .cancel-icon,
 nav .search-icon{
@@ -112,10 +123,6 @@ nav .search-icon{
 @media (max-width: 1140px){
   nav{
     padding: 0px;
-  }
-  nav .login a{
-    text-decoration: none;
-    color: antiquewhite;
   }
   nav .logo{
     flex: 2;
@@ -197,21 +204,6 @@ nav .search-icon{
     display: block;
   }
 }
-.content{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
-}
-
-.space{
-  margin: 10px 0;
-}
-nav .logo.space{
-  color: chartreuse;
-  padding: 0 5px 0 0;
-}
 @media (max-width: 980px){
   nav .menu-icon,
   nav .cancel-icon,
@@ -229,20 +221,6 @@ nav .logo.space{
     margin: 0 10px;
     font-size: 16px;
   }
-}
-nav .login button{
-  background-color: #1e232b;
-  color: white;
-  padding: 14px 20px;
-  font-weight: 600;
-  margin: 8px;
-  border-radius: 12px;
-  border: none;
-  width: 100%;
-  font-size: 16px;
-}
-nav .login button:hover{
-  background: chartreuse;
 }
 /* Navbar ends here*/
 
@@ -266,42 +244,43 @@ nav .login button:hover{
   color: antiquewhite;
   padding: 20px 40px 20px 40px;
 }
+
 /* Recently section start here */
 #recently{
   background-color: #2a2a2a;
 }
-#recently .container{
+#recently .r-container{
   padding: 10px 10px 10px 10px;
 }
-#recently .container .row{
+#recently .r-container .r-row{
   width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-#recently .container .row .image{
+#recently .r-container .r-row .r-image{
  position: relative;
  flex: 1;
  max-width: 1000px;
 }
-#recently .container .row .image img{
+#recently .r-container .r-row .r-image img{
   border-radius: 20px;
   padding: 10px 10px 10px 10px;
   height: 450px;
   width: 320px;
 }
-#recently .container .row .image .details{
-  padding: 4px 100px 20px 20px;
+#recently .r-container .r-row .r-image .r-details{
+  padding: 4px 10px ;
   display: center;
 }
-#recently .container .row .image .details a{
+#recently .r-container .r-row .r-image .r-details a{
   justify-content: center;
   color: #fff;
   text-decoration: none;
   font-size: 16px;
   font-weight: 400;
 }
-#recently .container .row .image .details a:hover{
+#recently .r-container .r-row .r-image .r-details a:hover{
   color: chartreuse;
 }
 /* Recently section ends here */
@@ -331,7 +310,7 @@ nav .login button:hover{
   width: 320px;
 }
 #trending .t-container .t-row .t-image .t-details{
-  padding: 4px 100px 20px 20px;
+  padding: 4px 10px ;
   display: center;
 }
 #trending .t-container .t-row .t-image .t-details a{
@@ -344,4 +323,4 @@ nav .login button:hover{
 #trending .t-container .t-row .t-image .t-details a:hover{
   color: chartreuse;
 }
-/* Recently section ends here */
+/* Trending section ends here */

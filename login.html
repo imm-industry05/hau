@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="css/login.css">
     <title>Otaku Haven - Login</title>
     <link rel="icon" href="img/icons/icon.png">
 </head>
@@ -23,7 +24,8 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="index.html#recently">Recently</a></li>
               <li><a href="index.html#trending">Trending</a></li>
-              <li><a href="error.html">List</a></li>
+              <li><a href="template.html">List</a></li>
+              <li><a href="login.html">Login</a></li>
            </div>
            <div class="search-icon">
               <span class="fas fa-search"></span>
@@ -35,13 +37,31 @@
               <input type="search" class="search-data" placeholder="Search" required>
               <button type="submit" class="fas fa-search"></button>
            </form>
-           <div class="login">
-              <a href="login.html"><button type="submit">Login</button></a>
-           </div>
-  
         </nav>
         </header>
+        
+        <div class="loginform">
+         <h1>Login Now</h1>
+         <form method="post">
+           <div class="txt_field">
+             <input type="text" required>
+             <span></span>
+             <label>Username</label>
+           </div>
+           <div class="txt_field">
+             <input type="password" required>
+             <span></span>
+             <label>Password</label>
+           </div>
+           <div class="pass">Forgot Password?</div>
+           <input type="submit" value="Login">
+           <div class="signup_link">
+             Not a member? <a href="#">Signup</a>
+           </div>
+         </form>
+       </div>     
 </body>
  <!--script-->
  <script src="js/navbaranimation.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>
