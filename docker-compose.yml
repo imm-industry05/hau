@@ -2,8 +2,9 @@ version: '3'
 
 services:
   apache:
-    image: php:7.4-apache
-    command: docker-php-ext-install mysqli
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - 6969:80
     volumes:
