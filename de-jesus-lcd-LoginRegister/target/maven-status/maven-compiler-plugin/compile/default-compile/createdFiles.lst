@@ -1,0 +1,8 @@
+com\example\demo\AppController.class
+com\example\demo\CustomUserDetailsService.class
+com\example\demo\UserRepository.class
+com\example\demo\WebSecurityConfig.class
+com\example\demo\User.class
+com\example\demo\LoginRegisterApplication.class
+com\example\demo\CustomUserDetails.class
+com\example\demo\PasswordEncoder.class
