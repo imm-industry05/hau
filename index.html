@@ -1,9 +1,174 @@
 <html>
-    <head>
-    <title>Poor Man's Tetris</title>
-    <body>
-        <canvas id="tetris" width="240" height="460"></canvas>
-        <script src="tetris.js"></script>
-    </body>
-    </head>
+<head>
+    <title>PM's Tetris</title>
+    
+    <style>
+    body {
+        background: #000000;
+        color: #fff;
+        font-size: 1.5em;
+        text-align: center;
+        font-family: 'back_to_1982regular', Arial, sans-serif;
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      canvas {
+        border: solid .2em rgb(255, 255, 255);
+        height: 70vh;
+      }
+
+      .wrapper>div{
+        text-align:right;
+        vertical-align:bottom;
+        display:inline-block;
+        margin-right: 0;
+      }
+      
+      #top{
+        vertical-align:top;
+      }
+      
+
+    .header{
+        color: white;
+        font-family: 'karmatic_arcaderegular';
+        text-align: left;
+        margin-top: 30px;
+    }
+
+    #headerButtons{
+        color: rgb(255, 255, 255);
+        font-size: 0.5em;
+        float: right; 
+        text-align: right;
+        vertical-align: middle;
+        margin-left: 20px;
+        margin-right: 50px;
+    }
+
+    #logo{
+        color: rgb(255, 255, 255);
+        font-size: 0.5em;
+        position: relative; 
+        display:inline-block; 
+        
+    }
+
+
+    a:link { text-decoration: none; color: inherit; }
+    a:visited { text-decoration: none; color: inherit;}
+    a:hover { text-decoration: none; color: inherit;}
+    a:active { text-decoration: none; color: inherit;}
+
+
+
+    #T{
+        color: white;
+        font-size: 1em;
+        position: relative; 
+        font-family: 'tetris_blocksregular';
+        vertical-align:top;
+        display:inline-block;
+        margin-left: 50px;
+        margin-top: -50px;
+    }
+
+    h1, h2, p {
+    margin-bottom: 60px;
+    }
+
+    input[type="text"], textarea {
+        background-color : #000000; 
+        border: solid .5em rgb(0, 0, 0);
+        color:rgb(255, 255, 255);
+        text-align: center;
+        font-family: 'back_to_1982regular', Arial, sans-serif;
+        src: url('backto1982-webfont.woff2') format('woff2'),
+             url('backto1982-webfont.woff') format('woff');
+        font-size: 1em;
+    }
+
+    input{
+        text-align: center; 
+    }
+
+    @font-face {
+    font-family: 'back_to_1982regular';
+    src: url('backto1982-webfont.woff2') format('woff2'),
+         url('backto1982-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'karmatic_arcaderegular';
+    src: url('ka1-webfont.woff2') format('woff2'),
+         url('ka1-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'tetris_blocksregular';
+    src: url('tetrisblocks-p99g-webfont.woff2') format('woff2'),
+         url('tetrisblocks-p99g-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    </style>
+</head>
+
+<body>  
+
+    <div class="header" style="width: 100%; height:auto">
+        <div id="T">
+            <h1><a href="index.html">D</a></h1>
+        </div>
+        <div id="Logo">
+            <h1><a href="index.html">Poorman's <br>Tetris</a></h1>
+        </div>
+        <div id="headerButtons" >
+            <h1><a href="index.html">About</a></h1>
+        </div>
+        <div id="headerButtons">
+            <h1><a href="index.html">Leaderboards</a></h1>
+        </div>
+    </div>
+    
+<div style="width: auto; height:auto" class="wrapper">
+    <div style="margin-left:-1.5em;">
+        <div>Top:
+            <div id="top" style =  "margin-bottom:100px;">
+            </div>
+        </div>
+        <div>Level:
+            <div id="level" >
+            </div>
+        </div>
+        <div style="margin-top: 10%;">Score:
+            <div id="score" style =  "margin-bottom: 70%;">
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center">
+        <div>
+            <canvas id="tetris" width=240; height= 400> 
+            <script src="tetris.js"></script>
+        </div>
+
+        <div style="display: block; text-align: center;" >
+            <form autocomplete="off">
+                <input type="text" id="name" name="name" placeholder="Enter Name">
+            </form>
+        </div>
+
+    </div>
+    
+
+</div>
+
+</body>
 </html>
