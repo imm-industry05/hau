@@ -11,5 +11,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen("8080", () => {
-    console.log('kikinig');
+    console.log('Initialized.');
 })
