@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 8080:80
+      - 8081:80
     volumes:
       - ./university:/var/www/html/
     networks:
@@ -19,10 +19,10 @@ services:
     image: nginx:1.23.1
     container_name: nginx
     ports:
-      - 80:80
+      - 8080:80
     restart: on-failure
     volumes:
-      - ./config/nginx:/etc/nginx/conf.d
+      - ./config:/etc/nginx/conf.d
     networks:
       myProxy:
         ipv4_address: 15.15.0.11
