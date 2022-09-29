@@ -3,7 +3,6 @@
     require_once('config.php');
 ?>
 <!doctype html>
-
 <html>
     <head>
         <title>Book Now</title>
@@ -25,13 +24,15 @@
             box-sizing: border-box;
         }
 
+        html::-webkit-scrollbar {
+                display: none;
+        }
         body {
             background-image: url("assets/minimalbg.jpg");
-            height: 100%; 
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            display: flex;
+            position:relative;
             justify-content: center;
             align-items: center;
             flex-direction: column;
@@ -47,7 +48,7 @@
             text-decoration: none;
             position: relative;
             font-weight:bolder;
-            margin: -80px 0 90px 1300px;
+            margin: 40px 50px 90px 800px;
             box-shadow: 0 8px 19px -11px red;
             transition: transform .2s;
         }
@@ -267,6 +268,7 @@
             position: absolute;
             margin: 140px 0 0 210px;
         }
+
     </style>
     <body>
         <a href="index.php"><button type="button" id="back">Back</button></a>

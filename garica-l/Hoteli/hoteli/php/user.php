@@ -38,20 +38,14 @@
             line-height: 1.8;
         }
         #logo{
-            height: 65px;
-            width: 80px;
+            height: 45px;
+            width: 60px;
             margin-left: 30px;
         }
         .topnav{
             background-color:white;
             text-decoration:none;
             box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-        }
-        /*footer logo*/
-        #logo1{
-            height: 85px;
-            width: 95px;
-            margin: 30px 600px 0;
         }
         #popup a{
           transition: transform .2s;
@@ -102,6 +96,75 @@
       .carousel-fade .carousel-control {
         z-index: 2;
       } 
+      #button{
+        position: relative;
+        border: 2px solid white;
+        background: transparent;
+        color: white;
+        width: 160px;
+        height: 40px;
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 5px;
+        opacity: .5;
+        top: 30px;
+        bottom: 0px;
+        left: 120px;
+        right: 0px;
+        margin: auto;
+        transition: .3s;
+        transition: transform .2s;
+      }
+
+        #button:hover{
+          border: 2px solid #81d184;
+          cursor: pointer;
+          color: #81d184;
+          opacity: 1;
+          transition: .3s;
+          box-shadow: 0 2px 40px 0 #ffff;
+          -ms-transform: scale(1.1); /* IE 9 */
+          -webkit-transform: scale(1.1); /* Safari 3-8 */
+          transform: scale(1.1);
+        }
+        #starter, #maincourse{
+              padding: 5%;
+        }
+
+        /*footer*/
+       /*footer logo*/
+       #logo1{
+                height: 85px;
+                width: 95px;
+                margin: 30px 600px 0;
+            }
+        #contact{
+            margin-top: 100px;
+            box-shadow:0 2px 10px 0 rgba(0,0,0,0.10),0 2px 20px 0 rgba(0,0,0,0.5);
+        }
+        .info-left{
+            color: #000;
+            float: left;  
+            font-size: 15px;
+            margin: -80px 0 60px 100px;
+            text-align: justify;
+        }
+        .info-right{
+            color: #000;
+            float: right;  
+            font-size: 15px;
+            margin: -80px 100px 60px 100px;
+            text-align: justify;
+        }
+        .copyright{
+              margin: 50px 70px 0 430px;
+              font-size: 13px;
+              padding-bottom:10px;
+          }
       @media all and (transform-3d), (-webkit-transform-3d) {
           .carousel-fade .carousel-inner > .item.next,
           .carousel-fade .carousel-inner > .item.active.right {
@@ -175,69 +238,7 @@
               background-position: center center;
               background-repeat: no-repeat;
               }
-          #button{
-              position: relative;
-              border: 2px solid white;
-              background: transparent;
-              color: white;
-              width: 160px;
-              height: 40px;
-              font-size: 20px;
-              font-family: 'Roboto', sans-serif;
-              font-weight: bold;
-              text-decoration: none;
-              text-decoration: none;
-              text-align: center;
-              border-radius: 5px;
-              opacity: .5;
-              top: 30px;
-              bottom: 0px;
-              left: 120px;
-              right: 0px;
-              margin: auto;
-              transition: .3s;
-              transition: transform .2s;
-            }
-
-          #button:hover{
-              border: 2px solid #81d184;
-              cursor: pointer;
-              color: #81d184;
-              opacity: 1;
-              transition: .3s;
-              box-shadow: 0 2px 40px 0 #ffff;
-              -ms-transform: scale(1.1); /* IE 9 */
-              -webkit-transform: scale(1.1); /* Safari 3-8 */
-              transform: scale(1.1);
-            }
-            #starter, #maincourse{
-                  padding: 5%;
-            }
-
-          /*footer*/
-          #contact{
-              margin-top: 100px;
-              box-shadow:0 2px 10px 0 rgba(0,0,0,0.10),0 2px 20px 0 rgba(0,0,0,0.5);
-          }
-          .info-left{
-              color: #000;
-              float: left;  
-              font-size: 15px;
-              margin: -80px 0 60px 200px;
-              text-align: justify;
-          }
-          .info-right{
-              color: #000;
-              float: right;  
-              font-size: 15px;
-              margin: -80px 230px 60px 100px;
-              text-align: justify;
-          }
-          .copyright{
-              margin:50px 550px 0;
-              font-size: 13px;
-              padding-bottom:30px;
-          }
+          
         </style>
     </head>
     <body>
@@ -248,12 +249,12 @@
                     <img src="assets/logobg.png" alt="Logo Hoteli" id="logo">
                 </a>
                 <!-- navbar links-->
-                <div class="w3-right w3-hide-small" style="padding:20px 0;" id="popup"><!--padding top-->
+                <div class="w3-right w3-hide-small" style="padding:10px 0;" id="popup"><!--padding top-->
                     <a href="#home" class="w3-bar-item w3-button">Home</a>
                     <a href="book_reserve.php" class="w3-bar-item w3-button">Book Reservation</a>
                     <a href="feedback.php" class="w3-bar-item w3-button">Feedback</a>
                     <a href="user_account_settings.php" class="w3-bar-item w3-button">Account Setting</a>
-                    <a href="logout.php?logout" class="w3-bar-item w3-button w3-text-blue" style="margin-left:450px">Log out</a><!--move the navbar links-->
+                    <a href="logout.php?logout" class="w3-bar-item w3-button w3-text-blue" style="margin-left:350px">Log out</a><!--move the navbar links-->
                 </div>
                 <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -323,7 +324,7 @@
     </div>
     <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
       <p><button onclick="document.getElementById('menu2').style.display='block'">
-      <img src="assets/dessert.jpg" style="width:100%; height:30vh;"/>
+      <img src="assets/dessert.jpg" style="width:100%; height:26vh;"/>
         <h3>Desserts</h3>
           <p>Dessert is a course that concludes a meal. The course consists of sweet foods, such as confection.</p>
       </button></p> 

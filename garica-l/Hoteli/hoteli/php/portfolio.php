@@ -17,7 +17,7 @@
         <style>
              html::-webkit-scrollbar {
                 display: none;
-            }
+             }
             /* Full height image background */
             body {
                 position: relative;
@@ -28,15 +28,16 @@
             }
             .container{
                 position: absolute;
-                margin: 40px 0 0 30px;
+                margin: 20px 0 0 10px;
                 text-align: center;
-                width: 100%;
+                width: 84%;
             }
             .container .content {
                 position: absolute;
                 background: rgba(255, 255, 255, 0.9); /* White background with 0.9 opacity */
-                padding: 20px;
-                width: 115%;
+                margin: 0 0 0 150px;
+                padding: 5px 0 5px;
+                width: 90%;
             }
             #back{
                 background: #eee;
@@ -44,7 +45,7 @@
                 text-decoration: none;
                 position: relative;
                 font-weight:bolder;
-                margin: 20px 0 10px 1300px;
+                margin: 20px 0 10px 870px;
                 box-shadow: 0 8px 19px -11px red;
                 transition: transform .2s;
             }
@@ -56,6 +57,7 @@
                 
             }
             button {
+                position:relative;
                 border-radius: 20px;
                 border: 1px solid #D3D3D3;
                 background-color: #D3D3D3;
@@ -85,16 +87,151 @@
                 color: blue;
             }
             .header{
-                padding-top: 10px;
+                padding-top: 1px;
                 color: #000;
                 font-size: 20px;
                 margin: auto;
-                line-height: 50px;
             }
             .sub-container{
                 max-width: 1200px;
                 margin: auto;
-                padding: 30px 0;
+                padding: 10px 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .teams{
+                margin: 10px;
+                padding: 22px;
+                max-width: 30%;
+                cursor: pointer;
+                transition: 0.4s;
+                box-sizing: border-box;
+                transition: transform .2s;
+            }
+            .teams:hover{
+                background: rgba(0, 0, 0, 0.3); /* Black background with 0.3 opacity */
+                border-radius: 12px;
+                -ms-transform: scale(1.1); /* IE 9 */
+                -webkit-transform: scale(1.1); /* Safari 3-8 */
+                transform: scale(1.1);
+            } 
+            .teams img{
+                width: 170px; 
+                height: 170px;
+                border-radius: 100%;
+            }
+            .name{
+                padding: 12px;
+                font-weight: bold;
+                font-size: 16px;
+                text-transform: uppercase;
+            }
+            .desig{
+                font-style: italic;
+                color: #000;   
+                font-size: 12px;
+            }
+            .about{
+                margin: 20px 0;
+                font-weight: lighter;
+                font-size: 12px;
+                color: #000;    
+            }
+            .social-links{
+                margin: 14px;   
+            }
+            .social-links a{
+                display: inline-block;
+                height: 30px;
+                width: 30px;
+                transition: .4s;
+            }
+            .social-links a-hover{
+                transform: scale(1.5);    
+            }
+            /*S7*/
+            @media only screen and (max-width: 1280px) {
+                html::-webkit-scrollbar {
+                display: none;
+            }
+            /* Full height image background */
+            body {
+                position: relative;
+                background-position: center;
+                background-attachment: fixed;
+                background-size: cover;
+                background-image: url("assets/portfolio-bg.jpg");
+            }
+            .container{
+                position: absolute;
+                margin: 10px 0 0 10px;
+                text-align: center;
+                width: 84%;
+            }
+            .container .content {
+                position: absolute;
+                background: rgba(255, 255, 255, 0.9); /* White background with 0.9 opacity */
+                padding: 10px;
+                width: 115%;
+            }
+            #back{
+                background: #eee;
+                color: black;
+                text-decoration: none;
+                position: relative;
+                font-weight:bolder;
+                margin: 20px 0 10px 1000px;
+                box-shadow: 0 8px 19px -11px red;
+                transition: transform .2s;
+            }
+            #back:hover{
+                color: red;
+                -ms-transform: scale(1.1); /* IE 9 */
+                -webkit-transform: scale(1.1); /* Safari 3-8 */
+                transform: scale(1.1);
+                
+            }
+            button {
+                position:relative;
+                border-radius: 20px;
+                border: 1px solid #D3D3D3;
+                background-color: #D3D3D3;
+                color: black;
+                font-size: 12px;
+                font-weight: bold;
+                margin: 20px 0;
+                padding: 12px 45px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                transition: transform 80ms ease-in;
+            }
+
+            button:active {
+                transform: scale(0.95);
+            }
+
+            button:focus {
+                outline: none;
+            }
+
+            button.ghost {
+                background-color: white;
+                border-color: white;
+            }
+            button:hover {
+                color: blue;
+            }
+            .header{
+                padding-top: 1px;
+                color: #000;
+                font-size: 20px;
+                margin: auto;
+            }
+            .sub-container{
+                max-width: 1200px;
+                margin: auto;
+                padding: 10px 0;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
@@ -146,6 +283,7 @@
             }
             .social-links a-hover{
                 transform: scale(1.5);    
+            }
             }
         </style>
     </head>

@@ -49,8 +49,8 @@
                 min-height: 88%;
             }
             #logo{
-                height: 65px;
-                width: 80px;
+                height: 45px;
+                width: 60px;
                 margin-left: 30px;
             }
             .topnav{
@@ -82,7 +82,7 @@
                 background-position: center;
                 background-size: cover;
                 width: 100%;
-                height: 100vh;
+                height: 130vh;
                 opacity: 0.9;
                 text-align: center;
             }
@@ -168,12 +168,12 @@
                 <img src="assets/logobg.png" alt="Logo Hoteli" id="logo">
             </a>
             <!-- navbar links-->
-            <div class="w3-right w3-hide-small" style="padding:20px 0;" id="popup"><!--padding top-->
+            <div class="w3-right w3-hide-small" style="padding:10px 0;" id="popup"><!--padding top-->
                 <a href="user.php" class="w3-bar-item w3-button">Home</a>
                 <a href="book_reserve.php" class="w3-bar-item w3-button">Book Reservation</a>
                 <a href="feedback.php" class="w3-bar-item w3-button">Feedback</a>
                 <a href="user_account_settings.php" class="w3-bar-item w3-button">Account Setting</a>
-                <a href="logout.php?logout" class="w3-bar-item w3-button w3-text-blue" style="margin-left:450px">Log out</a><!--move the navbar links-->
+                <a href="logout.php?logout" class="w3-bar-item w3-button w3-text-blue" style="margin-left:350px">Log out</a><!--move the navbar links-->
             </div>
 
             <!-- Hide right-floated links on small screens and replace them with a menu icon -->

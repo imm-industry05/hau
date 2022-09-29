@@ -34,8 +34,8 @@
                 min-height: 88%;
             }
             #logo{
-                height: 65px;
-                width: 80px;
+                height: 45px;
+                width: 60px;
                 margin-left: 30px;
             }
             .top{
@@ -51,7 +51,7 @@
             span{
                 font-weight:bold;
                 font-style:italic;
-                font-size:18px;
+                font-size:16px;
             }
             /*footer logo*/
             #logo1{
@@ -68,20 +68,20 @@
                 color: #000;
                 float: left;  
                 font-size: 15px;
-                margin: -80px 0 60px 200px;
+                margin: -80px 0 60px 100px;
                 text-align: justify;
             }
             .contact-right{
                 color: #000;
                 float: right;  
                 font-size: 15px;
-                margin: -80px 230px 60px 100px;
+                margin: -80px 100px 60px 100px;
                 text-align: justify;
             }
             .copyright{
-                margin:50px 490px 0;
+                margin: 50px 70px 0 430px;
                 font-size: 13px;
-                padding-bottom:30px;
+                padding-bottom:10px;
             }
 
         </style>
@@ -94,7 +94,7 @@
             <img src="assets/logobg.png" alt="Logo Hoteli" id="logo">
         </a>
         <!-- navbar links-->
-        <div class="w3-right w3-hide-small" style="padding:20px 0;"><!--padding top-->
+        <div class="w3-right w3-hide-small" style="padding:5px 0;"><!--padding top-->
             <a href="index.php#about" class="w3-bar-item w3-button">About Us</a>
             <a href="index.php#services" class="w3-bar-item w3-button">Services</a>
             <a href="index.php#location" class="w3-bar-item w3-button">Location</a>
@@ -123,7 +123,7 @@
 
 
         <div class="container">
-            <h1>TERMS OF SERVICE</h1>
+            <h2>TERMS OF SERVICE</h2>
             <span>AGREEMENT TO TERMS</span>
                 <p>These Terms of Service are a legally binding agreement between you and Online Games Addiction Treatment website regarding your access and use. This site was registered in the Philippines. Using our website, means you acknowledge that you have read, understand, and agree to be bound by all of the terms and service and, if you did not agree to any of the terms of service, you are not permitted to login the site.</p>
                 <p>Terms and conditions of service or materials issued on the Internet from time to time are expressly incorporated by reference herein. At any moment and for any reason, we retain the right to update or modify these terms of service. Any changes will be disclosed by changing the "Last Updated" date in these Terms of Use, and you hereby waive any right to obtain specific notice of any changes. Please review the applicable terms each time you visit our website to ensure that you are aware of which ones apply. If you continue to use the site after the revised Terms of Service are posted, you will be bound by them, and you will be deemed to have been made aware of and accepted the changes.</p>
@@ -159,7 +159,7 @@
                 <p>In order to resolve a complaint regarding the site or to receive further information regarding the use of the site, please contact us at:</p>
                 <p>Email: lggarcia@student.hau.edu.ph</p>
             <hr>
-            <h1>PRIVACY POLICY</h1>
+            <h2>PRIVACY POLICY</h2>
             <span>Welcome in Online Games Addiction Treatment</span>
                 <p>The Online Games Addiction Treatment that we operate, (the "Service", hence referred to as).
                     We shall describe how we collect, safeguard, and disclose information about you obtained via our service during your visit to this site.

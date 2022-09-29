@@ -292,7 +292,7 @@
             /*container for the feedback*/
             .container{
                 position: absolute;
-                padding: 10px 0 100px 60px;
+                padding: 10px 0 100px 20px;
             }
             /*container box - try to put border to see the outline*/
             .container .row{
@@ -305,7 +305,7 @@
                 font-size: 15px;
                 color: #000;
                 border-radius: 5px;
-                padding: 20px 185px 20px 0;
+                padding: 20px 150px 20px 0;
             }
             .container_info td{
                 padding: 5px 0;

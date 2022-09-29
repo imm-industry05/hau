@@ -48,11 +48,11 @@
                 background-position: center;
                 background-size: cover;
                 background-image: url("assets/bg.jpg");
-                min-height: 88%;
+                min-height: 98%;
             }
             #logo{
-                height: 65px;
-                width: 80px;
+                height: 45px;
+                width: 60px;
                 margin-left: 30px;
             }
             .topnav{
@@ -60,12 +60,6 @@
                 background-color:white;
                 text-decoration:none;
                 box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-            }
-            /*footer logo*/
-            #logo1{
-                height: 85px;
-                width: 95px;
-                margin: 30px 600px 0;
             }
             #popup a{
             transition: transform .2s;
@@ -77,14 +71,14 @@
             -webkit-transform: scale(1.1); /* Safari 3-8 */
             transform: scale(1.1);
             }
-             /*transparent box in welcome*/
+             /*transparent box*/
              #transparentbox {
                 background-color: #ffffff;
                 position:relative;
                 background-position: center;
                 background-size: cover;
                 width: 100%;
-                height: 175vh;
+                height: 250vh;
                 opacity: 0.9;
                 text-align: left;
             }
@@ -104,111 +98,116 @@
             .right-data1{
                 width: 40%;
                 position: absolute;
-                margin:80px 0 0 340px;
+                margin:80px 0 0 380px;
             }
             .date1{
                 position: absolute;
-                margin:80px 0 0 1020px;
+                margin:80px 0 0 1015px;
             }
             .left-data2 img{
                 width: 180px;
                 height: 150px;
                 position: absolute;
-                margin:300px 0 0 -147px;
+                margin:300px 0 0 -110px;
             }
             .right-data2{
                 width: 40%;
                 position: absolute;
-                margin:305px 0 0 73px;
+                margin:305px 0 0 150px;
             }
             .date2{
                 position: absolute;
-                margin:300px 0 0 750px;
+                margin:300px 0 0 790px;
             }
             .left-data3 img{
                 width: 180px;
                 height: 150px;
                 position: absolute;
-                margin:520px 0 0 -413px;
+                margin:550px 0 0 -340px;
             }
             .right-data3{
                 width: 40%;
                 position: absolute;
-                margin:525px 0 0 -197px;
+                margin:555px 0 0 -80px;
             }
             .date3{
                 position: absolute;
-                margin:520px 0 0 486px;
+                margin:550px 0 0 566px;
             }
             .left-data4 img{
                 width: 180px;
                 height: 150px;
                 position: absolute;
-                margin:740px 0 0 -681px;
+                margin:780px 0 0 -571px;
             }
             .right-data4{
                 width: 40%;
                 position: absolute;
-                margin:745px 0 0 -463px;
+                margin:785px 0 0 -310px;
             }
             .date4{
                 position: absolute;
-                margin:740px 0 0 222px;
+                margin:780px 0 0 342px;
             }
             .left-data5 img{
                 width: 180px;
                 height: 150px;
                 position: absolute;
-                margin:960px 0 0 -948px;
+                margin:990px 0 0 -799px;
             }
             .right-data5{
                 width: 40%;
                 position: absolute;
-                margin:965px 0 0 -728px;
+                margin:995px 0 0 -539px;
             }
             .date5{
                 position: absolute;
-                margin:960px 0 0 -44px;
+                margin:990px 0 0 120px;
             }
             .left-data6 img{
                 width: 180px;
                 height: 150px;
                 position: absolute;
-                margin:1180px 0 0 -1215px;
+                margin:1220px 0 0 -1025px;
             }
             .right-data6{
                 width: 40%;
                 position: absolute;
-                margin:1185px 0 0 -990px;
+                margin:1230px 0 0 -769px;
             }
             .date6{
                 position: absolute;
-                margin:1180px 0 0 -311px;
+                margin:1220px 0 0 -111px;
             }
-            /*footer*/
-            #footer{
-                margin-top: 10px;
-                box-shadow:0 2px 10px 0 rgba(0,0,0,0.10),0 2px 20px 0 rgba(0,0,0,0.5);
+            /*footer logo*/
+       #logo1{
+                height: 85px;
+                width: 95px;
+                margin: 30px 600px 0;
             }
-            .info-left{
-                color: #000;
-                float: left;  
-                font-size: 15px;
-                margin: -80px 0 60px 200px;
-                text-align: justify;
-            }
-            .info-right{
-                color: #000;
-                float: right;  
-                font-size: 15px;
-                margin: -80px 230px 60px 100px;
-                text-align: justify;
-            }
-            .copyright{
-                margin:50px 550px 0;
-                font-size: 13px;
-                padding-bottom:30px;
-            }
+        #contact{
+            margin-top: 100px;
+            box-shadow:0 2px 10px 0 rgba(0,0,0,0.10),0 2px 20px 0 rgba(0,0,0,0.5);
+        }
+        .info-left{
+            color: #000;
+            float: left;  
+            font-size: 15px;
+            margin: -80px 0 60px 100px;
+            text-align: justify;
+        }
+        .info-right{
+            color: #000;
+            float: right;  
+            font-size: 15px;
+            margin: -80px 100px 60px 100px;
+            text-align: justify;
+        }
+        .copyright{
+              margin: 50px 70px 0 430px;
+              font-size: 13px;
+              padding-bottom:10px;
+          }
         </style>
     </head>
     <body>
@@ -218,12 +217,12 @@
                     <img src="assets/logobg.png" alt="Logo Hoteli" id="logo">
                 </a>
                 <!-- navbar links-->
-                <div class="w3-right w3-hide-small" style="padding:20px 0;" id="popup"><!--padding top-->
+                <div class="w3-right w3-hide-small" style="padding:10px 0;" id="popup"><!--padding top-->
                     <a href="user.php" class="w3-bar-item w3-button">Home</a>
                     <a href="book_reserve.php" class="w3-bar-item w3-button">Book Reservation</a>
                     <a href="feedback.php" class="w3-bar-item w3-button">Feedback</a>
                     <a href="user_account_settings.php" class="w3-bar-item w3-button">Account Setting</a>
-                    <a href="logout.php?logout" class="w3-bar-item w3-button w3-text-blue" style="margin-left:450px">Log out</a><!--move the navbar links-->
+                    <a href="logout.php?logout" class="w3-bar-item w3-button w3-text-blue" style="margin-left:350px">Log out</a><!--move the navbar links-->
                 </div>
                 <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 

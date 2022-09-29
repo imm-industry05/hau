@@ -29,12 +29,12 @@
       background-position: center;
       background-size: cover;
       background-image: url("assets/bg.jpg");
-      margin-top:10px;
+      margin-top:3px;
       min-height: 90%;
     }
     #logo{
-      height: 65px;
-      width: 80px;
+      height: 45px;
+      width: 60px;
       margin-left: 30px;
     }
     .top{
@@ -45,11 +45,11 @@
     }
     /*transparent box in welcome*/
     #transparentbox {
-      margin: 180px 0 0 475px;
+      margin: 100px 0 0 350px;
       position: absolute;
       background-color: #ffffff;
       padding: 15px 30px 70px;
-      width: 40%;
+      width: 50%;
       opacity: 0.8;
       text-align: center;
     }
@@ -174,9 +174,11 @@
       from {opacity: .4} 
       to {opacity: 1}
     }
-    /* On smaller screens, decrease text size */
-    @media only screen and (max-width: 300px) {
-      .text {font-size: 11px}
+    /*footer logo*/
+    #logo1{
+      height: 85px;
+      width: 95px;
+      margin: 30px 600px 0;
     }
     /*remove the text link view in Special offer*/
     #nodec{
@@ -186,8 +188,8 @@
     /* zoom the special offer card/box together with the image*/
     #zoom {
       transition: transform .2s;
-      width: 350px;
-      height: 600px;
+      width: 300px;
+      height: 550px;
       margin: 0 auto;
       box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     }
@@ -202,36 +204,32 @@
       margin-top: 60px;
       box-shadow:0 2px 30px 0 rgba(0,0,0,0.20),0 2px 40px 0 rgba(0,0,0,0.16);
     }
-    /*footer logo*/
-    #logo1{
-      height: 85px;
-      width: 95px;
-      margin: 30px 600px 0;
-    }
     /*footer*/
     #contact{
-        margin-top: 100px;
-        box-shadow:0 2px 10px 0 rgba(0,0,0,0.10),0 2px 20px 0 rgba(0,0,0,0.5);
-    }
-    .info-left{
-        color: #000;
-        float: left;  
-        font-size: 15px;
-        margin: -80px 0 60px 200px;
-        text-align: justify;
-    }
-    .info-right{
-        color: #000;
-        float: right;  
-        font-size: 15px;
-        margin: -80px 230px 60px 100px;
-        text-align: justify;
-    }
-    .copyright{
-        margin:50px 550px 0;
-        font-size: 13px;
-        padding-bottom:30px;
-    }
+          margin-top: 100px;
+          box-shadow:0 2px 10px 0 rgba(0,0,0,0.10),0 2px 20px 0 rgba(0,0,0,0.5);
+      }
+      .info-left{
+          color: #000;
+          float: left;  
+          font-size: 15px;
+          margin: -80px 0 60px 100px;
+          text-align: justify;
+      }
+      .info-right{
+          color: #000;
+          float: right;  
+          font-size: 15px;
+          margin: -80px 100px 60px 100px;
+          text-align: justify;
+      }
+      .copyright{
+          margin:50px 450px;
+          font-size: 13px;
+          padding-bottom:30px;
+      }
+      .text {font-size: 11px
+      }
   </style>
   <body>
     <!-- Navbar (sit on top) -->
@@ -241,7 +239,7 @@
           <img src="assets/logobg.png" alt="Logo Hoteli" id="logo">
         </a>
         <!-- navbar links-->
-        <div class="w3-right w3-hide-small" style="padding:20px 0;"><!--padding top-->
+        <div class="w3-right w3-hide-small" style="padding:5px 0;"><!--padding top-->
           <a href="#about" class="w3-bar-item w3-button">About Us</a>
           <a href="#services" class="w3-bar-item w3-button">Services</a>
           <a href="#location" class="w3-bar-item w3-button">Location</a>
