@@ -12,7 +12,7 @@ $email_subject = 'New Form Submission';
 $email_body =   "User FirstName: $firstname.\n".
                 "User LastName: $lastname.\n".
                 "User Email: $email.\n".
-                "User Message: $message.\n".;
+                "User Message: $message.\n".
 
 $to = 'atongoljr24@gmail.com';
 

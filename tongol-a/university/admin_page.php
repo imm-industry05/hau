@@ -1,3 +1,15 @@
+<?php
+
+@include 'config.php';
+
+session_start();
+
+if(!isset($_SESSION['admin_name'])){
+    header('location:login_form.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +42,7 @@
                     <li><a href="course.html">ACADEMICS</a></li>
                     <li><a href="news.html">NEWS</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="login_form.php">LOGIN</a></li>
                 </ul>
             </div>
 
@@ -38,26 +50,20 @@
 
         </nav>
 
-        <h1>Register form</h1>
+        <h1>Login form</h1>
     </section>
-<!-----------------register------------------>
+<!-----------------admin------------------>
 
-<section class="register">
-    <div class="form-container">
-        <form action="" method="post">
-            <h3>Register now</h3>
-            <input type="text" name="name" required placeholder="Firstname">
-            <input type="text" name="name" required placeholder="Lastname">
-            <input type="email" name="email" required placeholder="Email">
-            <input type="password" name="password" required placeholder="Password">
-            <input type="password" name="cpassword" required placeholder="Confirm Password">
-            <select name="user_type">
-                <option value="user">User</option>
-                <option value="admin">Admin</option>
-            </select>
-            <input type="submit" name="submit" value="Register Now" class="form-btn">
-            <p>already have an account? <a href="login.html">Login now</a></p>
-        </form>
+<section class="login">
+    <div class="container">
+        <div class="content">
+            <h3>Hi, <span>Admin</span></h3>
+            <h1>Welcome <span><?php echo $_SESSION['admin_name'] ?></span></h1>
+            <p>this is an Admin page</p>
+            <a href="login.html" class="btn">Login</a>
+            <a href="register.html" class="btn">Register</a>
+            <a href="logout.html" class="btn">Logout</a>
+        </div>
     </div>
 </section>
 

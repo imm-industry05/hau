@@ -1,5 +1,7 @@
 <?php
 
+@include 'config.php';
+
 $server = "db";
 $user = "root";
 $pass = "123";
@@ -11,5 +13,5 @@ session_start();
 session_unset();
 session_destroy();
 
-header('location:/forms/login.html');
+header('location:login_form.php');
 ?>

@@ -1,3 +1,31 @@
+<?
+@include 'config.php';
+
+if(isset($_POST['submit'])){
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $pass = md5($_POST['password']);
+    $cpass = md5($_POST['cpassword']);
+    $user_type = $_POST['user_type'];
+
+    $select = "SELECT * FROM user_form WHERE email = '$email' && password = '$pass' ";
+    $result = mysqli_query($conn, $select);
+
+    if(mysqli_num_rows($result) > 0){
+        $error[] = 'user already exist!';
+    }else{
+        if($pass != $cpass){
+            $error[] = 'password not matched!';
+        }else{
+            $insert = "INSERT INTO user_form(name,email,password,user_type) VALUES('$name','$email','$pass','$user_type')";
+            mysqli_query($conn, $insert);
+            header('location:login_form.php');
+        }
+    }
+};   
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +58,7 @@
                     <li><a href="course.html">ACADEMICS</a></li>
                     <li><a href="news.html">NEWS</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="login_form.php">LOGIN</a></li>
                 </ul>
             </div>
 
@@ -38,20 +66,34 @@
 
         </nav>
 
-        <h1>Login form</h1>
+        <h1>Register form</h1>
     </section>
-<!-----------------admin------------------>
+<!-----------------register------------------>
 
-<section class="login">
-    <div class="container">
-        <div class="content">
-            <h3>Hi, <span>Admin</span></h3>
-            <h1>Welcome <span></span></h1>
-            <p>this is an Admin page</p>
-            <a href="login.html" class="btn">Login</a>
-            <a href="register.html" class="btn">Register</a>
-            <a href="logout.html" class="btn">Logout</a>
-        </div>
+<section class="register">
+    <div class="form-container">
+        <form action="" method="post">
+            <h3>Register now</h3>
+            <?php
+            if(isset($error)){
+                foreach($error as $error){
+                    echo '<span class="error-msg">'.$error.'</span>';
+                };
+            };
+            ?>
+
+            <input type="text" name="name" required placeholder="Firstname">
+            <input type="text" name="name" required placeholder="Lastname">
+            <input type="email" name="email" required placeholder="Email">
+            <input type="password" name="password" required placeholder="Password">
+            <input type="password" name="cpassword" required placeholder="Confirm Password">
+            <select name="user_type">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+            <input type="submit" name="submit" value="Register Now" class="form-btn">
+            <p>already have an account? <a href="login_form.php">Login now</a></p>
+        </form>
     </div>
 </section>
 
