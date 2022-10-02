@@ -12,3 +12,5 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Set working directory
 WORKDIR /var/www
 
+# Install mysqli extensions
+RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli

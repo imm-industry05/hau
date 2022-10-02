@@ -13,12 +13,10 @@
   <script src="js/bootstrap.js"></script>
   <!--Shortcut Icon-->
   <link rel="shortcut icon" type="x-icon" href="assets/logo.png">
-
   <style>
     body,h1,h2,h3,h4,h5,h6 {
       font-family: "Raleway", sans-serif;
     }
-
     body, html {
       height: 100%;
       line-height: 1.8;
@@ -71,7 +69,6 @@
       transition: transform 80ms ease-in;
       transition: transform .2s;
     }
-
     #button:active {
         transform: scale(0.95);
     }
@@ -164,7 +161,6 @@
     .active {
       background-color: #717171;
     }
-
     /* Fading animation */
     .fade {
       animation-name: fade;
@@ -248,13 +244,11 @@
           <a href="termsandpolicy.php" class="w3-bar-item w3-button">Terms & policy</a>
         </div>
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
         <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
           <i class="fa fa-bars"></i>
         </a>
       </div>
     </div>
-
     <!-- Sidebar on small screens when clicking the menu icon -->
     <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
       <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
@@ -265,7 +259,6 @@
       <a href="portfolio.php" onclick="w3_close()" class="w3-bar-item w3-button">Portfolio</a>
       <a href="termsandpolicy.php" onclick="w3_close()" class="w3-bar-item w3-button">Terms & policy</a>
     </nav>
-
     <!-- Header with full-height image -->
     <header class="bgimg-1 w3-display-container w3-grayscale-min w3-center">
       <div class="sw3-display-left w3-text-black">
@@ -277,13 +270,11 @@
         </div>
       </div> 
     </header>
-
     <!-- About Section -->
     <div class="w3-container" style="padding:128px 16px; margin-bottom:50px;" id="about">
       <h3 class="w3-center">ABOUT THE COMPANY</h3>
       <p class="w3-center w3-large" style="margin-top:2%;">“Hoteli” Hotel and Restaurant is a website created by the students of the Holy Angel University.<br > This website was launched in 2022.Hoteli came from the word Hotelization the process of hotelizing.<br> Hoteli website can reach the client satisfaction thru online services. It is a way to get book in our <br>services and also to gain more information in our “Hoteli” Hotel and Restaurant. The website <br> supports the client comment according to their experiences in which will be featured on the <br>website for other customers to see when they try to book in.</p>
     </div>
-
     <!-- Promo Section - "We know design" -->
     <div class="w3-container w3-dark-grey w3-hover-shadow:hover" style="padding:100px 0px 100px 0;" id="services">
         <div class="w3-row-padding">
@@ -300,35 +291,30 @@
                             <div class="text"><b>Room Booking</b></div>
                         </div>
                     </div>
-
                     <div class="mySlides">
                         <img src="assets/roomsv.png" style="width:100%">
                         <div class="transbox">
                             <div class="text"><b>Room Service</b></div>
                         </div>
                     </div>
-
                     <div class="mySlides">
                         <img src="assets/foodbev.png" style="width:100%">
                         <div class="transbox">
                             <div class="text"><b>Food & Beverages</b></div>
                         </div>
                     </div>
-
                     <div class="mySlides">
                       <img src="assets/event1bg.png" style="width:100%">
                       <div class="transbox">
                           <div class="text"><b>Events</b></div>
                       </div>
                     </div>
-
                     <div class="mySlides">
                       <img src="assets/minibarbg.png" style="width:100%">
                       <div class="transbox">
                           <div class="text"><b>Mini Bar</b></div>
                       </div>
                     </div>
-
                     <div class="mySlides">
                       <img src="assets/managefacilitybg.png" style="width:100%">
                       <div class="transbox">
@@ -347,7 +333,6 @@
           </div>
       </div>
     </div>
-
     <!-- Special Offer Sections -->
     <div class="w3-container" style="padding:199px 16px">
       <h3 class="w3-center">SPECIAL OFFER</h3>
@@ -399,14 +384,12 @@
         </div>
       </div>
     </div>
-
     <!-- Location Image Section -->
     <div class="w3-container" style="padding:15px 16px" id="location">
       <h3 class="w3-center">OUR LOCATION</h3>
       <p class="w3-center w3-large">What we've done for people</p>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d348702.4716359632!2d120.54145195131296!3d15.067219429966402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f4848d776319%3A0x55a57880b7da26f8!2sPampanga!5e0!3m2!1sen!2sph!4v1663590626678!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-
     <!-- Footer -->
     <div class="w3-center w3-padding-30" id="contact">
       <a href="#home" class="w3-bar-item">
@@ -428,7 +411,6 @@
     <script>
       // Toggle between showing and hiding the sidebar when clicking the menu icon
       var mySidebar = document.getElementById("mySidebar");
-
       function w3_open() {
         if (mySidebar.style.display === 'block') {
           mySidebar.style.display = 'none';
@@ -436,18 +418,15 @@
           mySidebar.style.display = 'block';
         }
       }
-
       // Close the sidebar with the close button
       function w3_close() {
         mySidebar.style.display = "none";
       }
     </script>
-
     <!--slide show automatic-->
     <script>
       let slideIndex = 0;
       showSlides();
-
       function showSlides() {
         let i;
         let slides = document.getElementsByClassName("mySlides");
