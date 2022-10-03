@@ -12,8 +12,8 @@ services:
    
   php:
     build:
-      context: ./dockerfiles
-      dockerfile: php.dockerfile
+      context: ./
+      dockerfile: Dockerfile
     volumes:
      - ./src:/var/www/html:delegated
      - ./src/custom.ini:/usr/local/etc/php/conf.d/custom.ini
