@@ -1,6 +1,13 @@
-/** assets **/
+/** general assets **/
 @import "navbar.css";
+@import "footer.css";
+
+/** sign in syles **/
+@import "login.css";
+
+/** main page styles **/
 @import "banner.css";
 @import "latest.css";
 @import "midbanner.css";
-@import "login.css";
+@import "botbanner.css";
+@import "newsletter.css";

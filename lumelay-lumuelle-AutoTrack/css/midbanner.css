@@ -1,10 +1,8 @@
 
 #middle-banner{
-  display: flex;
-  flex-direction: column;
+  display: flex; flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: center; text-align: center;
 
   background: url(../assets/img/middle-banner.jpg);
   background-size: cover;
@@ -27,8 +25,7 @@
   color: var(--white);
 
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 600;
-  font-size: 4.5rem;
+  font-weight: 600; font-size: 4.5rem;
 }
 
 #middle-banner button:hover{
