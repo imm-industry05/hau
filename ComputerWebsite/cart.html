@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Parts Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+   
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="ComputerParts/PCLogo.jpeg" width="125px">
+            </div>
+            <nav>
+                <ul id="Menu">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Account</a></li>
+                </ul>
+            </nav>
+            <img src="ComputerParts/basket-cart.png" width="30px" height="30px">
+            <img src="ComputerParts/Menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+  
+    <div class="small-container cart-page">
+
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="ComputerParts/AMD-Ryzen-5000-Series-Ryzen-9.png">
+                        <div>
+                            <p>Ryzen 9 5900</p>
+                        <small>Price: $79.00</small>
+                        <a href="">Remove</a>
+                        </div>   
+                    </div>
+                    
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$79.00</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="ComputerParts/Glorious-ModelD.jpeg">
+                        <div>
+                            <p>Glorious-ModelD</p>
+                        <small>Price: $59.00</small>
+                        <a href="">Remove</a>
+                        </div>   
+                    </div>
+                    
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$59.00</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="ComputerParts/logitech-GPro-Keyboard.jpeg">
+                        <div>
+                            <p>logitech-GPro-Keyboard</p>
+                        <small>Price: $80.00</small>
+                        <a href="">Remove</a>
+                        </div>   
+                    </div>
+                    
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$80.00</td>
+            </tr>
+        </table>
+
+        <div class="total-price">
+
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td>$218.00</td>
+                </tr>
+                <tr>
+                    <td>Tax</td>
+                    <td>$20.00</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>$238.00</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download the App</h3>
+                    <p>Available for iOS and Android</p>
+                    <div class="app-logo">
+                        <img src="ComputerParts/app-store-png-logo-33123.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <h3>REMINDER</h3>
+                    <p>We are here to serve you properly and prioritize your Computer Upgrades or Needs.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Notice</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Promo</li>
+                        <li>Warranty</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Socials</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="Copyright">Copyright 2022</p>
+        </div>
+    </div>
+
+
+    <script>
+        var Menu = document.getElementById("Menu");
+        Menu.style.maxHeight = "0px";
+        function menutoggle(){
+            if(Menu.style.maxHeight == "0px")
+            {
+                Menu.style.maxHeight = "200px";
+            }
+            else
+            {
+                Menu.style.maxHeight = "0px";
+            }
+        }
+    </script>
+    
+</body>
+</html>
