@@ -112,7 +112,7 @@ header .navbar a:hover{
 
 .featured .slide-container .slide .content{
     flex:1 1 40rem;
-    animation: slideContent .5s linear 1s backwards;
+    animation: slideContent .5s linear 0s backwards;
 }
 
 @keyframes slideContent{
