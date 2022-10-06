@@ -1,0 +1,62 @@
+version: '3.8'
+
+
+services:
+  app:
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    container_name: phpcontainer
+    restart: always
+    working_dir: /var/www/
+    volumes:
+      - ./InventorySystem:/var/www
+  
+  nginx:
+    image: nginx:latest
+    container_name: nginx-server
+    restart: always
+    ports:
+      - '8000:80'
+    volumes:
+      - ./InventorySystem:/var/www
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# services:
+#   apache-services:
+#     container_name: Inventory-System
+#     image: httpd:latest
+#     ports:
+#       - '80:80'
+#     volumes:
+#     - ./InventorySystem:/usr/local/apache2/htdocs/
+#     - ./httpd.conf:/usr/local/apache2/httpd.conf
+
+#   db:
+#     image: mariadb:10.9.2
+#     container_name: db
+#     restart: on-failure
+#     environment:
+#        MYSQL_ROOT_PASSWORD: 123
+#     ports:
+#       - '3306:3306'
+#     volumes:
+#       - ./mysql:/var/lib/mysql

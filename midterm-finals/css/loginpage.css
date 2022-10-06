@@ -1,0 +1,102 @@
+@font-face {
+    font-family: Rivera;
+    src: url(/fonts/Rivera_PERSONAL_USE_ONLY-Thin.otf);
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+body{
+    background-image: url(/images/bg-login.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.loginHeader{
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+div.loginHeader h1{
+    color: rgb(252, 174, 85);
+    font-size: 100px;
+    margin: 0px;
+    font-family: Rivera;
+}
+
+div.loginHeader p{
+    color: rgb(252, 174, 85);
+    font-size: 60px;
+    margin: 0px;
+    font-family: Rivera;
+    display: inline-block;
+}
+div.loginHeader p::after{
+    content: '';
+    display: block;
+    height: 5px;
+    margin: 0px;
+    background: rgb(252, 174, 85);
+    width: 100%;
+    margin: 0 auto;
+}
+
+div.loginBody form{
+    margin: 0 auto;
+    width: 350px;
+    background-color: rgba(24, 24, 24, 0.397);
+    padding: 15px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    border: 2px solid rgb(252, 174, 85);
+    border-radius: 30px;
+
+}
+
+div.loginInputContainer{
+    margin-top: 20px;
+    text-align: center;
+    
+}
+
+div.loginInputContainer label{
+    display: block;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: Rivera;
+    color: white;
+    padding-right: 125px;
+   
+    
+}
+
+div.loginInputContainer input{
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid rgb(252, 174, 85);
+    font-size: 25px;
+    font-family: Rivera;
+    font-weight: bold;
+   
+}
+
+div.loginButtonContainer{
+    margin-top: 25px;
+    text-align: center;
+    padding-top: 20px;
+}
+div.loginButtonContainer button{
+    font-size: 25px;
+    font-family: Rivera;
+    font-weight: bold;
+    background-color: rgba(252, 174, 85, 0.678);
+    padding: 0px 25px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    
+}

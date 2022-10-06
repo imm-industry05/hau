@@ -1,0 +1,113 @@
+
+@font-face{
+  font-family: Rivera;
+  src: url(/fonts/Nunito-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  main {
+    font-family: Rivera;
+  }
+  
+  .landing {
+    min-height: 100vh;
+    background: url("/images/bg-login.png");
+    background-size: cover;
+    padding: 0rem 5rem;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10vh;
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  .nav-links li {
+    padding-left: 10rem;
+    font-size: 1.2rem;
+  }
+  .nav-links li a{
+    text-decoration: none;
+    color: black;
+  }
+
+  #logo {
+    font-family: Rivera;
+    font-weight: lighter;
+    font-size: 2rem;
+  }
+  
+  .big-text2{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font-size: 5rem;
+    font-family: "Lobster", cursive;
+
+  }
+
+  .big-text3{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font-size: 5rem;
+    font-family: "Lobster", cursive;
+
+  }
+  .big-text2 a{
+    text-decoration: none;
+    font-size: 100px;
+    color: rgba(252, 174, 85, 0.767);
+  }
+  .big-text3 a{
+    text-decoration: none;
+    font-size: 50px;
+    color: #4d3227c5;
+  }
+
+  
+  .intro {
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider {
+    background: linear-gradient(45deg, rgb(252, 174, 85), rgb(68, 68, 68) );
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+  }
+  
+  .intro-text {
+    color: rgb(233, 233, 233);
+    font-family: Rivera;
+    font-size: 3rem;
+  }
+  
+  .hide {
+    background: black;
+    overflow: hidden;
+  }
+  
+  .hide span {
+    transform: translateY(100%);
+    display: inline-block;
+  }
