@@ -216,6 +216,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
+  margin-top: 5rem;
 }
 .about .video-files {
   flex: 1 1 42rem;
