@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Trabahero / Heroes</title>
+	<link rel="icon" type="image/png" href="../images/logo.png" />
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="../scripts/jquery.js"></script>
+	<script type="text/javascript" src="../scripts/jquery.localscroll-1.2.7-min.js"></script>
+	<script type="text/javascript" src="../scripts/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="../scripts/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="shadowbox-3.0.3/shadowbox.css">
+	<script type="text/javascript" src="shadowbox-3.0.3/shadowbox.js"></script>
+	<script type="text/javascript">
+
+		Shadowbox.init({
+
+			players: ['img', 'html', 'iframe', 'qt', 'wmp', 'swf', 'flv']
+
+		});
+	</script>
+	<script>
+		
+		$(document).ready(function () {
+			$('#know,#nav li a,#exp, #part2 a').click(function () {
+				var el = $(this).attr('href');
+				var elWrapped = $(el);
+				scrollToDiv(elWrapped, 40);
+				return false;
+			});
+
+			function scrollToDiv(element, navheight) {
+				var offset = element.offset();
+				var offsetTop = offset.top;
+				var totalScroll = offsetTop - $("header").outerHeight() + "px";
+
+				$('body,html').animate({ scrollTop: totalScroll }, 700);
+
+			}
+			$("#n1").css({ opacity: '1' }, 1);
+
+			$("#n1").hover(function () {
+				$("#b1").fadeToggle(0.5);
+			});
+			$("#n2").hover(function () {
+				$("#b2").fadeToggle(0.5);
+			});
+			$("#n3").hover(function () {
+				$("#b3").fadeToggle(0.5);
+			});
+			$("#gauche #bout").mouseover(function () {
+				$("#gauche #bout").animate({ opacity: '0.8' }, 'fast');
+			});
+			$("#gauche #bout").mouseleave(function () {
+				$("#gauche #bout").animate({ opacity: '1' }, 'fast');
+			});
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="menu">
+		<a id="exp" href="../index.html"><img alt="experiment" src="../images/experiment.png" /></a>
+		<a id="know" href="../knowm/knowm.html"><img alt="know more" src="../images/know.png" /></a>
+		<a id="shop" href="#"><img alt="shop section" src="../images/heroes.png" /></a>
+		<a id="s-in" href="../login/login.html"><img alt="shop section" src="../images/s-in.png" /></a>
+	</div>
+
+	<ul id="nav">
+		<div id="nom">
+			<li><a id="b1" href="#part2" title="Next Section"><img src="images/screenprint.png" alt="Link" /></a></li>
+			<li><a id="b2" href="#part3" title="Next Section"><img src="images/postersb.png" alt="Link" /></a></li>
+		</div>
+		<li><a id="n1" href="#part2" title="Next Section"><img src="../images/button2.png" alt="Link" /></a></li>
+		<li><a id="n2" href="#part3" title="Next Section"><img src="../images/button2.png" alt="Link" /></a></li>
+	</ul>
+
+
+
+	<div id="part2">
+		<div id="infos">
+			<div id="gauche">
+				<img alt="screen prints" src="images/screen3.png" />
+				<p>In Trabahero, we provide freelancers with the opportunity to land theirselves a job easily and conveniently. With just a click, they would have the job they desire.</p>
+				<a id="bout" href="mailto:trabahero@gmail.com?Subject=Hero%20Recruitment"><img alt="order now" class="batsign"
+						src="images/order2.png" /></a>
+				<p>Those who are willing to be a hero are welcome to serve, and those who need a hero will be rescued through  <a style="opacity:1"
+						href="#part3">TrabaHero!</a>.</p>
+			</div>
+			<div id="droite">
+				<ui class="container">
+					<li><a href="#" rel="shadowbox[1]"><img src="images/tandempet.png" alt="tandem"></a><a
+							href="images/tandem1.jpg" rel="shadowbox[1]"></a></li>
+					<li><a href="#" rel="shadowbox[2]"><img src="images/weirdopet.png" alt="weirdo"></a><a
+							href="images/weirdo1.jpg" rel="shadowbox[2]"></a></li>
+					<li><a href="#" rel="shadowbox[3]"><img src="images/hipsterpet.png" alt="hipster"></a><a
+							href="images/hipster1.jpg" rel="shadowbox[3]"></a></li>
+					<li><a href="#" rel="shadowbox[4]"><img src="images/gangstapet.png" alt="gangsta"></a><a
+							href="images/gangsta1.jpg" rel="shadowbox[4]"></a></li>
+					</ul>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div id="part3">
+		<div id="titre"><img alt="poster" src="images/poster.png">
+		</div>
+		<div id="society">
+			<ul id="liens">
+				<li><a href="../login/login.html"><img alt="Night Rider" src="images/ce.png"><br />
+						<h2>Civil Engineer</h2>
+						<hr />
+						<p>Price Varies</p>
+					</a></li>
+				<li><a href="../login/login.html"><img alt="swagger" src="images/doctor.png"><br />
+						<h2>Medical Doctors</h2>
+						<hr />
+						<p>Price Varies</p>
+					</a></li>
+				<li><a href="../login/login.html"><img alt="tandem" src="images/photo.png"><br />
+						<h2>Photographer</h2>
+						<hr />
+						<p>Price Varies</p>
+					</a></li>
+				<li><a href="../login/login.html"><img alt="grand pa" src="images/teacher.png"><br />
+						<h2>Teacher</h2>
+						<hr />
+						<p>Price Varies</p>
+					</a></li>
+				<li><a href="../login/login.html"><img alt="baby doll" src="images/writer.png"><br />
+						<h2>Writer</h2>
+						<hr />
+						<p>Price Varies</p>
+					</a></li>
+				<li><a href="../login/login.html"><img alt="cougar" src="images/market.png"><br />
+						<h2>Marketing</h2>
+						<hr />
+						<p>Price Varies</p>
+					</a></li>
+			</ul>
+		</div>
+		<div id="copyr">
+			<p>© MATENAKAN 2022 — All rights reservedd</p>
+		</div>
+	</div>
+
+
+	<script>
+		$("#tom").mouseover(function () {
+			$("#tom").animate({ opacity: '1' }, 150);
+			$("#rom").animate({ opacity: '0.5' }, 150);
+		});
+		$("#tom").mouseleave(function () {
+			$("#tom").animate({ opacity: '0.7' }, 150);
+			$("#rom").animate({ opacity: '0.7' }, 150);
+		});
+
+		$("#rom").mouseover(function () {
+			$("#rom").animate({ opacity: '1' }, 150);
+			$("#tom").animate({ opacity: '0.5' }, 150);
+		});
+		$("#rom").mouseleave(function () {
+			$("#rom").animate({ opacity: '0.7' }, 150);
+			$("#tom").animate({ opacity: '0.7' }, 150);
+		});
+
+
+		$("#share").hover(function () {
+			$("#content").toggle('slide');
+			$("#share a").animate({ opacity: '1' }, 1);
+		});
+		$("#share").mouseleave(function () {
+			$("#share a").animate({ opacity: '0.6' }, 1);
+
+		});
+
+		$(window).scroll(function () {
+			var divHeight = $(window).height() * 1;
+			var divIndex = $(window).scrollTop() / divHeight;
+
+			console.log(divIndex);
+
+
+			$("#n1").append(function () {
+
+				if (divIndex < 1) {
+					$("#n1").css({ opacity: '1' }, 1);
+				}
+				else {
+					$("#n1").css({ opacity: '0.2' }, 1);
+				}
+
+			});
+
+			$("#n2").append(function () {
+
+				if (divIndex >= 1 && divIndex) {
+					$("#n2").css({ opacity: '1' }, 1);
+				}
+				else {
+					$("#n2").css({ opacity: '0.2' }, 1);
+				}
+
+			});
+
+
+
+			$(function () {
+				$('#slides').slidesjs({
+					pagination: {
+						active: false
+					},
+					width: 580,
+					height: 422,
+					navigation: false
+				});
+			});
+		});
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+.banner {
+    max-width: 80%;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  h4, h5, h6 {
+    margin: 0.3rem auto;
+  }
+  
+  img {
+   margin: 0;
+  }
+  
+  .photo-entry-block {
+    margin: 2rem;
+    width: 30%;
+  }
+  
+  .photo-img {
+    width: 80%;
+  }
+  

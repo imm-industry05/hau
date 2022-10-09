@@ -1,0 +1,89 @@
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.loading svg {
+    
+    font-size: 150px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    letter-spacing: 1.2px;
+    animation: text 1s ease-in-out infinite;
+
+}
+.loading polygon {
+    animation: up-down .40s infinite;
+    animation-direction: alternate;
+
+
+}
+.loading .cls-1 {
+    
+
+    animation-delay: -0.25s;
+}
+.loading .cls-2 {
+    
+
+    animation-delay: -0.15s;
+}ّ
+.loading .cls-3 {
+
+    animation-delay: -0.30s;
+}
+.loading .cls-4 {
+
+    animation-delay: -.50s;
+}
+
+/* @keyframes up-down {
+    to{
+      transform: translateY(200px);
+
+  }
+} */
+@keyframes up-down {
+    100%, 50% {
+      transform: translateY(200px);
+    }
+  }
+/* @keyframes up-down {
+to {
+
+    transform: translateY(-150px);
+}
+
+}*/
+@keyframes text {
+    50%{
+        opacity: 0.3;
+    }
+}
+/* .loading svg {
+    font-size: 150px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    animation: text 1s ease-in-out infinite;
+
+
+} */
+
+/* @keyframes text {
+    50%{
+        opacity: 0.1;
+    }
+    
+}
+.loading polygon{
+    stroke-dasharray: 22;
+    stroke-dashoffset: 1;
+    animation: dash 4s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate-reverse;
+}
+@keyframes dash {
+    to {stroke-dashoffset: 234;}
+    
+} */
