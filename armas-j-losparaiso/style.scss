@@ -20,7 +20,8 @@ $losmocolor3:rgba(#1c2587,0.4);
 $white:#fff;
 $white2:rgb(160, 160, 160);
 $blue:rgb(0, 119, 255);
-$light-color:#aaa;
+$light-color:rgb(170, 170, 170);
+$light-blue:rgb(29, 182, 238);
 $black-bg:rgba(17,17,17,.3);
 $border:.2rem solid $losmocolor;
 $redbook:rgba(#be4040,0.4);
@@ -278,8 +279,46 @@ body{
             border-radius: 1rem;
             width: 100%;
         }
+        .controls{
+            text-align: center;
+            padding: 2rem 0;
+            
+            span{
+                display: inline-block;
+                height: 2rem;
+                width: 2rem;
+                border-radius: 50%;
+                background: $light-blue;
+                cursor: pointer;
+
+                    &:hover{
+                    background: $losmocolor;
+                    }
+
+            }
+        }
     }
     .content{
         flex:1 1 43rem;
+        margin-bottom: 5rem;
+
+        span{
+            color:$losmocolor;
+            font-size: 2rem;
+
+        }
+        h3{
+            color:$losmocolor;
+            font-size: 4rem;
+            margin-top: .5rem;
+            
+        }
+        p{
+            padding:1rem 0;
+            font-size:1rem;
+            color:$losmocolor;
+            line-height: 1;
+        }
+
     }
 }

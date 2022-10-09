@@ -225,6 +225,37 @@ body {
   border-radius: 1rem;
   width: 100%;
 }
+.about .video-files .controls {
+  text-align: center;
+  padding: 2rem 0;
+}
+.about .video-files .controls span {
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background: rgb(29, 182, 238);
+  cursor: pointer;
+}
+.about .video-files .controls span:hover {
+  background: #5633e3;
+}
 .about .content {
   flex: 1 1 43rem;
+  margin-bottom: 5rem;
+}
+.about .content span {
+  color: #5633e3;
+  font-size: 2rem;
+}
+.about .content h3 {
+  color: #5633e3;
+  font-size: 4rem;
+  margin-top: 0.5rem;
+}
+.about .content p {
+  padding: 1rem 0;
+  font-size: 1rem;
+  color: #5633e3;
+  line-height: 1;
 }/*# sourceMappingURL=style.css.map */
