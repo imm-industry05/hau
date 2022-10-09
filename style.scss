@@ -43,6 +43,10 @@ html{
 
 }
 
+section{
+    padding:3rem 9%;
+}
+
 body{
     background: $black;
     overflow-x: hidden;
@@ -113,8 +117,33 @@ body{
     display: none;
 
 }
+.home{
+    margin:0 auto;
+    margin-top: 9rem;
+    width: 90%;
+    border-radius: 1rem;
+    background: url(images/ocean.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+
+}
+
 
 //media
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding:1.5rem 2rem;
+    }
+    section{
+        padding:3rem 2rem;
+    }
+}
+
 @media (max-width:768px){
 
     #menu-btn{
