@@ -218,6 +218,7 @@ function playerReset() {
         updateTop();
         updateScore();
         updateLevel();
+        submitScore()
 
         pieces = 'ILJOTSZ';
         player.score = 0;
@@ -271,7 +272,6 @@ function updateScore() {
     if (player.score > recordedData.score){
         recordedData.score = player.score;
     }
-
     document.getElementById('score').innerText = player.score;
 }
 
@@ -297,7 +297,14 @@ function updateName() {
     } else {
         recordedData.name = document.getElementById("name").value;
     }
-    
+}
+
+function submitScore()
+{
+    document.getElementById("playername").value = recordedData.name;
+    document.getElementById("playerscore").value = recordedData.score;
+    document.getElementById("playerlevel").value = recordedData.level;
+    document.getElementById("playerform").submit(); 
 }
 
 //Keyboard handler
@@ -314,6 +321,9 @@ document.addEventListener('keydown', event => {
         playerRotate(-1);
     } else if (event.keyCode === 88) {
         playerRotate(1);
+    } else if (event.keyCode === 32) {
+        merge(arena, player);
+        playerReset();
     } 
 });
 

@@ -1,0 +1,267 @@
+@media only screen 
+and (min-width : 0px)
+and (max-width : 640px) {
+
+    body {
+        font-size: .5em;
+    }
+
+    #T{
+        display: none;
+    }
+
+    .header-child1 {
+        padding: 20px;
+    }  
+}
+
+@media only screen 
+and (min-width : 640px)
+and (max-width : 960px) {
+
+    body {
+        font-size: 1em;
+    }
+
+    #T{
+        display: none;
+    }
+
+    .header-child1 {
+        padding: 20px;
+    }  
+}
+
+@media only screen 
+and (min-width : 960px)
+and (max-width : 1280px) {
+
+    body {
+        font-size: 1.5em;
+    }
+
+    #T{
+        display: none;
+    }
+
+    .header-child1 {
+        padding: 20px;
+    }  
+
+}
+
+@media only screen 
+and (min-width : 1280px)
+and (max-width : 1500px) {
+
+    body {
+        font-size: 1.7em;
+    }
+}
+
+@media only screen 
+and (min-width : 1500px)
+and (max-width : 1920px) {
+
+    body {
+        font-size: 1.7em;
+    }
+}
+
+body {
+    background: #000000;
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+.header-container{
+    color: white;
+    font-family: 'karmatic_arcaderegular';
+    text-align: left;
+    width:100%;
+    height:10vh;
+}
+
+
+.header-child1 {
+    width: auto;
+    float: left;
+}  
+
+.header-child2 {
+    width: auto;
+    float: right;
+    padding: 20px;
+}  
+
+#headerButtons{
+    color: rgb(255, 255, 255);
+    font-size: 0.5em;
+}
+
+
+#logo{
+    color: rgb(255, 255, 255);
+    font-size: 0.5em;
+}
+
+#T{
+    color: white;
+    font-family: 'tetris_blocksregular';
+    margin-top: -55px;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+
+input[type="text"], textarea {
+    background-color : #000000; 
+    color:rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'back_to_1982regular', Arial, sans-serif;
+    src: url('backto1982-webfont.woff2') format('woff2'),
+         url('backto1982-webfont.woff') format('woff');
+    font-size: 1em;
+    border:0;
+    margin-top: 10px;
+}
+
+canvas {
+    border: solid .2em #fff;
+    height: 75vh;
+}
+
+#game{
+    text-align: center;
+}
+
+#hud{
+    text-align: right;
+    font-size: 0.7em;
+}
+
+#top{
+    margin-bottom:10vh;
+}
+
+#score{
+    margin-top: 1vh;
+}
+
+.wrapper>div{
+    display:inline-block;
+    margin-right: 0;
+    
+}
+
+.wrapper{
+    text-align: center;
+    height:80vh;
+    font-family: 'back_to_1982regular';
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    grid-gap: 20px;
+    
+}
+
+.grid-child{
+    border: solid .2em #fff;
+    padding: 10vh
+}
+
+.image-wrapper>div{
+    flex: 1;
+}
+
+.image-wrapper {
+    display: flex;
+}
+
+
+#margin{
+    margin-top: 5vh;
+
+}
+
+.github{
+    width: 200px;
+    height:120px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.youtube{
+    width: 150px;
+    height:120px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+a:link { text-decoration: none; color: inherit; }
+a:visited { text-decoration: none; color: inherit;}
+a:hover { text-decoration: none; color: inherit;}
+a:active { text-decoration: none; color: inherit;}
+
+.title-about{
+    margin-top: 10vh;
+   font-family: 'karmatic_arcaderegular';
+   font-size: 0.7em;
+   text-align: center;
+}
+
+.description-about{
+    font-family: 'FFF Forward';
+    font-size: 0.5em;
+    text-align: center;
+ }
+ 
+
+.title-leaderboards{
+    margin-top: 7vh;
+    font-family: 'FFF Forward';
+    font-size: 0.7em;
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'FFF Forward';
+    src: url('FFFForward.woff2') format('woff2'),
+        url('FFFForward.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'back_to_1982regular';
+    src: url('backto1982-webfont.woff2') format('woff2'),
+         url('backto1982-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+    
+ @font-face {
+    font-family: 'karmatic_arcaderegular';
+    src: url('ka1-webfont.woff2') format('woff2'),
+         url('ka1-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+    
+@font-face {
+    font-family: 'tetris_blocksregular';
+    src: url('tetrisblocks-p99g-webfont.woff2') format('woff2'),
+         url('tetrisblocks-p99g-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+    
