@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;0,700;1,200;1,500&display=swap');
+
+*{
+    font-family: 'Raleway', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+$green:#80ff00;
+$losmocolor:#5633e3;
+$dimgrey:#3c3c3c;
+$black:#14242c;
+$losmocolor2:#060d58;
+$losmocolor3:rgba(#1c2587,0.4);
+$white:#fff;
+$blue:rgb(0, 119, 255);
+$light-color:#aaa;
+$black-bg:rgba(17,17,17,.7);
+$border:.2rem solid $losmocolor;
+$redbook:rgba(#be4040,0.4);
+$navbarcolor:rgb(62, 41, 248);
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+
+    &::-webkit-scrollbar{
+        width:1rem
+    }
+    &::-webkit-scrollbar-track{
+        background: $losmocolor;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: $losmocolor;
+        border-radius: 5rem;
+    }
+
+}
+
+body{
+    background: $black;
+    overflow-x: hidden;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:1rem 3rem;
+    font-size:1.7rem;
+    color:$white;
+    border:$border;
+    border-radius: 5rem;
+    cursor: pointer;
+    background: none;
+
+    &:hover{
+        background:$redbook;
+        color:$white;
+
+    }
+
+}
+
+.header{
+    position: fixed;
+    top:0; left:0; right:0;
+    z-index: 1000;
+    background: $losmocolor3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0.7em 5%;
+    
+    .navbar a{
+        font-size: 1.7rem;
+        color:$white;
+        display: inline-block;
+        margin:0 1rem;
+
+        &:hover{
+            color:$navbarcolor;
+        }
+
+    }  
+
+    .logo{
+        font-size: 2.1rem;
+        color:$losmocolor;
+        font-weight: bolder;
+
+        i{
+            color:$losmocolor;
+            padding-right: .5rem;
+        }
+    }
+    
+    .btn{
+        margin-top: 0;
+    }
+
+}
+
+#menu-btn{
+    font-size: 2.5rem;
+    color:$losmocolor;
+    cursor: pointer;
+    display: none;
+
+}
+
+//media
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+    
+
+        .header{
+
+            .navbar{
+                position: absolute;
+                top:99%; left:0; right:0;
+                background: $dimgrey;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+                &.active{
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                }
+            
+                
+                a{
+                    margin:2rem;
+                    font-size: 2rem;
+                    display: block;
+
+                }
+            }
+        }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+
+    }
+}
+
+
