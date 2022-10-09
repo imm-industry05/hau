@@ -18,6 +18,7 @@ $black:#14242c;
 $losmocolor2:#060d58;
 $losmocolor3:rgba(#1c2587,0.4);
 $white:#fff;
+$white2:rgb(160, 160, 160);
 $blue:rgb(0, 119, 255);
 $light-color:#aaa;
 $black-bg:rgba(17,17,17,.3);
@@ -182,7 +183,7 @@ body{
                 border-radius: 5rem;
                 border:$border;
                 font-size: 1.6rem;
-                color:$white;
+                color:$white2;
                 text-transform: none;
                 background: none;
                 margin-top: 1rem;
@@ -262,4 +263,22 @@ body{
     }
 }
 
+//video
+.about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
 
+    .video-files{
+        flex:1 1 42rem;
+
+        video{
+            border-radius: 1rem;
+            width: 100%;
+        }
+    }
+    .content{
+        flex:1 1 43rem;
+    }
+}

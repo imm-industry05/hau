@@ -151,7 +151,7 @@ body {
   border-radius: 5rem;
   border: 0.2rem solid #5633e3;
   font-size: 1.6rem;
-  color: #fff;
+  color: rgb(160, 160, 160);
   text-transform: none;
   background: none;
   margin-top: 1rem;
@@ -210,4 +210,20 @@ body {
   html {
     font-size: 50%;
   }
+}
+.about {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.about .video-files {
+  flex: 1 1 42rem;
+}
+.about .video-files video {
+  border-radius: 1rem;
+  width: 100%;
+}
+.about .content {
+  flex: 1 1 43rem;
 }/*# sourceMappingURL=style.css.map */
