@@ -12,6 +12,7 @@
 
 $green:#80ff00;
 $losmocolor:#5633e3;
+$losmocolortr:#7a59ff;
 $dimgrey:#3c3c3c;
 $black:#14242c;
 $losmocolor2:#060d58;
@@ -19,7 +20,7 @@ $losmocolor3:rgba(#1c2587,0.4);
 $white:#fff;
 $blue:rgb(0, 119, 255);
 $light-color:#aaa;
-$black-bg:rgba(17,17,17,.7);
+$black-bg:rgba(17,17,17,.3);
 $border:.2rem solid $losmocolor;
 $redbook:rgba(#be4040,0.4);
 $navbarcolor:rgb(62, 41, 248);
@@ -117,16 +118,80 @@ body{
     display: none;
 
 }
+//ocean home
 .home{
     margin:0 auto;
     margin-top: 9rem;
     width: 90%;
     border-radius: 1rem;
-    background: url(images/ocean.png) no-repeat;
+    background:linear-gradient($black-bg,$black-bg), url(images/ocean.png) no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
+    min-height: 80vh;
+    padding-bottom: 5rem;
 
+    .content{
+        //follow us on fb
+        span{
+            
+            -webkit-text-stroke: .1rem $losmocolor;
+            font-size: 3vw;
+            display: block;
+
+        }
+        //follow us on fb
+        h3{
+            font-size: 1vw;
+            color:$losmocolortr
+        }
+        p{
+            max-width: 60rem;
+            margin:1rem auto;
+            font-size:1rem;
+            color:$losmocolor;
+            line-height: 1;
+        }
+    }
+
+}
+.book-form{
+    width: 80%;
+    margin:1rem auto;
+    margin-top: -5rem;
+    background: $black-bg;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(17,17,17,.3);
+    padding:3rem 2rem;
+
+    form{
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap:1.5rem;
+
+        .inputBox{
+            flex:1 1 25rem;
+            span{
+                font-size: 1.4rem;
+                color:$losmocolor;
+            }
+            input{
+                width: 100%;
+                padding:1.2rem 1.4rem;
+                border-radius: 5rem;
+                border:$border;
+                font-size: 1.6rem;
+                color:$white;
+                text-transform: none;
+                background: none;
+                margin-top: 1rem;
+            }
+        }
+        .btn{
+            flex: 1 1 15rem;
+        }
+    }
 }
 
 
@@ -169,6 +234,20 @@ body{
                     font-size: 2rem;
                     display: block;
 
+                }
+            }
+        }
+        .home{
+            margin-top: 5rem;
+            .content{
+                span{
+                    font-size:2vw;
+                }
+                h3{
+                    font-size:2vw;
+                }
+                p{
+                    font-size:2vw
                 }
             }
         }

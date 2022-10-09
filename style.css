@@ -99,10 +99,65 @@ body {
   margin-top: 9rem;
   width: 90%;
   border-radius: 1rem;
-  background: url(images/ocean.png) no-repeat;
+  background: linear-gradient(rgba(17, 17, 17, 0.3), rgba(17, 17, 17, 0.3)), url(images/ocean.png) no-repeat;
   background-size: cover;
   background-position: center;
   display: flex;
+  min-height: 80vh;
+  padding-bottom: 5rem;
+}
+.home .content span {
+  -webkit-text-stroke: 0.1rem #5633e3;
+  font-size: 3vw;
+  display: block;
+}
+.home .content h3 {
+  font-size: 1vw;
+  color: #7a59ff;
+}
+.home .content p {
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1rem;
+  color: #5633e3;
+  line-height: 1;
+}
+
+.book-form {
+  width: 80%;
+  margin: 1rem auto;
+  margin-top: -5rem;
+  background: rgba(17, 17, 17, 0.3);
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.3);
+  padding: 3rem 2rem;
+}
+.book-form form {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.book-form form .inputBox {
+  flex: 1 1 25rem;
+}
+.book-form form .inputBox span {
+  font-size: 1.4rem;
+  color: #5633e3;
+}
+.book-form form .inputBox input {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  border-radius: 5rem;
+  border: 0.2rem solid #5633e3;
+  font-size: 1.6rem;
+  color: #fff;
+  text-transform: none;
+  background: none;
+  margin-top: 1rem;
+}
+.book-form form .btn {
+  flex: 1 1 15rem;
 }
 
 @media (max-width: 991px) {
@@ -137,6 +192,18 @@ body {
     margin: 2rem;
     font-size: 2rem;
     display: block;
+  }
+  .home {
+    margin-top: 5rem;
+  }
+  .home .content span {
+    font-size: 2vw;
+  }
+  .home .content h3 {
+    font-size: 2vw;
+  }
+  .home .content p {
+    font-size: 2vw;
   }
 }
 @media (max-width: 450px) {
