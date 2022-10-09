@@ -1,0 +1,15 @@
+.homeBtn{
+	display: block;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	border-radius: 5px;
+	border: 1px solid black;
+	color:black;
+	background: #f0f0f0;
+	
+}
+.homeBtn:hover {
+	color: black;
+	text-decoration: none;
+}

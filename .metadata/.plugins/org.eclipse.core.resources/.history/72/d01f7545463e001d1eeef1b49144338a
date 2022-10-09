@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Main</title>
+  <link th:href="@{/style.css}" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  <div class="sidebar">
+    <div>
+      <img src="cpe.png.png" alt="logo"></div>
+    <ul>
+      <li><a class="current" th:href="@{/userInfoPage}"><i class="fas fa-home"></i>Home</a></li>
+      <li><a class="current" th:href="@{/list_users}"><i class="fas fa-solid fa-users"></i>Student List</a></li>
+    </ul>
+    <div class="social_media">
+      <a class="" href="https://www.facebook.com/holyangel1933/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a class="" href="https://twitter.com/holyangel1933/" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a class="" href="https://www.instagram.com/holyangel1933/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div>
+      <a class="logout mt-auto" type="button" id="fixedbutton"th:href="@{/logout}">Logout</a>
+    </div>
+  </div>
+  <div class="main_content">
+    <div class="header"></div>
+    <div class="info">
+      <div class="dash">Dashboard</div>
+      <div class="system">School Management System</div>
+      <div> <button onclick="student()" class="buttons" type="button">Total Student</button>
+        <button onclick="courses()" class="buttons" type="button">Available Courses</button>
+        <div class="youtube">
+          <iframe width="700" height="415"
+                  src="https://www.youtube.com/embed/E27yQoAGb4Q?autoplay=1&mute=1">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function student() {
+    var txt;
+    if (confirm("Holy Angel Have a student population over 21,000")) {
+    }
+    document.getElementById("demo").innerHTML = txt;
+  }
+  function courses() {
+    var txt;
+    if (confirm("You can see the different courses at hau.edu.ph")) {
+    }
+    document.getElementById("demo").innerHTML = txt;
+  }
+</script>
+
+</body>
+
+</html>

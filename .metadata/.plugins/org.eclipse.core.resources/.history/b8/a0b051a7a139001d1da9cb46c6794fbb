@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<link th:href="@{/list.css}" rel="stylesheet">
+	<title>Registration - Code Java </title>
+	<link rel ="stylesheet" type ="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+</head>
+<body>
+	<div class ="container text-center">
+		<div>
+		<h1>User Registration Sign Up</h1>
+		</div>
+		<div>
+		<form th:action = "@{/process_register}" method="post"
+			th:object="${user}">
+			<div class = "form-group row ml-3">
+				<label class"col-form-label col-2">E-mail</label>
+				<div class = "col-10">
+					<input type="email" class="form-control" th:field = "*{email}" placeholder ="E-mail" required />
+				</div>
+			</div>
+			
+			<div class = "form-group row ml-3">
+				<label class"col-form-label col-2">Password</label>
+				<div class = "col-10">
+					<input type="password" class="form-control" th:field = "*{password}" placeholder ="Password" required  
+					minlength = "6" maxlength = "10"/>
+				</div>
+			</div>
+			
+			<div class = "form-group row ml-3">
+				<label class"col-form-label col-2">First Name</label>
+				<div class = "col-10">
+					<input type="text" class="form-control" th:field = "*{firstName}" placeholder ="First Name" required  
+					minlength = "2" maxlength = "20"/>
+				</div>
+			</div>
+			
+			
+			</div>
+			<div class = "form-group row">
+				<label class"col-form-label col 4">First Name</label>
+				<div class ="col-8">
+					<input type="text" class="form-control" th:field = "*{firstName}" placeholder ="First Name" required
+					minlength = "2" maxlength = "20" />
+				</div>
+			</div>
+			
+			<div class = "form-group row">
+				<label class"col-form-label col 4">Last Name</label>
+				<div class ="col-8">
+					<input type="text" class="form-control" th:field = "*{lastName}" placeholder ="Last Name" required
+					minlength = "2" maxlength = "20" />
+				</div>
+			</div>
+			
+			<div>
+				<button type = "submit" class = "btn btn-primary">Sign Up</button>
+			</div>
+		</form>
+		</div>
+	</div>
+</body>
+</html>

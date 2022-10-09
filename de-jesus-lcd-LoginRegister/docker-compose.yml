@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx:1.23.1
+    container_name: nginx
+    ports:
+      - '80:80'
+    restart: on-failure
+    volumes:
+      - ./loginregister.local.com.conf:/etc/nginx/conf.d/loginregister.local.com.conf
+    networks:
+      infraNework:
+        ipv4_address: 10.10.0.2
+
+  spring:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: spring-app
+    ports:
+      - '8080:8080'
+    networks:
+      infraNework:
+        ipv4_address: 10.10.0.4
+
+  db:
+    image: mariadb:10.3.36
+    container_name: db-1
+    restart: on-failure
+    environment:
+       MYSQL_ROOT_PASSWORD: root
+    ports:
+      - '13306:3306'
+    volumes:
+      - ./MySQL:/var/lib/mysql
+    networks:
+      infraNework:
+        ipv4_address: 10.10.0.50
+
+
+networks:
+  infraNework:
+    ipam:
+      config:
+        - subnet: 10.10.0.0/16

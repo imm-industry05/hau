@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Home - Code Java </title>
+	<link th:href="@{/login.css}" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
+	
+</head>
+<body>
+	<div class = "title">
+		<label>Welcome to School Management System</label>
+	</div>
+
+	<div class ="container">
+			<h3><a th:href="@{/list_users}">List All Users</a></h3>
+			<h3><a th:href="@{/register}">Register</a></h3>
+			<h3><a th:href="@{/login}">Login</a></h3>
+	</div>
+	<div class="animation-area">
+    <ul class="box-area">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+	
+</body>
+</html>
