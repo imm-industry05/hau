@@ -236,6 +236,7 @@ body {
   border-radius: 50%;
   background: rgb(29, 182, 238);
   cursor: pointer;
+  margin: 0.7rem;
 }
 .about .video-files .controls span:hover {
   background: #5633e3;

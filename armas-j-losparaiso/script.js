@@ -3,8 +3,16 @@ let navbar = document.querySelector('.header .navbar');
 document.querySelector('#menu-btn').onclick = () =>{
     navbar.classList.toggle('active');
 }
+document.querySelectorAll('.about .video-files .controls .control-btn').forEach(btn =>{
+    btn.onclick = () => {
+        let src = btn.getAttribute('data-src');
+        document.querySelector('.about .video-files .video').src= src;
+    }
+})
 
-//music stars here
+
+
+//music stars here ----------------------------------------------------------------------------------------------------------------------------------
 const musicContainer = document.getElementById('music-container');
 const playBtn = document.getElementById('play');
 const prevBtn = document.getElementById('prev');
@@ -184,4 +192,5 @@ audio.addEventListener('ended', nextSong);
 // Time of song
 audio.addEventListener('timeupdate',DurTime);
 
-//music end
+//music end ----------------------------------------------------------------------------------------------------------------------------------
+

@@ -290,6 +290,7 @@ body{
                 border-radius: 50%;
                 background: $light-blue;
                 cursor: pointer;
+                margin:.7rem;
 
                     &:hover{
                     background: $losmocolor;
@@ -323,7 +324,7 @@ body{
     }
 }
 
-//music style starts
+//music style starts ----------------------------------------------------------------------------------------------------------------------------------
 body {
    
     display: flex;
@@ -454,4 +455,4 @@ body {
     width: 0%;
     transition: width 0.1s linear;
   }
-  //music styles END!
+  //music styles END!----------------------------------------------------------------------------------------------------------------------------------
