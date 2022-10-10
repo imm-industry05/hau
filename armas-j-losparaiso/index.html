@@ -17,8 +17,6 @@
 
     </head>
 <body>
-<!--audiobgm-->
-
 <!-- header section -->
     <header class="header">
         <div id="menu-btn" class="fas fa-bars"></div>
@@ -93,15 +91,37 @@
 
 </section>
 
-<!--audiotestbgm-->
-<iframe src="audiobgm/bgmloop.mp3" allow="autoplay" id="audio" hidden ></iframe>
+<!--audiotestbgm start-->
+<div class="music-container" id="music-container">
+    <div class="music-info">
+      <h4 id="title"></h4>
+      <div class="progress-container" id="progress-container">
+        <div class="progress" id="progress"></div>
+      </div>
+    </div>
 
-    <audio id="player" autoplay>
-        <source src="audiobgm/bgmloop.mp3" type="audio/mpeg" />
-        <source src="audiobgm/bgmloop.ogg" type="audio/ogg" />
-        <source src="audiobgm/bgmloop.wav" type="audio/wav" />
-        
-    </audio>
+    <audio src="music/again.mp3" id="audio"></audio>
+
+    <div class="img-container">
+      <img src="imgmusic/again.png" alt="music-cover" id="cover" />
+    </div>
+    <div class="navigation">
+      <button id="prev" class="action-btn">
+        <i class="fas fa-backward"></i>
+      </button>
+      <button id="play" class="action-btn action-btn-big">
+        <i class="fas fa-play"></i>
+      </button>
+      <button id="next" class="action-btn">
+        <i class="fas fa-forward"></i>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+      
+
+
 <!--endaudiotestbgm-->
 
 </body>
