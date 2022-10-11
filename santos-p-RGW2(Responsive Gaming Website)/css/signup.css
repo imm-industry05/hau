@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+}
+html, body{
+    height: 100%;
+}
+.containerbg{
+    height: 100%;
+    background: url(../images/signupbg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.form {
+    width: 550px;
+    background-color: #1b182b;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 30px;
+    margin: 10px 0;
+    border-radius: 20px;
+}
+input {
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 10px;
+    background-color: #322f40;
+    font-size: 18px;
+    color: #fff;
+}
+.signupform{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.signupbtn{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 0;
+    margin: 10px 0;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.sign1{
+    width: 40%;
+    font-size: 20px;
+    background-color: #e42f28;
+    border: none;
+}
+.sign1:hover{
+    background: #3c7df7;
+}
+.already{
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* scroll bar */
+html::-webkit-scrollbar{
+    display: none;
+}
+.progress{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    z-index: 300;
+}
+.progress-bar{
+    height: 4px;
+    background: #8465f3;
+    width: 0%;
+}
+
+
+a {
+    color: #3c7df7;
+}
+@media(max-width:800px){
+    .form {
+        width: 400px;
+    }
+    .signupform{
+        position: relative;
+    }
+    input{
+        margin: 5px 0;
+    }
+}
