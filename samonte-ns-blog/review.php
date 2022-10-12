@@ -24,7 +24,7 @@
                     
                     <form method="POST">
                         <input type="text" hidden name="id" value="<?php echo $q['id'];?>">
-                        <button class="btn btn-danger btn-sm ml-2">Delete blog</button>
+                        <button class="btn btn-danger btn-sm ml-2" name="delete">Delete blog</button>
                     </form>
                 </div>
             </div>

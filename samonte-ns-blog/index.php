@@ -22,6 +22,14 @@
                     <div class="alert alert-success h4" role="alert">
                         <strong>New blog content has been successfully added!</strong>
                     </div>
+                <?php } else if($_REQUEST['info'] == "updated"){ ?>
+                    <div class="alert alert-success h4" role="alert">
+                        <strong>New blog content has been successfully edited!</strong>
+                    </div>
+                <?php } else if($_REQUEST['info'] == "deleted"){ ?>
+                    <div class="alert alert-danger h4" role="alert">
+                        <strong>Blog content has been deleted!</strong>
+                    </div>
                 <?php }?>
             <?php }?>
 
