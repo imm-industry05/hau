@@ -6,11 +6,15 @@
     --Roboto: 'Roboto', sans-serif;
     --dark: #3c393d;
     --exDark: #2b2b2b;
+    --form-wid: 40%;
 }
 *{
     padding: 0;
     margin: 0;
     font-family: var(--Quicksand);
+}
+*:before, *:after{
+box-sizing: inherit;
 }
 body{
     line-height: 1.4;
@@ -25,6 +29,10 @@ img{
     max-width: 1320px;
     margin: 0 auto;
     padding: 0 1.2rem;
+}
+section {
+    margin-top: 3rem;
+    width: 100vw;
 }
 
 /* header */
@@ -114,13 +122,6 @@ header{
     font-size: 1.4rem;
     padding: 0rem 30rem;
 }
-.food-img img{
-    transition:  all 0.5s ease;
-    padding: 0rem 30rem;
-}
-.food-item:hover img{
-    transform: scale(1.1);
-}
 .food-img span:first-of-type{
     position: absolute;
     z-index: 1;
@@ -177,6 +178,58 @@ header{
 }
 .food-text a:hover{
     background: var(--exDark);
+}
+.column{
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 100px;
+}
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+}
+.card img{
+    transition:  all 0.5s ease;
+}
+.card:hover img{
+    transform: scale(1.1);
+}
+.about-section{
+    padding: 50px;
+    text-align: center;
+    color: white;
+}
+.container{
+    padding: 0 16px;
+  }
+.container::after, .row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.title{
+    color: var(--dark);
+}
+.button{
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+.button:hover{
+    background-color: #555;
+}
+@media screen and (max-width: 650px){
+    .column {
+      width: 100%;
+      display: block;
+    }
 }
 footer{
     background: var(--exDark);
