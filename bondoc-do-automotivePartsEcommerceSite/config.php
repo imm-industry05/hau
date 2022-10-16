@@ -1,15 +1,16 @@
 <?php 
 
-$server = "database";
+$server = "";
 $user = "root";
-$pass = "123";
-$database = "inventory_db";
+$pass = "";
+$database = "login_php";
 
-$conn = mysqli_connect($server, $user, $pass, $database);
+$conn = mysqli_connect($server,$user,$pass,$database);
 
 
-if(!$conn){
-    die("<script>alert('Connection failed')</script>");
+if(!$conn->connect_error){
+    die("<script>alert('connection failed')</script>");
 }
+
 
 ?>

@@ -1,5 +1,6 @@
 <?php 
-include 'config.php':
+
+include 'config.php';
 error_reporting(0);
 
 if (isset($_POST['submit']))
@@ -8,7 +9,7 @@ if (isset($_POST['submit']))
  $username = $_POST[username];
  $email = $_POST[email];
  $password = $_POST[password];
- $cpassword = $_POST[cpassword];
+ $cpassword = md5($_POST[cpassword]);
 
  if(password==cpassword){
   $sql = "SELECT * FROM signup_php WHERE email = 'email'";
@@ -23,15 +24,15 @@ if (isset($_POST['submit']))
         $email = "";
         $_POST['password'] = "";
         $_POST['cpassword'] = "";
-        header("location: /login-signup.php")
-      }  else {
-        echo"<script>alert('Try again')</script>";
-    }
-}else {
-    echo"<script>alert('Email already exists')</script>";
-}
+        header("location: /login-signup.php");
+      } else {
+          echo"<script>alert('Try again')</script>";
+      }
+  }else {
+      echo"<script>alert('Email already is already existing')</script>";
+  }
 }else{
-echo"<script>alert('Password do not match')</script>";
+  echo"<script>alert('Password do not match')</script>";
 }
 }
 ?>
