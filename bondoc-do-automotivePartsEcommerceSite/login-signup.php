@@ -1,3 +1,40 @@
+<?php 
+include 'config.php':
+error_reporting(0);
+
+if (isset($_POST['submit']))
+{
+ $name = $_POST[name];
+ $username = $_POST[username];
+ $email = $_POST[email];
+ $password = $_POST[password];
+ $cpassword = $_POST[cpassword];
+
+ if(password==cpassword){
+  $sql = "SELECT * FROM signup_php WHERE email = 'email'";
+  $result = mysqli_query($conn, $sql);
+
+  if(!$result -> num_rows > 0) {
+    $sql = "INSERT INTO signup_php(name, username, email, password, cpassword) VALUES('$name', '$username', '$email', '$password', '$cpassword')";
+    $result = mysqli_query($conn, $sql);
+      if($result){
+        $name = "";
+        $username = "";
+        $email = "";
+        $_POST['password'] = "";
+        $_POST['cpassword'] = "";
+        header("location: /login-signup.php")
+      }  else {
+        echo"<script>alert('Try again')</script>";
+    }
+}else {
+    echo"<script>alert('Email already exists')</script>";
+}
+}else{
+echo"<script>alert('Password do not match')</script>";
+}
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -209,7 +246,7 @@
           role="tabpanel"
           aria-labelledby="tab-register"
         >
-          <form>
+          <form action="" method="POST">
             <div class="text-center mb-3">
               <p>Sign up with:</p>
               <button type="button" class="btn btn-link btn-floating mx-1">
@@ -233,19 +270,19 @@
 
             <!-- Name input -->
             <div class="form-outline mb-4">
-              <input type="text" id="registerName" class="form-control" />
+              <input type="text" name="name" id="registerName" class="form-control" value="<?php echo $name?>" required/>
               <label class="form-label" for="registerName">Name</label>
             </div>
 
             <!-- Username input -->
             <div class="form-outline mb-4">
-              <input type="text" id="registerUsername" class="form-control" />
+              <input type="text" name="username" id="registerUsername" class="form-control" value="<?php echo $username?>"  required/>
               <label class="form-label" for="registerUsername">Username</label>
             </div>
 
             <!-- Email input -->
             <div class="form-outline mb-4">
-              <input type="email" id="registerEmail" class="form-control" />
+              <input type="email" name="email" id="registerEmail" class="form-control" value="<?php echo $email;?>" required/>
               <label class="form-label" for="registerEmail">Email</label>
             </div>
 
@@ -253,8 +290,12 @@
             <div class="form-outline mb-4">
               <input
                 type="password"
+                name="password"
                 id="registerPassword"
                 class="form-control"
+                value="<?php echo $password;?>"
+                required
+
               />
               <label class="form-label" for="registerPassword">Password</label>
             </div>
@@ -263,8 +304,11 @@
             <div class="form-outline mb-4">
               <input
                 type="password"
+                name="cpassword"
                 id="registerRepeatPassword"
                 class="form-control"
+                value="<?php echo $cpassword;?>"
+                required
               />
               <label class="form-label" for="registerRepeatPassword"
                 >Repeat password</label
@@ -280,6 +324,7 @@
                 id="registerCheck"
                 checked
                 aria-describedby="registerCheckHelpText"
+                required
               />
               <label class="form-check-label" for="registerCheck">
                 I have read and agree to the terms
@@ -287,7 +332,7 @@
             </div>
 
             <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-block mb-3">
+            <button type="submit" name="submit" class="btn btn-primary btn-block mb-3">
               Register
             </button>
           </form>
