@@ -20,15 +20,6 @@ Login as Student
 
 Logout
 
-## Installation
-*	Install XAMPP
-*	Open XAMPP Control panel and start [apache] and [mysql]
-*	Download the project zip file
-*	Extract the file and copy “SRMS” folder 
-*	Paste inside root directory xampp/htdocs/
-*	Open PHPMyAdmin (http://localhost/phpmyadmin)
-*	Create a database named ‘srms’
-*	Import srms.sql file (given in zip package)
-*	Open the browser and type localhost/SRMS/ 
+
 
 
