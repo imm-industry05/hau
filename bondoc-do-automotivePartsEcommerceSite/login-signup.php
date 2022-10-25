@@ -5,10 +5,10 @@ error_reporting(0);
 
 if (isset($_POST['submit']))
 {
- $name = $_POST[name];
+ $name1 = $_POST[name1];
  $username = $_POST[username];
  $email = $_POST[email];
- $password = $_POST[password];
+ $password1 = $_POST[password1];
  $cpassword = md5($_POST[cpassword]);
 
  if(password==cpassword){
@@ -16,7 +16,7 @@ if (isset($_POST['submit']))
   $result = mysqli_query($conn, $sql);
 
   if(!$result -> num_rows > 0) {
-    $sql = "INSERT INTO signup_php(name, username, email, password, cpassword) VALUES('$name', '$username', '$email', '$password', '$cpassword')";
+    $sql = "INSERT INTO signup_php (name, username, email, password, cpassword) VALUES('$name1', '$username', '$email', '$password1', '$cpassword')";
     $result = mysqli_query($conn, $sql);
       if($result){
         $name = "";
@@ -271,8 +271,8 @@ if (isset($_POST['submit']))
 
             <!-- Name input -->
             <div class="form-outline mb-4">
-              <input type="text" name="name" id="registerName" class="form-control" value="<?php echo $name?>" required/>
-              <label class="form-label" for="registerName">Name</label>
+              <input type="text" name="name1" id="registerName" class="form-control" value="<?php echo $name1?>" required/>
+              <label class="form-label" for="registerName">Name1</label>
             </div>
 
             <!-- Username input -->
@@ -291,14 +291,14 @@ if (isset($_POST['submit']))
             <div class="form-outline mb-4">
               <input
                 type="password"
-                name="password"
+                name="password1"
                 id="registerPassword"
                 class="form-control"
-                value="<?php echo $password;?>"
+                value="<?php echo $password1;?>"
                 required
 
               />
-              <label class="form-label" for="registerPassword">Password</label>
+              <label class="form-label" for="registerPassword">Password1</label>
             </div>
 
             <!-- Repeat Password input -->
