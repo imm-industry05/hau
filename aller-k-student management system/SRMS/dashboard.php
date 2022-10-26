@@ -25,7 +25,7 @@ include('sidebar.php');
                         <span><b>Total Students</b></span>
                     </div> 
                     <div>
-                        <span class="fas fa-user-graduate"></span>
+                      <span><a href="view student.php" class="fas fa-user-graduate"></a></span>
                     </div>
                 </div> 
                 
@@ -41,7 +41,7 @@ include('sidebar.php');
                         <span><b>Departments</b></span>
                     </div> 
                     <div>
-                        <span class="fas fa-university"></span>
+                       <span><a href="view department.php" class="fas fa-university"></a></span>
                     </div>
                 </div> 
                 
@@ -57,7 +57,7 @@ include('sidebar.php');
                         <span><b>Courses</b></span>
                     </div> 
                     <div>
-                        <span class="fas fa-book"></span>
+                       <span><a href="view course.php"  class="fas fa-book"></a></span>
                     </div>
                 </div> 
             </div>

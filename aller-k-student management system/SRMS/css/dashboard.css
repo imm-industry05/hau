@@ -41,6 +41,13 @@
     box-shadow: 0 5px 15px #00B0FF;
 }
 
+a {
+   color: #00B0FF;
+} 
+a:hover {
+   color: rgb(4, 0, 248);
+ }
+ 
 .card-single span:last-child{
     color: #00B0FF;
 }
