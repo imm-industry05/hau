@@ -146,6 +146,25 @@ h4{
     padding: 50px;
 }
 
+.about{
+    padding-top: 100px;
+}
+.about .col-3{
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.5;
+}
+.about .col-3 img{
+    width: 100px;
+    margin-top: 20px;
+    border-radius: 80%;
+}
+.about .col-3:hover{
+    transform: translateY(-10px);
+}
+
 .brands{
     margin: 100px auto;
 }
