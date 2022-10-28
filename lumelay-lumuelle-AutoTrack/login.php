@@ -10,7 +10,7 @@
         <form action="includes/login.inc.php" method="post">
 
           <div class="">
-            <input class="input-field" type="text" name="name" placeholder="Email/Name">
+            <input class="input-field" type="text" name="email" placeholder="Email">
             <!-- <i class="fa-solid fa-user"></i> -->
           </div>
 

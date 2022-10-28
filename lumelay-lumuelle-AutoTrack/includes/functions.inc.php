@@ -52,7 +52,7 @@ function emailExists($conn, $email) {
 
   $resultData = mysqli_stmt_get_result($stmt);
 
-  if (mysqli_fetch_assoc($resultData)) {
+  if ($row = mysqli_fetch_assoc($resultData)) {
     return $row;
   }
   else {
@@ -97,11 +97,11 @@ function emptyInputLogin($email, $pwd) {
 //
 //function for login system
 //checking if the account exists
-function loginUser($conn, $email, $pwd){
+function loginUser($conn, $email, $pwd) {
   $emailExists = emailExists($conn, $email);
 
   if ($emailExists === false) {
-    header("location: ../login.php?error=accountnotfound");
+    header("location: ../login.php?error=wronglogin");
     exit();
   }
 
@@ -111,11 +111,10 @@ function loginUser($conn, $email, $pwd){
   $checkPwd = password_verify($pwd, $pwdHashed);
 
   if ($checkPwd === false) {
-    header("location: ../login.php?error=passwordnotmatch");
+    header("location: ../login.php?error=incorrectpassword");
     exit();
   }
-  else if ($checkPwd === true){
-    //starting session
+  elseif ($checkPwd === true) {
     session_start();
     $_SESSION["userid"] = $emailExists["usersId"];
     $_SESSION["useremail"] = $emailExists["usersEmail"];
