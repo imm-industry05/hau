@@ -3,7 +3,6 @@
     "development"
   ],
   "hints": {
-    "meta-viewport": "off",
     "axe/text-alternatives": [
       "default",
       {
@@ -22,6 +21,7 @@
         "label": "off",
         "select-name": "off"
       }
-    ]
+    ],
+    "meta-viewport": "off"
   }
 }
