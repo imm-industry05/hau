@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+footer{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    background:#feffa3;
+    height:auto;
+    width: 100vw;
+    padding-top: 3px;
+    color:#020202;
+}
+.footer-bottom{
+    background:#feffa3;
+    width: 100vw;
+    padding: 20px 0 ;
+    text-align: center;
+}
+.main-content{
+    position: relative;
+    display: flex;
+    background-color: black;
+    height: 100vh;   
+    
+}
+.main-content::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.3;
+    z-index: 0;
+    background-image: url(img/aesthetic.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.title{ 
+    background-image: url(img/title.png);
+    background-size: contain;
+    background-position: center;
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    bottom: 400px;
+    
+}
+
+
+p{
+    font-family: 'Shadows Into Light', cursive;
+    position: absolute;
+    letter-spacing: 3px;
+    
+    font-size: 4vmin;
+}
+h1{
+    font-family: 'Teko', sans-serif;
+    position: relative;
+    font-size: 5vmin;
+    text-align: center;
+}
+h2{
+    font-family: 'Teko', sans-serif;
+    position: relative;
+    font-size: 4vmin;
+    text-align: center;
+}
+
+
+.box{
+    background-color: #dbdcff;
+    width: 700px;
+    height: 400px;
+    border-radius: 2%;
+    position: absolute;
+    top: 120px;
+    left: 300px;
+    
+}

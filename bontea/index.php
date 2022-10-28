@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BonTea</title>
+    <title>BONTEA | LOGIN </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
-    <link rel = "stylesheet" type ="text/css" href = "style.css">
+    <link rel = "stylesheet" type ="text/css" href = "sstyle.css">
 </head>
 <body>
 <!-- images -->
@@ -17,21 +17,23 @@
     <div class ="design"></div>
 
 <!-- form box -->
-    <div class="box">
-            <h1 class="font"> 
-                <br> Username: <br> 
-                <form> <input>
-            </h1>
-            <h2 class="font"> <br>
-                Password: <br><input type="password"> 
-            </h2>
-           <a href="context.html">
+    
+        <form action="login.php" method="post"> 
+                 <?php
+                    if(isset($_GET['error'])){ 
+                        ?> <p class = "error"><?php echo $_GET['error']; ?></p>
+                   <?php } ?>
+                <label>Username</label>
+                <input  type ="text" name="username" placeholder="Username">
+            
+                <label>Password</label>
+                <input type ="password" name="password" placeholder="Password">
 
-            <img src="img/nxt.png" width="50px;">
-        
-        </a>
-        </form>
-    </div>
+                <button type="submit">LOGIN</button>
+               <p class = "fontnp" >Doesn't have an account?</p><a class = "fonta" href="newacc.php"> Register here </a>
+           
+           </form>
+    
 
     <footer>
         <div class="footer-content">
