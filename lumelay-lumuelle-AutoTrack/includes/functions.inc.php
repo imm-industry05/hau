@@ -43,7 +43,7 @@ function emailExists($conn, $email) {
   $sql = "SELECT * FROM users WHERE usersEmail = ?;";
   $stmt = mysqli_stmt_init($conn);
   if (!mysqli_stmt_prepare($stmt, $sql)) {
-    header("location: ../signUp.php?error=stmtfailed");
+    header("location: ../signup.php?error=stmtfailed");
     exit();
   }
 
@@ -68,7 +68,7 @@ function createUser($conn, $name, $email, $address, $pwd) {
   $sql = "INSERT INTO users (usersName, usersEmail, usersAddress, usersPwd) VALUES (?, ?, ?, ?);"; //Inserting the data into the database
   $stmt = mysqli_stmt_init($conn);
   if (!mysqli_stmt_prepare($stmt, $sql)) {
-    header("location: ../signUp.php?error=stmtfailed");
+    header("location: ../signup.php?error=stmtfailed");
     exit();
   }
 
@@ -77,6 +77,49 @@ function createUser($conn, $name, $email, $address, $pwd) {
   mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $address, $hashedPwd);
   mysqli_stmt_execute($stmt);
   mysqli_stmt_close($stmt);
-  header("location: ../signUp.php?error=none");
+  header("location: ../login.php");
   exit();
+}
+
+//*****************
+// for login system
+// checking for empty input
+function emptyInputLogin($email, $pwd) {
+  $result;
+  if (empty($email) || empty($pwd)) {
+    $result = true;
+  }
+  else {
+    $result = false;
+  }
+  return $result;
+}
+//
+//function for login system
+//checking if the account exists
+function loginUser($conn, $email, $pwd){
+  $emailExists = emailExists($conn, $email);
+
+  if ($emailExists === false) {
+    header("location: ../login.php?error=accountnotfound");
+    exit();
+  }
+
+  //
+  //verifying the password in the database
+  $pwdHashed = $emailExists["usersPwd"];
+  $checkPwd = password_verify($pwd, $pwdHashed);
+
+  if ($checkPwd === false) {
+    header("location: ../login.php?error=passwordnotmatch");
+    exit();
+  }
+  else if ($checkPwd === true){
+    //starting session
+    session_start();
+    $_SESSION["userid"] = $emailExists["usersId"];
+    $_SESSION["useremail"] = $emailExists["usersEmail"];
+    header("location: ../main.php");
+    exit();
+  }
 }
