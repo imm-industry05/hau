@@ -7,7 +7,7 @@
     <div class="login-form">
       <h2>Log In</h2>
 
-        <form action="login.inc.php" method="post">
+        <form action="includes/login.inc.php" method="post">
 
           <div class="">
             <input class="input-field" type="text" name="name" placeholder="Email/Name">
@@ -25,7 +25,7 @@
               <a href="#">Forgot password?</a>
             </div>
             <p>Not a member yet?
-              <a href="signUp.php" class="caa">Create an account</a>
+              <a href="signup.php" class="caa">Create an account</a>
             </p>
           </div>
 

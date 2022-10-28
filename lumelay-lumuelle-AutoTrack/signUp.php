@@ -7,7 +7,7 @@
     <div class="login-form">
       <h2>Sign Up</h2>
 
-        <form action="signup.inc.php" method="post">
+        <form action="includes/signup.inc.php" method="post">
 
           <div class="">
             <input type="text" name="name" placeholder="Enter Your Full Name (Juan Dela Cruz)">
@@ -20,7 +20,7 @@
           </div>
 
           <div class="">
-            <input type="text" name="email" placeholder="Enter Your Address (City, Barangay, Street)">
+            <input type="text" name="address" placeholder="Enter Your Address (City, Barangay, Street)">
             <!-- <i class="fa-regular fa-envelope"></i> -->
           </div>
 
