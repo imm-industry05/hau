@@ -1,0 +1,11 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+.background {
+    background-image: url(images/greek-mythology-background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+}
