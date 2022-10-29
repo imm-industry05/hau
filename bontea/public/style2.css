@@ -3,6 +3,38 @@
     padding: 0;
     box-sizing: border-box
 }
+
+select{
+    display: block;
+	border: 2px solid #ccc;
+    height: 5%;
+	width: 30%;
+
+	margin: 10px auto;
+	border-radius: 5px;   
+}
+input {
+	display: block;
+	border: 2px solid #ccc;
+	width: 30%;
+	padding: 10px;
+	margin: 10px auto;
+	border-radius: 5px;
+}
+
+button {
+	float: right;
+	background-image: white;
+	padding: 10px 15px;
+	color: #020202;
+	border-radius: 5px;
+	margin-right: 100px;
+	border: none;
+    position: absolute;
+    left: 500px;
+    bottom: 25px;
+}
+
 footer{
     position: absolute;
     bottom:0;
@@ -84,5 +116,7 @@ h2{
     position: absolute;
     top: 120px;
     left: 300px;
+    justify-content: center;
     
 }
+

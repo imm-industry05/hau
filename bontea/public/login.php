@@ -1,6 +1,7 @@
 <?php
 include "db-con.php";
 
+
 if (isset($_POST['username']) && isset($_POST['password'])){
     function validate($data){
         $data = trim($data);
