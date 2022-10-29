@@ -6,7 +6,7 @@
         echo "<h4 class='container-fluid bg-dark text-center p-2 text-danger'>NOT ABLE TO CREATE DATABASE CONNECTION</h4>";
     }
 
-    $sql = "SELECT * FROM data";
+    $sql = "SELECT * FROM data ORDER BY id DESC";
     $query = mysqli_query($conn, $sql);
     
     if(isset($_REQUEST["new_post"])){
