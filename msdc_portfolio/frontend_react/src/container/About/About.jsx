@@ -3,17 +3,23 @@ import { motion } from 'framer-motion';
 
 import { images } from '../../constants'
 import './About.scss';
-
-const abouts = [
-  { title: 'Computer Engineer', description: 'I am a good Computer Engineer.', imgUrl: images.about01 },
-  { title: 'Frontend Developer', description: 'I am a good Computer Engineer.', imgUrl: images.about02 },
-  { title: 'Backend Developer', description: 'I am a good Computer Engineer.', imgUrl: images.about03},
-]
+import { urlFor, client } from '../../client';
  
 const About = () => {
+  const [abouts, setAbouts] = useState([]);
+  
+  useEffect(() => {
+    const query = '*[_type == "abouts"]';
+
+    client.fetch(query)
+      .then((data) => setAbouts(data));
+  }, []);
+
+  
+
   return (
     <>
-      <h2 className="head-text">I Know That <span>Good Development</span> <br /> means <span>Good Business</span></h2>
+      <h2 className="head-text">I Know That <span>Good Apps</span> <br /> means <span>Good Business</span></h2>
 
       <div className="app__profiles">
         {abouts.map((about, index) =>(
@@ -24,7 +30,7 @@ const About = () => {
             className="app__profile-item"
             key={about.title + index}
           >
-            <img src={about.imgUrl} alt={about.title} />
+            <img src={urlFor(about.imgUrl)} alt={about.title} />
             <h2 className="bold-text" style={{ marginTop: 20 }}>{about.title}</h2>
             <p className="p-text" style={{ marginTop: 10 }}>{about.description}</p>
           </motion.div>
