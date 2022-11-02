@@ -275,6 +275,67 @@ header .navbar a:hover{
     text-decoration: line-through;
 }
 
+.hoops .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    border:.1rem solid rgba(0,0,0,.1);
+    border-radius: .5rem;
+    background:#f9f9f9;
+    padding:2rem;
+    align-items: center;
+    margin:1.5rem 0;
+}
+
+.hoops .row .content{
+    flex:1 1 40rem;
+}
+
+.hoops .row .image-container{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex: 1 1 50rem;
+}
+
+.hoops .row .image-container .small-image{
+    width: 10%;
+}
+
+.hoops .row .image-container .big-image{
+    width: 80%;
+    padding: 1rem;
+}
+
+.hoops .row .image-container .small-image img{
+    width: 100%;
+    padding: 1rem;
+    border: .1rem solid rgba(0,0,0,.3);
+    cursor: pointer;
+}
+
+.hoops .row .image-container .small-image img:hover{
+    background-color:#ccc;
+}
+
+.hoops .row .image-container .big-image img{
+    width: 50%;
+}
+
+.hoops .row .image-container .big-image img:hover{
+    transform: scale(1.05);
+}
+
+.hoops .row .content h3{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.hoops .row .content p{
+    font-size: 1.5rem;
+    color:#999;
+    padding: 1rem 0;
+}
 
 
 
