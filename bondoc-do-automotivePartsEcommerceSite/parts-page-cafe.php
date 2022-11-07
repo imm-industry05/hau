@@ -56,7 +56,7 @@
       <div class="container">
         <a
           class="navbar-brand"
-          href="index.html"
+          href="index.php"
           ><img
             src="images/logo.png"
             style="max-width: 15%; max-height: auto"
@@ -78,7 +78,7 @@
             <li class="nav-item">
               <a
                 class="nav-link"
-                href="index.html"
+                href="index.php"
                 >Home</a
               >
             </li>
@@ -90,15 +90,15 @@
             <li class="nav-item">
               <a
                 class="nav-link"
-                href="contact-us.html"
+                href="contact-us.php"
                 >Contact Us</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link"
-                href="login.php"
-                >Sign Up / Login</a
+                href="logout.php"
+                >Logout</a
               >
             </li>
           </ul>
@@ -109,7 +109,7 @@
     <div class="container" style="padding-top: 2rem; padding-bottom: 40rem">
       <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="parts-page.html">Available Products</a></li>
+          <li class="breadcrumb-item"><a href="parts-page.php">Available Products</a></li>
           <li class="breadcrumb-item active" aria-current="page">Cafe Racer 152</li>
         </ol>
       </nav>
@@ -169,21 +169,21 @@
         <ul class="nav col-md-4 justify-content-end">
           <li class="nav-item">
             <a
-              href="index.html"
+              href="index.php"
               class="nav-link px-2 text-muted"
               >Home</a
             >
           </li>
           <li class="nav-item">
             <a
-              href="parts-page.html"
+              href="parts-page.php"
               class="nav-link px-2 text-muted"
               >Available Parts</a
             >
           </li>
           <li class="nav-item">
             <a
-              href="contact-us.html"
+              href="contact-us.php"
               class="nav-link px-2 text-muted"
               >Contact Us</a
             >

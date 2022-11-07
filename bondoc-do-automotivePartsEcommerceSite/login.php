@@ -1,6 +1,7 @@
 <?php
 include 'config.php';
 error_reporting(0);
+session_start();
 
 if(isset($_POST['submit'])){
   $username = $_POST['username'];
@@ -15,7 +16,7 @@ if(isset($_POST['submit'])){
 
       if ($row['username'] == "$username"){
           $_SESSION['log_in'] = $row['username'];
-          header("location: index.html");
+          header("location: index.php");
       }
   }
 }
@@ -25,7 +26,7 @@ if(isset($_POST['submit'])){
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DB MFG | Autoparts & Fabrication | Login & Signup</title>
+    <title>DB MFG | Autoparts & Fabrication | Login Page</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -75,7 +76,7 @@ if(isset($_POST['submit'])){
     </svg>
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="index.html"
+        <a class="navbar-brand" href="#"
           ><img
             src="images/logo.png"
             style="max-width: 15%; max-height: auto"
@@ -92,24 +93,6 @@ if(isset($_POST['submit'])){
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="parts-page.html"
-                >Available Parts</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact-us.html">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Sign Up / Login</a>
-            </li>
-          </ul>
-        </div>
       </div>
     </nav>
 <!-- Login Form Here-->
@@ -184,25 +167,8 @@ if(isset($_POST['submit'])){
             <use xlink:href="#bootstrap"></use>
           </svg>
         </a>
-
-        <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link px-2 text-muted">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="parts-page.html" class="nav-link px-2 text-muted"
-              >Available Parts</a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="contact-us.html" class="nav-link px-2 text-muted"
-              >Contact Us</a
-            >
-          </li>
-        </ul>
       </footer>
     </div>
-
     <!--Bootstrap js link-->
     <script
       type="text/javascript"

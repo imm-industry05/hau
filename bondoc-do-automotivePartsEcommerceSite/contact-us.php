@@ -3,14 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DB MFG | Autoparts & Fabrication | Available Parts</title>
+    <title>DB MFG | Autoparts & Fabrication | Contact Us</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
-    />
-
+      crossorigin="anonymous"/>
+      
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
@@ -53,9 +52,7 @@
     </svg>
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
       <div class="container">
-        <a
-          class="navbar-brand"
-          href="index.html"
+        <a class="navbar-brand" href="/index.php"
           ><img
             src="images/logo.png"
             style="max-width: 15%; max-height: auto"
@@ -75,63 +72,35 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a
-                class="nav-link"
-                href="index.html"
-                >Home</a
-              >
+              <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+              <a
+                class="nav-link"
+                href="parts-page.php"
                 >Available Parts</a
               >
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link"
-                href="contact-us.html"
+              <a class="nav-link active" aria-current="page" href="#"
                 >Contact Us</a
               >
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link"
-                href="login.php"
-                >Sign Up / Login</a
-              >
+              <a class="nav-link" href="logout.php" >Logout</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="container" style="padding-top: 2rem; padding-bottom: 40rem">
-      <div class="row row-cols-1 row-cols-md-3 g-4" style="padding-bottom: 10rem;">
-      <div class="col">
-        <div class="card">
-          <img src="images/cr152-image.png" class="card-img-top" alt="Keeway Cafe Racer 152 Parts" />
-          <div class="card-body">
-            <h5 class="card-title">Beneli Cafe Racer 152 Parts</h5>
-            <p class="card-text">
-              Discover pre designed parts for this motorcycle, with downloadable 3d models available. 
-            </p>
-            <p style="color:red"> Modifications to intake airbox is needed for parts installation for this motorcycle</p>
-            <a href="parts-page-cafe.html" class="btn btn-primary">See Parts</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="images/tvs-a180.png" class="card-img-top" alt="TVS Apache 180 Parts" />
-          <div class="card-body">
-            <h5 class="card-title">TVS Apache RTR 180 Parts</h5>
-            <p class="card-text">
-              Discover pre designed parts for this motorcycle, with downloadable 3d models available. 
-            </p>
-            <p style="color:rgb(11, 94, 215)"> Parts for this motorcycle are plug and play</p> <br>
-            <a href="parts-page-apache.html" class="btn btn-primary">See Parts</a>
-          </div>
-        </div>
-      </div>
+    <div class="container" style="padding-top: 5rem; "> <div class="container" style="padding-bottom: 5rem;"> 
+      <h1>We are located at </h1>
+      <h2>#1 Holy Angel St, Angeles, 2009 Pampanga</h2>
+      <h3>Contact Number : 0949-689-****</h3>
+    </div>
+      <div class="container" style="padding-bottom: 3rem; padding-left: 14rem;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3851.459702160084!2d120.58782231484663!3d15.133077989465118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f24ec2f5a1f9%3A0x5e0af8a6aaab2282!2sHoly%20Angel%20University!5e0!3m2!1sen!2sph!4v1664332646724!5m2!1sen!2sph" width="80%" height="450" style="border:2px; border-radius: 3rem; border-color: aliceblue;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+   
+  </div>
     </div>
     <div class="container">
       <footer
@@ -150,22 +119,18 @@
 
         <ul class="nav col-md-4 justify-content-end">
           <li class="nav-item">
-            <a
-              href="index.html"
-              class="nav-link px-2 text-muted"
-              >Home</a
-            >
+            <a href="index.php" class="nav-link px-2 text-muted">Home</a>
           </li>
           <li class="nav-item">
             <a
-              href="parts-page.html"
+              href="parts-page.php"
               class="nav-link px-2 text-muted"
               >Available Parts</a
             >
           </li>
           <li class="nav-item">
             <a
-              href="contact-us.html"
+              href="#"
               class="nav-link px-2 text-muted"
               >Contact Us</a
             >
@@ -177,13 +142,13 @@
     <!--Bootstrap js link-->
 
     <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-      crossorigin="anonymous"
-    ></script>
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"
+  ></script>
   </body>
 </html>

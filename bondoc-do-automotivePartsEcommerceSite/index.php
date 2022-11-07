@@ -1,3 +1,13 @@
+<?php
+include 'config.php';
+error_reporting(0);
+
+session_start();
+
+if(!isset($_SESSION['log_in'])){
+    header("location: login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -52,13 +62,13 @@
             <a class="nav-link active" aria-current="page" href="#" >Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="parts-page.html" >Available Parts</a>
+            <a class="nav-link" href="parts-page.php" >Available Parts</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact-us.html" >Contact Us</a>
+            <a class="nav-link" href="contact-us.php" >Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="login.php" >Sign Up / Login</a>
+            <a class="nav-link" href="logout.php" >Logout</a>
           </li>
         </ul>
       </div>
@@ -111,8 +121,8 @@
 
     <ul class="nav col-md-4 justify-content-end">
       <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-      <li class="nav-item"><a href="parts-page.html" class="nav-link px-2 text-muted">Available Parts</a></li>
-      <li class="nav-item"><a href="contact-us.html" class="nav-link px-2 text-muted">Contact Us</a></li>
+      <li class="nav-item"><a href="parts-page.php" class="nav-link px-2 text-muted">Available Parts</a></li>
+      <li class="nav-item"><a href="contact-us.php" class="nav-link px-2 text-muted">Contact Us</a></li>
   
     </ul>
   </footer>

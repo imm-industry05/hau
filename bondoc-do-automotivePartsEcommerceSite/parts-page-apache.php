@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DB MFG | Autoparts & Fabrication | Contact Us</title>
+    <title>DB MFG | Autoparts & Fabrication | Apache RTR 180 Parts</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"/>
-      
+      crossorigin="anonymous"
+    />
+
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
@@ -24,6 +25,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
@@ -52,7 +54,9 @@
     </svg>
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="/index.html"
+        <a
+          class="navbar-brand"
+          href="index.php"
           ><img
             src="images/logo.png"
             style="max-width: 15%; max-height: auto"
@@ -72,37 +76,82 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
               <a
                 class="nav-link"
-                href="parts-page.html"
-                >Available Parts</a
+                href="index.php"
+                >Home</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#"
+                >Available Parts</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="contact-us.php"
                 >Contact Us</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="login.php" >Sign Up / Login</a>
+              <a
+                class="nav-link"
+                href="logout.php"
+                >Logout</a
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="container" style="padding-top: 5rem; "> <div class="container" style="padding-bottom: 5rem;"> 
-      <h1>We are located at </h1>
-      <h2>#1 Holy Angel St, Angeles, 2009 Pampanga</h2>
-      <h3>Contact Number : 0949-689-****</h3>
+    <!--Body Code-->
+    <div class="container" style="padding-top: 2rem; padding-bottom: 40rem">
+      <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="parts-page.php">Available Products</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Apache RTR 180</li>
+        </ol>
+      </nav>
+      <h1>TVS Apache RTR 180 </h1>
+    <div class="container-sm" style="border-radius: 5rem;">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+      
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="images/apch1.png" class="d-block w-100" alt="img1">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="images/apch2.png" class="d-block w-100" alt="img2">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="images/apch3.png" class="d-block w-100" alt="img3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <img src="images/hr-fake.png" style="width: 80%;display: block;margin-left: auto;margin-right: auto; padding-bottom: 2rem;" alt="">
+      <h3>About Modifications</h3>
+      <h5 style="padding-bottom: 3rem;padding-left: 2rem;">  Plug and Play power, easy installation that can be done in 5 minutes. <br> Discover the potential a slight modification can do. <br></h5>
+      <h2 style="padding-bottom: 1rem;">File Download Link</h2>
+      <h6 style="padding-bottom:3rem;padding-left: 2rem;">  The modifications included in the downloadable files includes 3d files.<br>Replace original filter holder with provided version. <br> Don't lose factory gaskets as they will still be used.</h6>
+      <a href="/downloadfiles/RTR180_PartsE.rar"><button class="btn" style="background-color:#0d6efd;border: none;color: white;padding: 12px 30px;cursor: pointer;width:100%;font-size: 20px;"><i class="fa fa-download"></i> Download</button></a>
     </div>
-      <div class="container" style="padding-bottom: 3rem; padding-left: 14rem;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3851.459702160084!2d120.58782231484663!3d15.133077989465118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f24ec2f5a1f9%3A0x5e0af8a6aaab2282!2sHoly%20Angel%20University!5e0!3m2!1sen!2sph!4v1664332646724!5m2!1sen!2sph" width="80%" height="450" style="border:2px; border-radius: 3rem; border-color: aliceblue;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-   
-  </div>
-    </div>
-    <div class="container">
+    <img src="images/hr-fake.png" style="width: 80%;display: block;margin-left: auto;margin-right: auto; padding-bottom: 2rem;padding-top: 5rem;opacity: 0;" alt="">
+    <!--Footer Code-->
+    <div class="container" >
       <footer
         class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
       >
@@ -119,18 +168,22 @@
 
         <ul class="nav col-md-4 justify-content-end">
           <li class="nav-item">
-            <a href="index.html" class="nav-link px-2 text-muted">Home</a>
+            <a
+              href="index.php"
+              class="nav-link px-2 text-muted"
+              >Home</a
+            >
           </li>
           <li class="nav-item">
             <a
-              href="parts-page.html"
+              href="parts-page.php"
               class="nav-link px-2 text-muted"
               >Available Parts</a
             >
           </li>
           <li class="nav-item">
             <a
-              href="contact-us.html"
+              href="contact-us.php"
               class="nav-link px-2 text-muted"
               >Contact Us</a
             >
@@ -142,13 +195,13 @@
     <!--Bootstrap js link-->
 
     <script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-    crossorigin="anonymous"
-  ></script>
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
