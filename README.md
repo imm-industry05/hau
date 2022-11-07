@@ -1,2 +1,0 @@
-# hau
-embedded-comparc-comparcl
