@@ -8,9 +8,9 @@ $database = "login_php";
 $conn = mysqli_connect($server, $user, $pass, $database);
 
 
-if($conn->connect_error){
-    die("<script>alert('Connection Failed')</script>");
+if(!$conn){
+    die("<script>alert('Connection failed')</script>");
 }
-echo "Connection Successful";
+
 
 ?>

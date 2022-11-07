@@ -1,9 +1,44 @@
+<?php
+include 'config.php';
+error_reporting(0);
+
+if(isset($_POST['submit'])){
+  $username = $_POST['username'];
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+  $cpassword = $_POST['cpassword'];
+
+  if($password == $cpassword){
+    $sql = "SELECT * FROM signup_php WHERE email ='$email'";
+    $result = mysqli_query($conn, $sql);
+
+    if(!$result -> num_rows > 0){
+        $sql = "INSERT INTO signup_php(username, name, email, password) VALUES('$username', '$name', '$email', '$password')";
+        $result = mysqli_query($conn, $sql);
+        if($result){
+            $username = "";
+            $email = "";
+            $_POST['password'] = "";
+            $_POST['cpassword'] = "";
+            header("location: login.php");
+        }else{
+            echo "<script>alert('Please Try Again')</script>";
+        }  
+        }else{
+            echo "<script>alert('The Email is already is use')</script>";
+        }    
+         }else{ 
+             echo "<script>alert('Passwords do not match')</script>";
+        }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DB MFG | Autoparts & Fabrication | Cafe Racer 152 Parts</title>
+    <title>DB MFG | Autoparts & Fabrication | Login & Signup</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -25,7 +60,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
@@ -54,9 +88,7 @@
     </svg>
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
       <div class="container">
-        <a
-          class="navbar-brand"
-          href="index.html"
+        <a class="navbar-brand" href="index.html"
           ><img
             src="images/logo.png"
             style="max-width: 15%; max-height: auto"
@@ -76,82 +108,80 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a
-                class="nav-link"
-                href="index.html"
-                >Home</a
-              >
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+              <a class="nav-link" aria-current="page" href="parts-page.html"
                 >Available Parts</a
               >
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link"
-                href="contact-us.html"
-                >Contact Us</a
-              >
+              <a class="nav-link" href="contact-us.html">Contact Us</a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link"
-                href="login.php"
-                >Sign Up / Login</a
-              >
+              <a class="nav-link active" href="login.php">Sign Up / Login</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <!--Body Code-->
-    <div class="container" style="padding-top: 2rem; padding-bottom: 40rem">
-      <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+<!-- Login Form Here-->
+<div class="container-md" style="padding-top: 5rem; width:30%;">
+    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="parts-page.html">Available Products</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Cafe Racer 152</li>
+          <li class="breadcrumb-item"><a href="login.php">Login/Register</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Sign Up</li>
         </ol>
       </nav>
-      <h1>Beneli / Keeway Cafe Racer 152 </h1>
-    <div class="container-sm" style="border-radius: 5rem;">
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-      
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="10000">
-            <img src="images/crp1.png" class="d-block w-100" alt="img1">
-          </div>
-          <div class="carousel-item" data-bs-interval="3000">
-            <img src="images/crp2.png" class="d-block w-100" alt="img2">
-          </div>
-          <div class="carousel-item" data-bs-interval="3000">
-            <img src="images/crp3.png" class="d-block w-100" alt="img3">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+<h1 style="padding-bottom: 2rem;">Signup</h1>
+<form action="" method="POST"> 
+ <!-- Username Input -->
+ <div class="form-outline mb-4">
+    <input type="text" id="username" name="username" value="<?php echo $username; ?>" class="form-control" required/>
+    <label class="form-label">Username</label>
+  </div>
+<!-- Name Input -->
+<div class="form-outline mb-4">
+    <input type="text" id="uname" name="name" value="<?php echo $name; ?>" class="form-control" required/>
+    <label class="form-label" >Name</label>
+  </div>
+
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <input type="email" id="email" name="email" value="<?php echo $email; ?>" class="form-control" required/>
+    <label class="form-label" >Email address</label>
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <input type="password" id="password" name="password" value="<?php echo $_POST['password']; ?>" class="form-control" required />
+    <label class="form-label" >Password</label>
+  </div>
+  <!-- confirmPassword input -->
+  <div class="form-outline mb-4">
+    <input type="password" id="cpassword" id="cpassword" name="cpassword" value="<?php echo $_POST['cpassword']; ?>" class="form-control" required/>
+    <label class="form-label" >Confirm Password</label>
+  </div>
+
+  <!-- 2 column grid layout for inline styling -->
+  <div class="row mb-4">
+    <div class="col d-flex justify-content-center">
+      <!-- Checkbox -->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="form2Example31" required />
+        <label class="form-check-label" for="form2Example31"> I have read the terms and conditions </label>
       </div>
-      <img src="images/hr-fake.png" style="width: 80%;display: block;margin-left: auto;margin-right: auto; padding-bottom: 2rem;" alt="">
-      <h3>About Modifications</h3>
-      <h5 style="padding-bottom: 3rem;padding-left: 2rem;">  Increase Excitement by installing our intake airbox modifications on your bike. <br>  Our product increases the airflow going to the engine and thus more power and a more exciting ride</h5>
-      <h2 style="padding-bottom: 1rem;">File Download Link</h2>
-      <h6 style="padding-bottom:3rem;padding-left: 2rem;">  The modifications included in the downloadable files includes 3d files.<br>  For instructions please refer to the contact page for inquiry.<br>  Installations must be done by professionals.</h6>
-      <a href="/downloadfiles/CR152_PartsE.rar"><button class="btn" style="background-color:#0d6efd;border: none;color: white;padding: 12px 30px;cursor: pointer;width:100%;font-size: 20px;"><i class="fa fa-download"></i> Download</button></a>
     </div>
-    <img src="images/hr-fake.png" style="width: 80%;display: block;margin-left: auto;margin-right: auto; padding-bottom: 2rem;padding-top: 5rem;opacity: 0;" alt="">
-    <!--Footer Code-->
-    <div class="container" >
+  </div>
+
+  <!-- Submit button -->
+  <button type="submit" name="submit" class="btn btn-primary btn-block mb-4">Sign Up</button>
+
+  <!-- Register buttons -->
+  
+</form>
+</div>
+    <div class="container">
       <footer
         class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
       >
@@ -168,23 +198,15 @@
 
         <ul class="nav col-md-4 justify-content-end">
           <li class="nav-item">
-            <a
-              href="index.html"
-              class="nav-link px-2 text-muted"
-              >Home</a
-            >
+            <a href="index.html" class="nav-link px-2 text-muted">Home</a>
           </li>
           <li class="nav-item">
-            <a
-              href="parts-page.html"
-              class="nav-link px-2 text-muted"
+            <a href="parts-page.html" class="nav-link px-2 text-muted"
               >Available Parts</a
             >
           </li>
           <li class="nav-item">
-            <a
-              href="contact-us.html"
-              class="nav-link px-2 text-muted"
+            <a href="contact-us.html" class="nav-link px-2 text-muted"
               >Contact Us</a
             >
           </li>
@@ -193,7 +215,6 @@
     </div>
 
     <!--Bootstrap js link-->
-
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
