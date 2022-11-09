@@ -27,7 +27,7 @@ if (isset($_POST['username']) && isset($_POST['password'])){
             $row = mysqli_fetch_assoc($result);
         if($row['username'] === $username && $row['password'] === $password){
             $_SESSION['username'] = $row['username'];
-            $_SESSION['name'] = $row['name'];
+            $_SESSION['firstname'] = $row['firstname'];
             $_SESSION['id'] = $row['id'];
 
             header("Location: context.php");

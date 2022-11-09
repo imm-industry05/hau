@@ -1,8 +1,8 @@
 <?php
 
-$sname= "localhost";
-$unmae= "root";
-$password = "";
+$sname= "database";
+$unmae= "ci";
+$password = "ci";
 
 $db_name = "useraccounts";
 

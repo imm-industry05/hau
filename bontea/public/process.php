@@ -1,5 +1,5 @@
 <?php
-require_once('config.php');
+require('config.php');
 ?>
 
 <?php
@@ -20,7 +20,7 @@ require_once('config.php');
         if ($result){
         echo 'Successfully saved.';
     }
-    else{
+    else {
         echo 'There were errors while saving the data.';
     }
 }
