@@ -196,37 +196,6 @@ header .navbar a:hover{
     
 }
 
-.service .box-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap:1.5rem;
-    background:#000000;
-    border:.1rem solid rgba(0,0,0,.1);
-    border-radius: .5rem;
-    padding:2rem;
-}
-
-.service .box-container .box{
-    text-align: center;
-    flex:1 1 30rem;
-}
-
-.service .box-container .box i{
-    font-size: 4rem;
-    color:var(--white);
-}
-
-.service .box-container .box h3{
-    font-size: 2rem;
-    color:var(--white);
-    padding-top: 1rem;
-}
-
-.service .box-container .box p{
-    font-size: 1.5rem;
-    color:#fff;
-    padding:1rem 0;
-}
 
 .popular .box-container{
     display: flex;
@@ -303,7 +272,7 @@ header .navbar a:hover{
 }
 
 .hoops .row .image-container .big-image{
-    width: 80%;
+    width: 100%;
     padding: 1rem;
 }
 

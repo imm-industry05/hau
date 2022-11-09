@@ -67,3 +67,73 @@ document.querySelectorAll('.hoops-image-6').forEach(image_6 =>{
         document.querySelector('.big-image-6').src = src;
     });
 });
+
+document.querySelectorAll('.hoops-image-7').forEach(image_7 =>{
+    image_7.addEventListener('click', () =>{
+        var src = image_7.getAttribute('src');
+        document.querySelector('.big-image-7').src = src;
+    });
+});
+
+document.querySelectorAll('.hoops-image-8').forEach(image_8 =>{
+    image_8.addEventListener('click', () =>{
+        var src = image_8.getAttribute('src');
+        document.querySelector('.big-image-8').src = src;
+    });
+});
+
+document.querySelectorAll('.hoops-image-9').forEach(image_9 =>{
+    image_9.addEventListener('click', () =>{
+        var src = image_9.getAttribute('src');
+        document.querySelector('.big-image-9').src = src;
+    });
+});
+
+document.querySelectorAll('.hoops-image-10').forEach(image_10 =>{
+    image_10.addEventListener('click', () =>{
+        var src = image_10.getAttribute('src');
+        document.querySelector('.big-image-10').src = src;
+    });
+});
+
+document.querySelectorAll('.hoops-image-11').forEach(image_11 =>{
+    image_11.addEventListener('click', () =>{
+        var src = image_11.getAttribute('src');
+        document.querySelector('.big-image-11').src = src;
+    });
+});
+
+document.querySelectorAll('.hoops-image-12').forEach(image_12 =>{
+    image_12.addEventListener('click', () =>{
+        var src = image_12.getAttribute('src');
+        document.querySelector('.big-image-12').src = src;
+    });
+});
+
+document.querySelectorAll('.hoops-image-13').forEach(image_13 =>{
+    image_13.addEventListener('click', () =>{
+        var src = image_13.getAttribute('src');
+        document.querySelector('.big-image-13').src = src;
+    });
+});
+
+document.querySelectorAll('.hoops-image-14').forEach(image_14 =>{
+    image_14.addEventListener('click', () =>{
+        var src = image_14.getAttribute('src');
+        document.querySelector('.big-image-14').src = src;
+    });
+});
+
+document.querySelectorAll('.hoops-image-15').forEach(image_15 =>{
+    image_15.addEventListener('click', () =>{
+        var src = image_15.getAttribute('src');
+        document.querySelector('.big-image-15').src = src;
+    });
+});
+
+document.querySelectorAll('.hoops-image-16').forEach(image_16 =>{
+    image_16.addEventListener('click', () =>{
+        var src = image_6.getAttribute('src');
+        document.querySelector('.big-image-16').src = src;
+    });
+});
