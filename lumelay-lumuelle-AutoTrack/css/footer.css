@@ -1,24 +1,3 @@
-/* logo */
-footer .logo{
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 3.3rem; font-weight: 900;
-  font-style: italic;
-  color: var(--red);
-
-  margin-bottom: 30px;
-}
-
-/* separate */
-hr {
-  display: block;
-  margin-top: 0.5em; margin-bottom: 0.5em;
-  margin-left: auto; margin-right: auto;
-  border-style: inset;
-  border-width: 1px;
-}
-
-/* body */
-
 .footer-wrapper{
   display: flex; flex-wrap: wrap;
   justify-content: space-between;
@@ -29,6 +8,10 @@ hr {
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 20px;
+}
+
+footer .logo{
+  margin-bottom: 30px;
 }
 
 footer h4{
@@ -57,13 +40,11 @@ footer .footer-list:hover{
 /* Social Media */
 footer .follow{
   margin-top: 20px;
-  font-size: 16px;
 }
 
 footer .follow i{
   color: var(--black-highlight);
   cursor: pointer; padding-right: 8px;
-  font-size: 16px;
 }
 
 /* Install Apps */
@@ -77,6 +58,20 @@ footer .install .row-install i{
   padding-bottom: 20px; padding-right: 15px;
 }
 
+footer .install .row-payments i{
+  cursor: default;
+}
+
+/* separate */
+hr {
+  display: block;
+  margin-top: 0.5em; margin-bottom: 0.5em;
+  margin-left: auto; margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+
+/* copyright */
 footer .copyright{
   width: 100%; padding-top: 10px;
   text-align: center;

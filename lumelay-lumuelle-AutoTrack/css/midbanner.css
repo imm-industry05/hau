@@ -1,4 +1,3 @@
-
 #middle-banner{
   display: flex; flex-direction: column;
   justify-content: center;
@@ -17,7 +16,7 @@
   font-family: 'Nunito Sans', sans-serif;
   font-style: italic;
   font-weight: 900;
-  font-size: 2.655rem;
+  font-size: 24px;
 }
 
 #middle-banner h2{
@@ -25,7 +24,7 @@
   color: var(--white);
 
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 600; font-size: 4.5rem;
+  font-weight: 600; font-size: 30px;
 }
 
 #middle-banner button:hover{

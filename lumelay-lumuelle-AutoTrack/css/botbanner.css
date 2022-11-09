@@ -3,7 +3,7 @@ button.white{
   cursor: pointer;
   transition: 0.2s;
 
-  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
   font-weight: 600;
   color: var(--white);
 
@@ -21,11 +21,12 @@ button.white{
 #sm-banner .banner-box:hover .white2{
   background: var(--white);   border: 1px solid var(--white);
   color: var(--black);
+  transition: none;
 }
 
 #sm-banner{
-  display: flex;
-  justify-content: space-between; flex-wrap: wrap;
+  display: flex; flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #sm-banner .banner-box{
@@ -45,7 +46,6 @@ button.white{
 
 #sm-banner h4{
   color: var(--white);
-  font-family: 'Montserrat', sans-serif;
   font-size: 20px; font-weight: 500;
 }
 
@@ -63,6 +63,7 @@ button.white{
 }
 
 /** mini banner **/
+
 #banner-three{
   display: flex; flex-wrap: wrap-reverse;
   justify-content: space-between;
@@ -90,9 +91,7 @@ button.white{
 
 #banner-three h2{
   color: var(--white);
-  font-weight: 900; font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
-  line-height: 54px;
+  font-size: 30px; font-weight: 900;
 }
 
 #banner-three h3{

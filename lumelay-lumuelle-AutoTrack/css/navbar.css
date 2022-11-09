@@ -1,16 +1,4 @@
-.header{
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2.5rem 9.5%;
-  background: var(--nav-bar);
-  box-shadow: var(--box-shadow);
-}
-
-.header .logo{
+.logo {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 3.3rem;
   font-weight: 900;
@@ -19,64 +7,73 @@
   color: var(--red);
 }
 
-.header .navbar a{
-  font-size: 1.7rem;
-  font-weight: 700;
-
-  margin: 0 1.2rem;
-  color: var(--black);
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: var(--nav-bar);
+  box-shadow: var(--box-shadow);
+  z-index: 999;
+  position: sticky;
+  top: 0; left: 0;
 }
 
-.header .navbar a:hover{
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li{
+  list-style: none;
+  padding: 0 20px;
+}
+
+#navbar li a{
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--black);
+  transition: all .2s ease;
+}
+
+#navbar li div{
+  font-size: 18px;
+  transition: all .3s ease;
+}
+
+#navbar li a:hover {
   color: var(--red-highlight);
 }
 
-.header .icons div{
-  height: 4.5rem; width: 4.5rem;
-  line-height: 4.5rem;
-  border-radius: .5rem;
-  background: var(--white);
+#navbar li div:hover {
+  color: var(--red-highlight);
   cursor: pointer;
-
-  color: var(--black);
-  font-size: 2rem;
-
-  margin-right: .3rem;
-  text-align: center;
-}
-
-.header .icons div:hover{
-  background: var(--red-hover);
-  color: var(--white);
-}
-
-#menu-btn{
-  display: none;
 }
 
 /** search bar **/
-.header .search-form{
+header .search-form{
   position: absolute;
   align-items: center;
   display: flex;
   overflow: hidden;
-  top: 110%; right: -110%;
-  width: 50rem;
-  height: 5rem;
+  top: 15%; right: -110%;
+  width: 25rem;
+  height: 3rem;
 
   background: var(--nav-bar);
   box-shadow: var(--box-shadow);
   border-radius: .5rem;
 }
 
-.header .search-form.active{
+header .search-form.active{
   right: 2rem;
   transition: 0.7s ease-out;
 }
 
-.header .search-form input{
+header .search-form input{
   font-weight: 500;
-  font-size: 1.6rem;
+  font-size: 1rem;
   color: var(--black);
 
   height: 100%;
@@ -84,17 +81,17 @@
 
   background: none;
   text-transform: none;
-  padding:0 1.5rem;
+  padding:0 1rem;
 }
 
-.header .search-form label{
-  font-size: 2rem;
+header .search-form label{
+  font-size: 1rem;
   color: var(--black);
 
   cursor: pointer;
   padding-right: 1.5rem;
 }
 
-.header .search-form label:hover{
+header .search-form label:hover{
   color: var(--red-highlight);
 }

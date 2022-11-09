@@ -10,8 +10,8 @@
 }
 
 #newsletter h4{
-  font-family: 'Montserrat', sans-serif; color: var(--white);
-  font-weight: 700; font-size: 24px;
+  color: var(--white);
+  font-weight: 700; font-size: 22px;
 }
 
 #newsletter span{
@@ -20,12 +20,16 @@
 
 #newsletter p{
   font-family: 'Source Sans Pro', sans-serif; color: var(--white);
-  font-weight: 500; font-size: 16px;
-  margin: 15px 0 20px 0;
+  font-weight: 500;
+}
+
+#newsletter .newsform{
+  display: flex;
+  width: 40%;
 }
 
 #newsletter input{
-  height: 4.56rem; padding: 1em 1.25em;
+  height: 3rem; padding: 0em 1.25em;
   width: 100%;
   font-size: 14px; font-family: 'Source Sans Pro', sans-serif;
   border: 1px solid transparent; border-radius: 4px;
@@ -34,20 +38,11 @@
 }
 
 #newsletter button{
-  background-color: var(--red-highlight);
-  color: var(--white);  font-weight: 700; font-family: 'Montserrat', sans-serif;
-  white-space: nowrap;
+background-color: var(--red-highlight);
+color: var(--white);  font-weight: 700;
+white-space: nowrap;
 
-  padding: 15px 30px;
-  cursor: pointer;
-  transition: 0.2s;
-
-  border: none; border-radius: 4px;
-  border-top-left-radius: 0; border-bottom-left-radius: 0;
-  outline: none;
-}
-
-#newsletter .newsform{
-  display: flex;
-  width: 40%;
+border: none; border-radius: 4px;
+border-top-left-radius: 0; border-bottom-left-radius: 0;
+outline: none;
 }

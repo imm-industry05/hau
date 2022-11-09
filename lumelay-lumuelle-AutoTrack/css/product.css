@@ -1,7 +1,5 @@
-
 #product1{
   text-align: center;
-  background-color: var(--nav-bar);
 }
 
 #product1 .product-container{
@@ -11,18 +9,9 @@
   flex-wrap: wrap;
 }
 
-#product1 h2{
-  padding: 5rem;
-  font-size: 6rem;
-  color: var(--black);
-}
-
-
 #product1 .pro{
-  width: 23%;
-  min-width: 250px;
-  margin: 1.5rem;
-  padding: 10px 12px;
+  width: 23%; min-width: 250px;
+  margin: 15px 0; padding: 10px 12px;
 
   border-radius: 25px;
   border: 1px solid var(--border-line);
@@ -50,9 +39,14 @@
 }
 
 #product1 .pro .des span{
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
+  color: var(--red-highlight);
+}
+
+#product1 p{
+  font-size: 18px;
+  color: var(--dark-gray);
 }
 
 #product1 .pro .des h5{
@@ -60,8 +54,7 @@
   color: var(--black);
 
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: 700; font-size: 14px;
 }
 
 #product1 .pro .des h4{
@@ -70,16 +63,14 @@
 
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 20px;
 }
 
 #product1 .pro .fa-arrow-right{
-  width: 35px; height: 35px;
-  line-height: 35px;
+  width: 40px; height: 40px;
+  line-height: 40px;
   border-radius: 50px; border: 1px var(--border-line);
   background-color: var(--red-highlight);
-
-  font-size: 2rem;
   color: var(--white);
 
   position: absolute;
