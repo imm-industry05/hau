@@ -1,6 +1,37 @@
 <?php
 
-    $conn = mysqli_connect("localhost", "root", "", "blog");
+    
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = 'blog';
+
+
+    // $conn = mysqli_connect("localhost", "root", "", "blog");
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password,$dbname);
+    // Check connection
+    if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+    }
+    
+    // $sql = "CREATE DATABASE blog";
+    // if ($conn->query($sql) === TRUE) {
+    // echo "Database created successfully";
+    // } else {
+    // echo "Error creating database: " . $conn->error;
+    // }
+
+    // try {
+    // $conn = new PDO("mysql:host=$servername;dbname=blog", $username, $password);
+    // // set the PDO error mode to exception
+    // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // echo "Connected successfully";
+    // } catch(PDOException $e) {
+    // echo "Connection failed: " . $e->getMessage();
+    // }
+
 
     if(!$conn){
         echo "<h4 class='container-fluid bg-dark text-center p-2 text-danger'>NOT ABLE TO CREATE DATABASE CONNECTION</h4>";
