@@ -1,16 +1,14 @@
 <?php
 
-    
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = 'blog';
+    $servername = "database";
+    $username = "ci";
+    $password = "ci";
+    $dbname = "inventory";
 
-
-    // $conn = mysqli_connect("localhost", "root", "", "blog");
+    // $conn = mysqli_connect($servername, $username, $password, $dbname);
 
     // Create connection
-    $conn = new mysqli($servername, $username, $password,$dbname);
+    $conn = new mysqli($servername, $username, $password, $dbname);
     // Check connection
     if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -23,15 +21,18 @@
     // echo "Error creating database: " . $conn->error;
     // }
 
-    // try {
-    // $conn = new PDO("mysql:host=$servername;dbname=blog", $username, $password);
-    // // set the PDO error mode to exception
-    // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    // echo "Connected successfully";
-    // } catch(PDOException $e) {
-    // echo "Connection failed: " . $e->getMessage();
-    // }
-
+    // sql to create table
+    // $sql = "CREATE TABLE data (
+    // id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    // title TEXT(255) NOT NULL,
+    // content text(255) NOT NULL
+    // )";
+    
+//    if ($conn->query($sql) === TRUE) {
+//       echo "Table MyGuests created successfully";
+//     } else {
+//       echo "Error creating table: " . $conn->error;
+//     } 
 
     if(!$conn){
         echo "<h4 class='container-fluid bg-dark text-center p-2 text-danger'>NOT ABLE TO CREATE DATABASE CONNECTION</h4>";
@@ -79,4 +80,3 @@
         header("Location: index.php?info=deleted");
         exit();
     }
-?>
