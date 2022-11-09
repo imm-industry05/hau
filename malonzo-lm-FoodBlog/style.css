@@ -29,6 +29,7 @@ img{
     max-width: 1320px;
     margin: 0 auto;
     padding: 0 1.2rem;
+    color: #fff;
 }
 section {
     margin-top: 3rem;
@@ -157,6 +158,14 @@ header{
     color: rgb(255, 255, 255);
     background: rgba(142, 131, 131, 0.874);
 }
+.food-text h3{
+    font-family: var(--Playfair);
+    padding: 1rem 0;
+    font-size: xx-large;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background: rgba(142, 131, 131, 0.874);
+}
 .food-text p{
     font-weight: 300;
     font-size: 1.1rem;
@@ -186,11 +195,12 @@ header{
     padding: 0 100px;
 }
 .card{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.2);
     margin: 8px;
 }
 .card img{
     transition:  all 0.5s ease;
+    width: 100%;
 }
 .card:hover img{
     transform: scale(1.1);
@@ -208,13 +218,19 @@ header{
     clear: both;
     display: table;
 }
+.about-container{
+    padding: 50px;
+    text-align: center;
+    color: white;
+    font-size: x-large;
+}
 .title{
-    color: var(--dark);
+    color: #fff;
 }
 .button{
     border: none;
     outline: 0;
-    display: inline-block;
+    display: grid;
     padding: 8px;
     color: white;
     background-color: #000;
