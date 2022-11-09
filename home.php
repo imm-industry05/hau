@@ -28,7 +28,7 @@ session_start();
     <ul>
         <li><a href="#" class="active">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Adopt</a></li>
+        <li><a href="#sec">Adopt</a></li>
         <li><a href="#">Donate</a></li>
         <li><a href="#">Contact</a></li>
         <li><a class="logout" href="logout.php" >Logout</a></li>
@@ -41,27 +41,44 @@ session_start();
    <img src="img/house4.png" id="house4">
    <img src="img/tree5.png" id="tree5">
    <img src="img/house6.png" id="house6">
-   <img src="img/light7.png" id="slight7">
-   <img src="img/car3.png" id="car3">
+   <img src="img/house7.png" id="house7">
+   <img src="img/light8.png" id="light8">
+   <img src="img/road9.png" id="road9">
+   <img src="img/car10.png" id="car10">
 </section>
-<div class="sec">
-   <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Tenetur amet distinctio, ducimus hic similique veniam quae 
-      dolor vel quo minus tempore corrupti laboriosam ullam, ad, 
-      quam repudiandae dolorum fuga iure?<br><br>Lorem ipsum dolor 
-      sit amet consectetur adipisicing elit. 
-      Tenetur amet distinctio, ducimus hic similique veniam quae 
-      dolor vel quo minus tempore corrupti laboriosam ullam, ad, 
-      quam repudiandae dolorum fuga iure?<br><br>Lorem ipsum dolor 
-      sit amet consectetur adipisicing elit. 
-      Tenetur amet distinctio, ducimus hic similique veniam quae 
-      dolor vel quo minus tempore corrupti laboriosam ullam, ad, 
-      quam repudiandae dolorum fuga iure?<br><br>Lorem ipsum dolor 
-      sit amet consectetur adipisicing elit. 
-      Tenetur amet distinctio, ducimus hic similique veniam quae 
-      dolor vel quo minus tempore corrupti laboriosam ullam, ad, 
-      quam repudiandae dolorum fuga iure?
-   </p>
+
+
+<!---------------------section2--------------------->
+<section>
+<div class="sec" id="sec">
+<img src="img/toy11.png" id="toy11">
+<img src="img/books12.png" id="books12">
+<img src="img/bed13.png" id="bed13">
+<img src="img/carpet14.png" id="carpet14">
+</div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+<script>
+   gsap.from("#moon", {
+      scrollTrigger : {
+         scrub: true
+      },
+      duration: 5,
+      y: -20,
+   })
+
+   gsap.from("#car10", {
+      scrollTrigger : {
+         scrub: true
+      },
+      duration: 5,
+      x: 100,
+   })
+</script>
+
+
+
 </body>
 </html>
