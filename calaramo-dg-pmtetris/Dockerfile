@@ -1,2 +1,2 @@
 FROM nginx:alpine
-COPY . /usr/share/nginx/html/
+RUN docker-php-ext-install mysqli    

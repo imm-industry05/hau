@@ -223,6 +223,13 @@ a:active { text-decoration: none; color: inherit;}
     font-size: 0.5em;
     text-align: center;
  }
+
+ .description-table{
+    font-family: 'FFF Forward';
+    font-size: 0.5em;
+    text-align: center;
+    padding:10px
+ }
  
 
 .title-leaderboards{
@@ -231,6 +238,17 @@ a:active { text-decoration: none; color: inherit;}
     font-size: 0.7em;
     text-align: center;
 }
+
+td {
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-right:20px;   
+  }
+  
+  td:first-child {
+    padding-left:20px;
+    padding-right:0;
+  }
 
 @font-face {
     font-family: 'FFF Forward';

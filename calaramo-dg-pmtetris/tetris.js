@@ -304,7 +304,8 @@ function submitScore()
     document.getElementById("playername").value = recordedData.name;
     document.getElementById("playerscore").value = recordedData.score;
     document.getElementById("playerlevel").value = recordedData.level;
-    document.getElementById("playerform").submit(); 
+
+    document.getElementById("playerform").submit();
 }
 
 //Keyboard handler

@@ -1,3 +1,4 @@
+
 <html>
 <head>
 
@@ -19,7 +20,7 @@
         </div>
 
         <div  class = "header-child2" id="headerButtons">
-            <h1><a href="leaderboard.html">Leaderboards</a></h1>
+            <h1><a href="leaderboard.php">Leaderboards</a></h1>
         </div>
 
     </div>
@@ -27,6 +28,7 @@
 </head>
 
 <body>
+
     <div id = "margin"></div>
     <div class="wrapper">
 
@@ -54,20 +56,22 @@
             <div style="display: block; text-align: center;" >
                 <form autocomplete="off">
                     <input type="text" id="name" name="name" maxlength="10" placeholder="Enter Name">
-                </form>
+     </form>
             </div>
         </div>
            
         
     </div>
 
+<div class="form">
 <iframe name="votar" style="display:none;"></iframe>
-<form id="playerform" target="votar" style="display:none;">
-    <input type="field" id="playername" name="playername" value="">
-    <input type="field" id="playerscore" name="playerscore" value="">
-    <input type="field" id="playerlevel" name="playerlevel" value="">
-</form>
+<form method="POST" action="connect.php" name="playerform" id="playerform" target="votar" style="display:none;">
+    <input type="text" id="playername" name="playername" value="">
+    <input type="text" id="playerscore" name="playerscore" value="">
+    <input type="text" id="playerlevel" name="playerlevel" value="">
 
+</form>
+</div>
 </body>
 
 </html>
