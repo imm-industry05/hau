@@ -1,75 +1,45 @@
 <?php
-      include_once 'header.php'
-?>
 
-<section id="login-container" class="login-container">
-  <div class="forms">
-    <div class="login-form">
-      <h2>Sign Up</h2>
+ if (isset($_POST["submit"])) {
 
-        <form action="includes/signup.inc.php" method="post">
+   $name = $_POST["name"];
+   $email = $_POST["email"];
+   $address = $_POST["address"];
+   $pwd = $_POST["pwd"];
+   $pwdRepeat = $_POST["pwdrepeat"];
 
-          <div class="">
-            <input type="text" name="name" placeholder="Enter Your Full Name (Juan Dela Cruz)">
-            <!-- <i class="fa-solid fa-user"></i> -->
-          </div>
-
-          <div class="">
-            <input type="text" name="email" placeholder="Enter Your Email (juandelacruz@mail.com)">
-            <!-- <i class="fa-regular fa-envelope"></i> -->
-          </div>
-
-          <div class="">
-            <input type="text" name="address" placeholder="Enter Your Address (City, Barangay, Street)">
-            <!-- <i class="fa-regular fa-envelope"></i> -->
-          </div>
-
-          <div class="">
-            <input type="password" name="pwd" placeholder="Enter Your Password">
-          </div>
-
-          <div class="">
-            <input type="password" name="pwdrepeat" placeholder="Enter Your Confirm Password">
-          </div>
-
-          <button type="submit" name="submit">Sign Up</button>
-
-          <div class="login-text-container">
-            <p>Already have account?
-              <a href="login.php" class="caa">Sign Up</a>
-            </p>
-          </div>
-          <!--testing login system-->
-          <div>
-          <?php
-            if (isset($_GET["error"])) {
-              if ($_GET["error"] == "emptyinput") {
-                echo "<p>Please fill all flieds</p>";
-              }
-              else if($_GET["error"] == "invalidEmail"){
-                echo "<p>The email is already taken!</p>";
-              }
-              else if($_GET["error"] == "invalidpassword"){
-                echo "<p>The password don't match</p>";
-              }
-              else if($_GET["error"] == "stmtfailed"){
-                echo "<p>Something went wrong</p>";
-              }
-              else if($_GET["error"] == "none"){
-                echo "<p>You have signed up!</p>";
-              }
-            }
-           ?>
-         </div>
-
-        </form>
-    </div>
-  </div>
-</section>
-
-
-<!-- footer -->
-
-<?php
-    include_once 'footer.php'
-?>
+   require_once 'dbh.inc.php';
+   require_once 'functions.inc.php'; // error handlers functions
+   //
+   //**error handlers**//
+   // checking for empty input
+   if (emptyInputSignup($name, $email, $address, $pwd, $pwdRepeat) !==false) {
+     header("location: ../signup.php?error=emptyinput");
+     exit();
+   }
+   //*********************************
+   //checking for email if it is valid
+   if (invalidEmail($email) !== false) {
+     header("location: ../signup.php?error=invalidemail");
+     exit();
+   }
+   //*******************************
+   //checking password if they match
+   if (pwdMatch($pwd, $pwdRepeat) !== false) {
+     header("location: ../signup.php?error=invalidpassword");
+     exit();
+   }
+   //*****************************************
+   //checking if the account is already exists
+   if (emailExists($conn, $email) !== false) {
+     header("location: ../signup.php?error=accountexists");
+     exit();
+   }
+   //******************************
+   //Signing up the user in website
+   createUser($conn, $name, $email, $address, $pwd);
+ }
+else {
+  header("location: ../signup.php");
+  exit();
+}

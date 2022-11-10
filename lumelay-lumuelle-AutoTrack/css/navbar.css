@@ -51,47 +51,7 @@
   cursor: pointer;
 }
 
-/** search bar **/
-header .search-form{
-  position: absolute;
+#nav-mobile{
+  display: none;
   align-items: center;
-  display: flex;
-  overflow: hidden;
-  top: 15%; right: -110%;
-  width: 25rem;
-  height: 3rem;
-
-  background: var(--nav-bar);
-  box-shadow: var(--box-shadow);
-  border-radius: .5rem;
-}
-
-header .search-form.active{
-  right: 2rem;
-  transition: 0.7s ease-out;
-}
-
-header .search-form input{
-  font-weight: 500;
-  font-size: 1rem;
-  color: var(--black);
-
-  height: 100%;
-  width: 100%;
-
-  background: none;
-  text-transform: none;
-  padding:0 1rem;
-}
-
-header .search-form label{
-  font-size: 1rem;
-  color: var(--black);
-
-  cursor: pointer;
-  padding-right: 1.5rem;
-}
-
-header .search-form label:hover{
-  color: var(--red-highlight);
 }

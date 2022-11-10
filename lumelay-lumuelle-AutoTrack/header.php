@@ -37,10 +37,17 @@
          <li><a href="contacts.php">Contacts</a></li>
          <!-- icons -->
 
-         <li><div class="fas fa-search" id="search-btn"></div></li>
-         <li><a href="cart.php"><div class="fas fa-shopping-cart"></div></a></li>
-         <li><a href="login.php"><div class="fas fa-user"></div></a></li>
-
+         <li id="icons"><i class="fas fa-search" id="search-btn"></i></li>
+         <li id="icons"><a href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
+         <li id="icons"><a href="login.php"><i class="fas fa-user"></i></a></li>
+         <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
        </ul>
+     </div>
+
+     <div id="nav-mobile">
+       <i class="fas fa-search" id="search-btn"></i>
+       <a href="cart.php"><i class="fas fa-shopping-cart"></i></a>
+       <a href="login.php"><i class="fas fa-user"></i></a>
+       <i id="bar" class="fa-solid fa-bars"></i>
      </div>
    </section>

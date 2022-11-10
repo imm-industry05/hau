@@ -1,20 +1,16 @@
 //Navigation bar animation (transition)
+const bar = document.getElementById('bar');
+const nav = document.getElementById('navbar');
+const close = document.getElementById('close');
 
-let searchForm = document.querySelector('.search-form');
-
-document.querySelector('#search-btn').onclick = () =>{
-  searchForm.classList.toggle('active');
-  navbar.classList.remove('active');
+if (bar) {
+  bar.addEventLister('click', () => {
+    nav.classList.add('active');
+  })
 }
 
-let navbar = document.querySelector('.navbar');
-
-document.querySelector('#menu-btn').onclick = () =>{
-  navbar.classList.toggle('active');
-  searchForm.classList.remove('active');
-}
-
-window.onscroll = () =>{
-  searchForm.classList.remove('active');
-  navbar.classList.remove('active');
+if (close) {
+  close.addEventLister('click', () => {
+    nav.classList.remove('active');
+  })
 }
