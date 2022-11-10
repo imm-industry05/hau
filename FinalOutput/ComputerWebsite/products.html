@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Parts Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+   
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="ComputerParts/PCLogo.jpeg" width="125px">
+            </div>
+            <nav>
+                <ul id="Menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <img src="ComputerParts/basket-cart.png" width="30px" height="30px">
+            <img src="ComputerParts/Menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+       
+        </div>
+    </div>
+    </div>
+
+   
+    <div class="small-container">
+        
+        <div class="row row-2">
+            <h2>All Products Available</h2>
+            <select>  
+                <option>Default Sorting</option>
+                <option>Sort by price</option>
+                <option>Sort by sale</option>
+                <option>Sort by rating</option>
+            </select>
+        </div>
+
+
+        <div class="row">
+            <div class="col-4">
+                <img src="ComputerParts/Glorious-ModelD.jpeg">
+                <h4>Glorious Model D Mouse</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$59</p>
+            </div>
+            <div class="col-4">
+                <img src="ComputerParts/msib450carbon.png">
+                <h4>MSI b450 Carbon</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <p>$110</p>
+            </div>
+            <div class="col-4">
+                <img src="ComputerParts/nzxt-h510-black.jpg">
+                <h4>NZXT H510 Black</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <p>$69</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="ComputerParts/logitech-GPro-Keyboard.jpeg">
+                <h4>Logitech G-Pro Keyboard</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$80</p>
+            </div>
+            <div class="col-4">
+                <img src="ComputerParts/Aorus-3090.png">
+                <h4>Gigabyte Aorus RTX 3090</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <p>$999</p>
+            </div>
+            <div class="col-4">
+                <img src="ComputerParts/arctis5.png">
+                <h4>Steelseries Arctis 5</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$59</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="ComputerParts/Corsairk70mk2png.png">
+                <h4>Corsair K70 Keyboard MK2</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <p>$89</p>
+            </div>
+            <div class="col-4">
+                <img src="ComputerParts/CoolerMaster-h500.png">
+                <h4>CoolerMaster Mastercase H500</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$59</p>
+            </div>
+            <div class="col-4">
+                <img src="ComputerParts/HyperxPredator-8gbRam.png">
+                <h4>Kingston HyperX  Predator 8gb DDR4</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$49</p>
+            </div>
+        </div>
+
+        <div class="page-btn">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span> 
+            <span>4</span>
+            <span>&#8594;</span> 
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download the App</h3>
+                    <p>Available for iOS and Android</p>
+                    <div class="app-logo">
+                        <img src="ComputerParts/app-store-png-logo-33123.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <h3>REMINDER</h3>
+                    <p>We are here to serve you properly and prioritize your Computer Upgrades or Needs.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Notice</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Promo</li>
+                        <li>Warranty</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Socials</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="Copyright">Copyright 2022</p>
+        </div>
+    </div>
+
+    <script>
+        var Menu = document.getElementById("Menu");
+        Menu.style.maxHeight = "0px";
+        function menutoggle(){
+            if(Menu.style.maxHeight == "0px")
+            {
+                Menu.style.maxHeight = "200px";
+            }
+            else
+            {
+                Menu.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+</body>
+</html>
