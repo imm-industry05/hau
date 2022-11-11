@@ -33,11 +33,15 @@ if(isset($_POST['submit'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body style="height:100%; background:url(img/loginbg.png); background-repeat:no-repeat; background-position:center; background-size:cover; background-attachment:fixed;">
+<body style="height:100%; background:url(img/loginbg.png); background-repeat:no-repeat; background-position:center; background-size:cover; background-attachment:fixed; overflow-y: hidden;">
     
 <div class="form-container">
 
     <form action="" method="post">
+    <div class="logocontainer">
+    <a href="#"><img src="img/logo1.png" alt="logo"></a>
+    </div>
+   
         <h3 class="title">login now</h3>
         <?php
          if(isset($error)){

@@ -7,7 +7,7 @@
    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body style="height:100%; background:url(img/logobg.png); background-repeat:no-repeat; background-position:center; background-size:cover; background-attachment:fixed;">
+<body style="height:100%; background:url(img/logobg.png); background-repeat:no-repeat; background-position:center; background-size:cover; background-attachment:fixed; overflow-y: hidden;">
 <div class="front-container">
 
    <button><p><a href="login_form.php" class="btn buttton-login">login</a></p> </button>
