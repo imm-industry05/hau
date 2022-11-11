@@ -9,4 +9,4 @@ services:
       - 8000:80
       - 8443:443
     volumes:
-      - ./malonzo-lm:/usr/local/apache2/htdocs/
+      - ./malonzo-lm-finals:/usr/local/apache2/htdocs/
