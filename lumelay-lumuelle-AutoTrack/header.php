@@ -35,11 +35,18 @@
          <li><a href="parts.php">Parts</a></li>
          <li><a href="performance.php">Performance</a></li>
          <li><a href="contacts.php">Contacts</a></li>
-         <!-- icons -->
 
+         <!-- icons -->
          <li id="icons"><i class="fas fa-search" id="search-btn"></i></li>
          <li id="icons"><a href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
-         <li id="icons"><a href="login.php"><i class="fas fa-user"></i></a></li>
+          <?php
+            if (isset($_SESSION["useremail"])) {
+              echo "<li id='icons'><a href='profile.php'><i class='fas fa-user'></i></a></li>";
+            }
+            else {
+              echo "<li id='icons'><a href='login.php'><i class='fas fa-user'></i></a></li>";
+            }
+          ?>
          <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
        </ul>
      </div>

@@ -1,6 +1,6 @@
 <!-- javascript -->
 
-<script type ="text/javascript" src="js/nav.js"></script>
+<script type ="text/javascript" src="js/navbar.js"></script>
 
 <!-- footer -->
 

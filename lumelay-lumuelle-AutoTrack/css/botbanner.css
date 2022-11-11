@@ -66,7 +66,7 @@ button.white{
 /** mini banner **/
 
 #banner-three{
-  display: flex; flex-wrap: wrap-reverse;
+  display: flex; flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 80px;
 }
@@ -107,4 +107,69 @@ button.white{
 
 #banner-three .banner-box-four h3{
     color: var(--red-highlight);
+}
+
+/** Media Query **/
+@media screen and (max-width:1880px){
+  /* Bottom banner */
+  #sm-banner .banner-box{
+    min-width: 800px;
+  }
+
+}
+
+@media screen and (max-width:1780px){
+  /* Bottom banner */
+  #sm-banner .banner-box{
+    min-width: 750px;
+  }
+
+  @media screen and (max-width:1690px){
+    /* Bottom banner */
+    #sm-banner .banner-box{
+      min-width: 710px;
+    }
+}
+
+@media screen and (max-width:1650px){
+  /* Bottom banner */
+  #sm-banner .banner-box{
+    min-width: 680px;
+  }
+}
+
+@media screen and (max-width:1575px){
+  /* Bottom banner */
+  #sm-banner .banner-box{
+    min-width: 650px;
+  }
+}
+
+@media screen and (max-width:1500px){
+  /* Bottom banner */
+  #sm-banner .banner-box{
+    min-width: 620px;
+  }
+
+  #banner-three h2{
+    font-size: 22px;
+  }
+
+  #banner-three h3{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width:1460px){
+  /* Bottom banner */
+  #sm-banner .banner-box{
+    min-width: 600px;
+  }
+}
+
+@media screen and (max-width:1400px){
+  /* Bottom banner */
+  #sm-banner .banner-box{
+    min-width: 100%;
+  }
 }

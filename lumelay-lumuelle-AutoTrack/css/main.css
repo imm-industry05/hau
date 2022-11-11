@@ -99,8 +99,26 @@ p {
 }
 
 /** Media Query **/
+@media screen and (max-width:1400px){
+  /* Bottom banner */
+  #sm-banner .banner-box{
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width:1220px){
+  #banner-three .banner-box{
+    width: 28%;
+  }
+}
 
 @media screen and (max-width:1100px){
+  /* Assets */
+  .section-p1{
+    padding: 40px 40px;
+  }
+
+  /* Navbar */
   #navbar {
     display: flex;
     flex-direction: column;
@@ -108,13 +126,13 @@ p {
     justify-content: flex-start;
 
     position: fixed;
-    right: -300px; top: 0;
+    right: -400px; top: 0;
     height: 100vh; width: 300px;
     background-color: var(--nav-bar);
     box-shadow: 0 40px 60px var(--box-shadow);
 
     padding: 80px 0 0 10px;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
   #navbar.active{
@@ -123,6 +141,11 @@ p {
 
   #navbar li {
     margin-bottom: 25px;
+    padding: 20px;
+  }
+
+  #navbar li a{
+    padding: 20px;
   }
 
   #nav-mobile{
@@ -130,10 +153,16 @@ p {
     align-items: center;
   }
 
+/* Icons outside the side-navigation*/
+
   #nav-mobile i{
     color: var(--black);
     font-size: 24px;
-    padding-left: 20px;
+    padding-left: 36px;
+  }
+
+  #nav-mobile i:hover{
+    cursor:pointer;
   }
 
   #close{
@@ -146,5 +175,47 @@ p {
 
   #icons {
     display: none;
+  }
+
+  /* Banner section */
+  #banner{
+    height: 70vh;
+    padding: 0 80px;
+    background-position: top 30% right 30%;
+  }
+
+  /* Products */
+  #product1 .product-container{
+    justify-content: center;
+  }
+
+  #product1 .pro{
+    margin: 15px;
+  }
+
+  /* Middle banner*/
+  #middle-banner{
+    height: 20vh;
+  }
+
+  #middle-banner h4{
+    font-size: 15px;
+  }
+
+  #middle-banner h2{
+    font-size: 25px;
+  }
+
+  /* Mini Banner */
+  #banner-three{
+    padding: 0 40px;
+  }
+
+  #banner-three h2{
+    font-size: 30px;
+  }
+
+  #banner-three h3{
+    font-size: 18px;
   }
 }
