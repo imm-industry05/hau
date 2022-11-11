@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  php-info:
+    image: httpd:2.4
+    container_name: food-blog
+    restart: always
+    ports:
+      - 8000:80
+      - 8443:443
+    volumes:
+      - ./malonzo-lm:/usr/local/apache2/htdocs/
