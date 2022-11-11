@@ -29,7 +29,7 @@
           </div>
 
           <div class="">
-            <input type="password" name="pwdrept" placeholder="Enter Your Confirm Password">
+            <input type="password" name="pwdrepeat" placeholder="Enter Your Confirm Password">
           </div>
 
           <button type="submit" name="submit">Sign Up</button>
@@ -39,11 +39,34 @@
               <a href="login.php" class="caa">Sign Up</a>
             </p>
           </div>
+          <!--testing login system-->
+          <div>
+          <?php
+            if (isset($_GET["error"])) {
+              if ($_GET["error"] == "emptyinput") {
+                echo "<p>Please fill all flieds</p>";
+              }
+              else if($_GET["error"] == "invalidEmail"){
+                echo "<p>The email is already taken!</p>";
+              }
+              else if($_GET["error"] == "invalidpassword"){
+                echo "<p>The password don't match</p>";
+              }
+              else if($_GET["error"] == "stmtfailed"){
+                echo "<p>Something went wrong</p>";
+              }
+              else if($_GET["error"] == "none"){
+                echo "<p>You have signed up!</p>";
+              }
+            }
+           ?>
+         </div>
 
         </form>
     </div>
   </div>
 </section>
+
 
 <!-- footer -->
 

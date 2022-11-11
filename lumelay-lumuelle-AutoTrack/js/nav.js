@@ -9,6 +9,8 @@ document.querySelector('#bar').onclick = () =>{
   close.classList.remove('active');
 }
 
+//for close button
+
 let close = document.querySelector('#close');
 
 document.querySelector('#close').onclick = () =>{
