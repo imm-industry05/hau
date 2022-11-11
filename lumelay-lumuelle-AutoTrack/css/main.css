@@ -137,6 +137,7 @@ p {
   }
 
   #close{
+    display: flex;
     position: absolute;
     top: 30px; left: 30px;
     color: var(--black);
