@@ -48,7 +48,6 @@
      <div class="column">
         <img src="img/9.png" width="100%;">
      </div>
-     
 </div>
 </body>
 </html>
