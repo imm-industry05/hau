@@ -1,0 +1,175 @@
+button.white{
+  padding: 11px 18px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white);
+
+  background-color: transparent;
+
+  border: 1px solid var(--white);
+  outline: none;
+}
+
+#sm-banner .banner-box:hover button{
+  background: var(--red-hover);
+  border: 1px solid var(--red-hover);
+}
+
+#sm-banner .banner-box:hover .white2{
+  background: var(--white);   border: 1px solid var(--white);
+  color: var(--black);
+  transition: none;
+}
+
+/* medium banner*/
+#sm-banner{
+  display: flex; flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#sm-banner .banner-box{
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: flex-start;
+  background-image: url("../assets/img/minibanner-one.jpg");
+  background-size: cover; background-position: center;
+  min-width: 850px; /** 580px in responsive [too small for my monitor] **/
+  height: 50vh;
+
+  padding: 30px;
+}
+
+#sm-banner .banner-box-two{
+  background-image: url("../assets/img/minibanner-two.jpg");
+}
+
+#sm-banner h4{
+  color: var(--white);
+  font-size: 20px; font-weight: 500;
+}
+
+#sm-banner h2{
+    color: var(--white);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 35px; font-weight: 600;
+}
+
+#sm-banner span{
+    color: var(--white);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 19px; font-weight: 300;
+    padding-bottom: 20px;
+}
+
+/** mini banner **/
+
+#banner-three{
+  display: flex; flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 80px;
+}
+
+#banner-three .banner-box{
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: flex-start;
+  background-image: url("../assets/img/minibanner-three.jpg");
+  background-size: cover; background-position: center;
+  min-width: 30%;
+  height: 30vh;
+
+  padding: 20px; margin-bottom: 20px;
+}
+
+#banner-three .banner-box-three{
+    background-image: url("../assets/img/minibanner-four.jpg");
+}
+
+#banner-three .banner-box-four{
+    background-image: url("../assets/img/minibanner-five.jpg");
+}
+
+#banner-three h2{
+  color: var(--white);
+  font-size: 30px; /* 22px */ font-weight: 900;
+}
+
+#banner-three h3{
+  color: var(--white);
+  font-weight: 700; font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px; /* 15px */
+}
+
+#banner-three .banner-box-four h2{
+    color: var(--red-highlight);
+}
+
+#banner-three .banner-box-four h3{
+    color: var(--red-highlight);
+}
+
+/** Media Query **/
+@media screen and (max-width:1880px){
+  /* Bottom banner */
+  #sm-banner .banner-box{
+    min-width: 800px;
+  }
+
+}
+
+@media screen and (max-width:1780px){
+  /* Bottom banner */
+  #sm-banner .banner-box{
+    min-width: 750px;
+  }
+
+  @media screen and (max-width:1690px){
+    /* Bottom banner */
+    #sm-banner .banner-box{
+      min-width: 710px;
+    }
+}
+
+@media screen and (max-width:1650px){
+  /* Bottom banner */
+  #sm-banner .banner-box{
+    min-width: 680px;
+  }
+}
+
+@media screen and (max-width:1575px){
+  /* Bottom banner */
+  #sm-banner .banner-box{
+    min-width: 650px;
+  }
+}
+
+@media screen and (max-width:1500px){
+  /* Bottom banner */
+  #sm-banner .banner-box{
+    min-width: 620px;
+  }
+
+  #banner-three h2{
+    font-size: 22px;
+  }
+
+  #banner-three h3{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width:1460px){
+  /* Bottom banner */
+  #sm-banner .banner-box{
+    min-width: 600px;
+  }
+}
+
+@media screen and (max-width:1400px){
+  /* Bottom banner */
+  #sm-banner .banner-box{
+    min-width: 100%;
+  }
+}

@@ -1,0 +1,55 @@
+#banner{
+  background: url(../assets/img/RE-V7Banner.jpg);
+  background-size: cover;
+  background-position: top 25% right 0;
+  height: 90vh; width: 100%;
+
+  padding: 0 80px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#banner h4{
+  padding-bottom: 5px;
+  font-weight: 800; font-size: 20px;
+  color: var(--black-highlight);
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#banner h2{
+  color: var(--black-highlight);
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#banner h1{
+  color: var(--red);
+  padding-bottom: 10px;
+}
+
+#banner button{
+  padding: 14px 80px 14px 65px;
+
+  background-color: var(--red-highlight);
+  border-radius: 6px;
+
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+
+  color: var(--white);
+  cursor: pointer;
+}
+
+#banner button i{
+  margin-left: 5px;
+  font-size: 0.9rem;
+}
+
+#banner button:hover{
+  background-color: var(--red);
+
+  font-weight: 700;
+  transition: .2s ease-in-out;
+}

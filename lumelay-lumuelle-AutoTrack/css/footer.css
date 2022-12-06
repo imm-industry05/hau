@@ -1,0 +1,82 @@
+.footer-wrapper{
+  display: flex; flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-wrapper .col{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+footer .logo{
+  margin-bottom: 30px;
+}
+
+footer h4{
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+footer p{
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
+
+/* list */
+footer .footer-list{
+  font-size: 13px; color: var(--black);
+  margin: 0 0 8px 0;
+  padding-bottom: 10px;
+}
+
+footer .footer-list:hover{
+  font-size: 13px; color: var(--red-highlight);
+  text-decoration: underline;
+  transition: 0.2s all ease;
+}
+
+/* Social Media */
+footer .follow{
+  margin-top: 20px;
+}
+
+footer .follow i{
+  color: var(--black-highlight);
+  cursor: pointer; padding-right: 8px;
+}
+
+/* Install Apps */
+footer .install i{
+  color: var(--black-highlight);
+  cursor: pointer; padding-right: 8px;
+  font-size: 26px;
+}
+
+footer .install .row-install i{
+  padding-bottom: 20px; padding-right: 15px;
+}
+
+footer .install .row-payments i{
+  cursor: default;
+}
+
+/* separate */
+hr {
+  display: block;
+  margin-top: 0.5em; margin-bottom: 0.5em;
+  margin-left: auto; margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+
+/* copyright */
+footer .copyright{
+  width: 100%; padding-top: 10px;
+  text-align: center;
+}
+
+footer .copyright a{
+  color: var(--red);
+}

@@ -1,0 +1,33 @@
+#middle-banner{
+  display: flex; flex-direction: column;
+  justify-content: center;
+  align-items: center; text-align: center;
+
+  background: url(../assets/img/middle-banner.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 40vh;
+}
+
+#middle-banner h4{
+  color: var(--white);
+
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 24px;
+}
+
+#middle-banner h2{
+  padding: 10px 0;
+  color: var(--white);
+
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600; font-size: 30px;
+}
+
+#middle-banner button:hover{
+  background-color: var(--red-highlight);
+  color: var(--white);
+}

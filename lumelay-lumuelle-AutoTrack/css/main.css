@@ -1,0 +1,221 @@
+/** general assets **/
+@import "navbar.css";
+@import "footer.css";
+
+/** sign in syles **/
+@import "login.css";
+
+/** main page styles **/
+@import "banner.css";
+@import "product.css";
+@import "midbanner.css";
+@import "botbanner.css";
+@import "newsletter.css";
+
+/** Assets **/
+button.normal{
+  margin: 14px; padding: 15px 30px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--black);
+
+  background-color: var(--white);
+
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+/* colors */
+:root{
+  --black:#080808;
+  --black-highlight:#1c1c1c;
+  --red:#e60000;
+  --red-highlight:#ff3131;
+  --red-hover:#ff5a5a;
+  --pink:#ff9c9c;
+  --white:#f0f0f0;
+
+  --nav-bar:#fff;
+  --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+  --border: .2rem solid rgba(0, 0, 0, 0.1);
+  --outline: .1rem solid rgba(0, 0, 0, 0.1);
+  --outline-hover: .2rem solid var(--black);
+
+  --shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  --shadow-hover: 20px 20px 30px rgba(0, 0, 0, 0.06);
+  --border-line:#8e8e8e;
+}
+
+*{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body{
+  width: 100%;
+  background: var(--nav-bar);
+}
+
+.section-p1{
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+}
+
+h2 {
+  font-size: 50px;
+  line-height: 64px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  margin: 15px 0 20px 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: var(--back-highlight);
+}
+
+/** Media Query **/
+@media screen and (max-width:1400px){
+  /* Bottom banner */
+  #sm-banner .banner-box{
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width:1220px){
+  #banner-three .banner-box{
+    width: 28%;
+  }
+}
+
+@media screen and (max-width:1100px){
+  /* Assets */
+  .section-p1{
+    padding: 40px 40px;
+  }
+
+  /* Navbar */
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    position: fixed;
+    right: -400px; top: 0;
+    height: 100vh; width: 300px;
+    background-color: var(--nav-bar);
+    box-shadow: 0 40px 60px var(--box-shadow);
+
+    padding: 80px 0 0 10px;
+    transition: 0.4s;
+}
+
+  #navbar.active{
+    right: 0px;
+  }
+
+  #navbar li {
+    margin-bottom: 25px;
+    padding: 20px;
+  }
+
+  #navbar li a{
+    padding: 20px;
+  }
+
+  #nav-mobile{
+    display: flex;
+    align-items: center;
+  }
+
+/* Icons outside the side-navigation*/
+
+  #nav-mobile i{
+    color: var(--black);
+    font-size: 24px;
+    padding-left: 36px;
+  }
+
+  #nav-mobile i:hover{
+    cursor:pointer;
+  }
+
+  #close{
+    display: flex;
+    position: absolute;
+    top: 30px; left: 30px;
+    color: var(--black);
+    font-size: 24px;
+  }
+
+  #icons {
+    display: none;
+  }
+
+  /* Banner section */
+  #banner{
+    height: 70vh;
+    padding: 0 80px;
+    background-position: top 30% right 30%;
+  }
+
+  /* Products */
+  #product1 .product-container{
+    justify-content: center;
+  }
+
+  #product1 .pro{
+    margin: 15px;
+  }
+
+  /* Middle banner*/
+  #middle-banner{
+    height: 20vh;
+  }
+
+  #middle-banner h4{
+    font-size: 15px;
+  }
+
+  #middle-banner h2{
+    font-size: 25px;
+  }
+
+  /* Mini Banner */
+  #banner-three{
+    padding: 0 40px;
+  }
+
+  #banner-three h2{
+    font-size: 30px;
+  }
+
+  #banner-three h3{
+    font-size: 18px;
+  }
+}

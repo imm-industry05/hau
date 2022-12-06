@@ -1,0 +1,97 @@
+#login-container{
+  min-height: 100vh;
+  display: flex; align-items: center;
+  justify-content: center;
+
+  background-color: var(--white);
+}
+
+#login-container .forms{
+  position: relative;
+  max-width: 430px; padding: 25px;
+  width: 100%;
+  border-radius: 8px;
+
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+}
+
+#login-container h2{
+  position: relative;
+  color: var(--black);
+  font-size: 36px; font-weight: 700;
+}
+
+#login-container input{
+  position: relative;
+  height: 100%; width: 100%;
+  margin-top: 3rem;
+
+  border-bottom: 2px solid var(--border-line);
+  border-top: 2px solid transparent;
+
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px; font-weight: 600;
+
+  transition: all 0.2s ease;
+}
+
+#login-container input[type=text]:focus{
+  border-bottom: 2.5px solid var(--pink);
+}
+
+#login-container input[type=password]:focus{
+  border-bottom: 2.5px solid var(--pink);
+}
+
+#login-container button{
+  height: 5rem; width: 100%;
+  margin-top: 3rem; border-radius: 5.5px;
+
+  font-weight: 700; font-size: 1.5rem;
+  background-color: var(--red-highlight);
+  color: var(--white);
+
+  cursor: pointer; letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+#login-container button:hover{
+  background-color: var(--red);
+}
+
+/* Text style at the bottom of log in/sign up */
+
+.login-text-container{
+  display: flex; justify-content: space-between;
+  margin-top: 1.85rem;
+
+  font-size: 15px;
+}
+
+.login-text-container p{
+  color: var(--black);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+
+  margin: 0;
+}
+
+.login-text-container a{
+  color: var(--black);
+  font-family: 'Source Sans Pro', sans-serif;
+  transition: none;
+}
+
+.login-text-container .caa{
+  color: var(--red);
+}
+
+.login-text-container .caa:hover{
+  color: var(--red);
+}
+
+.login-text-container a:hover{
+  color: var(--red);
+  text-decoration: underline;
+}
